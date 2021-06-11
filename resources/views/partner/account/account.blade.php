@@ -15,7 +15,7 @@ My Account
 			if(cid){
 				$.ajax({
 					type:"get",
-					url: '../partner/getdistricts/'+cid,//Please see the note at the end of the post**
+					url: '../getdistricts/'+cid,//Please see the note at the end of the post**
 					success:function(res){
 						if(res.length !== 0){
 							$("#districts").empty();
@@ -41,7 +41,7 @@ My Account
 			if(cid){
 				$.ajax({
 					type:"get",
-					url: '../partner/getwards/'+cid,//Please see the note at the end of the post**
+					url: '../getwards/'+cid,//Please see the note at the end of the post**
 					success:function(res){
 						if(res){
 							$("#wards").empty();

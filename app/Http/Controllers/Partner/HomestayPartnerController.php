@@ -5,20 +5,20 @@ namespace App\Http\Controllers\Partner;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Validator;
+use Illuminate\Validation\Validator;
 use Illuminate\Support\Str;
 use App\Homestay;
 use App\District;
 use App\Province;
 use App\Ward;
 use App\User;
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Product;
 use App\ImageHomestay;
 
 class HomestayPartnerController extends Controller
 {
-        
+
     public function getListPartnerHomestay()
     {
         $user = Auth::user()->id;
@@ -31,20 +31,20 @@ class HomestayPartnerController extends Controller
         return view('partner.pays.pays-new-step1',['homestay'=>$homestay]);
     }
     public function getPaysHomestay2(){
-        
+
     }
 
     //upload Ảnh
     public function create($id){
-        
+
         $homestay = Homestay::find($id);
         return view ('partner.homestay.add-Image-homestay',
         ['homestay'=>$homestay]
     );
     }
-    
+
     public function Upload(Request $request,$id){
-       
+
         $homestay = Homestay::find($id);
 
         // dd($homestay);
@@ -55,26 +55,26 @@ class HomestayPartnerController extends Controller
             $array_len = count($image_array);
 
             $id = Homestay::where('id','user_id')->get();
-            
+
 
             for($i=0;$i<$array_len;$i++)
-            {   
+            {
                 $image_size = $image_array[$i]->getSize();
                 $image_ext = $image_array[$i]->getClientOriginalExtension();
-                
+
                 $new_image_name = "uploads/homestay/".rand(1,99999).".".$image_ext;
 
                 $destination_path = public_path('/uploads/homestay');
-               
+
                 $image_array[$i]->move($destination_path,$new_image_name);
                 $table = new ImageHomestay;
                 $table->url= $new_image_name;
                 $table->homestay_id = $request->id;
                 $table->save();
 
-            }                       
+            }
             return redirect()->back()->with(['thongbao'=>'success','massage'=>'Thêm ảnh thành công']);
-        }else {            
+        }else {
             return redirect()->back()->with(['thongbao'=>'fail','massage'=>'Hãy chọn nhiều file ảnh ']);
         }
     }
@@ -87,13 +87,13 @@ class HomestayPartnerController extends Controller
         return back();
     }
     //end Upload ảnh
-    
+
     //Add Homestay
     public function getAddPartnerHomestay(){
         $provinces = Province::all();
         $product = Product::all();
         $homestay = Homestay::all();
-        return view('partner.homestay.add-homestay', 
+        return view('partner.homestay.add-homestay',
         ['homestay'=>$homestay,
         'product'=>$product,
         'provinces'=>$provinces]);
@@ -124,7 +124,7 @@ class HomestayPartnerController extends Controller
                 'xaid.required'=>'Vui lòng chọn Xã/Phường',
             ]
             );
-        
+
         if($validatorAdd->fails()){
             return redirect()->back()->withErrors($validatorAdd, 'addHomestay');
         }
@@ -135,7 +135,7 @@ class HomestayPartnerController extends Controller
 
             $destination_path = public_path('/uploads/homestay');
             $image->move($destination_path,$new_image_name);
-            
+
             $homestay = new Homestay() ;
             $homestay->avatar = $new_image_name;
             $homestay->name=$request->name;
@@ -145,17 +145,17 @@ class HomestayPartnerController extends Controller
             $homestay->xaid = $request->xaid;
             $homestay->alias = $alias;
             $homestay->user_id= Auth::user()->id;
-            $homestay->title = $request->title;          
+            $homestay->title = $request->title;
             $homestay->status_pay = 0;
             $homestay->description=$request->description;
-            $homestay->status=$request->status; 
+            $homestay->status=$request->status;
             $homestay->save();
             return redirect()->route('UploadImageHomestay',['id'=>$homestay->id])->with(['thongbao'=>'success','massage'=>'Thêm Homestay thành công !']);
-    
+
 }
 
     public function getEditprovinces()
-    {   
+    {
         $provinces = Province::all();
         return view('partner.homestay.edit-list-homestay', compact('provinces'));
     }
@@ -261,5 +261,5 @@ class HomestayPartnerController extends Controller
         return redirect()->back()->with(['thongbao'=>'success','massage'=>'Khôi phục thành công']);
     }
 
-    
+
 }
