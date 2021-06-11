@@ -1,12 +1,13 @@
 # File .ENV
 
-MAIL_DRIVER=smtp
-MAIL_HOST=smtp.googlemail.com
-MAIL_PORT=587
-MAIL_USERNAME=hihinewbie99@gmail.com
-MAIL_PASSWORD=jvkxolraycwytttl
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=hihinewbie99@gmail.com
+<p>MAIL_DRIVER=smtp</p>
+MAIL_HOST=smtp.googlemail.com <br>
+MAIL_PORT=587 <br>
+MAIL_USERNAME=hihinewbie99@gmail.com <br>
+MAIL_PASSWORD=jvkxolraycwytttl <br>
+MAIL_ENCRYPTION=tls <br>
+MAIL_FROM_ADDRESS=hihinewbie99@gmail.com <br>
+MAIL_FROM_ADDRESS=hihinewbie99@gmail.com <br>
 MAIL_FROM_NAME="${APP_NAME}"
 
 
