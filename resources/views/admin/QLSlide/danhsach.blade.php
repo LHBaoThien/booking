@@ -5,16 +5,14 @@
 	<ul class="breadcrumb">
 		<li>
 			<i class="icon-home"></i>
-			<a href="#">Home</a> 
-			<i class="icon-angle-right"></i>
+			<a href="{{url('/admin/dashboard')}}">Home</a>
 		</li>
-		<li><a href="#">Quản Lí</a></li>
 		<li>
 			<i class="icon-angle-right"></i>
-			<a href="#">Quản Lí Slide</a>
+			<a href="{{url('/admin/QLSlide/danhsach')}}">Quản Lí Slide</a>
 		</li>
 	</ul>
-	<div class="row-fluid sortable">		
+	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
 				<h2><i class="halflings-icon white user"></i><span class="break"></span>danh Sách Slide</h2>
@@ -36,33 +34,33 @@
 						  <th style="text-align: center">Status</th>
 						  <th style="text-align: center">Hoạt Động</th>
 					  </tr>
-				  </thead>   
+				  </thead>
 				  <tbody>
 				  	@foreach($slide as $tl)
 					<tr>
 						<td style="text-align: center">{{$tl->id}}</td>
-						<td style="text-align: center"><img width="70px" height="80px" src="{{$tl->url}}" alt=""></td>
+						<td style="text-align: center"><img width="70px" height="80px" src="{{ URL::to('/') }}/{{$tl->url}}" alt=""></td>
 						<td style="text-align: center">{{$tl->slogan}}</td>
 						<td style="text-align: center">{{$tl->slogan2}}</td>
 						<td style="text-align: center">{{$tl->order}}</td>
 						<td style="text-align: center">
 							@if($tl->status==0)
 							<p class="label label-primary">Ẩn</p>
-							@else 
+							@else
 							<p class="label label-important">Public</p>
 							@endif
-							
+
 						</td>
 						<td style="text-align: center">
 							<a href="{{url('/admin/QLSlide/edit')}}/{{$tl->id}}" class="btn btn-success">Edit</a>
 							<a class="btn btn-danger" href="{{url('/admin/QLSlide/delete')}}/{{$tl->id}}" onclick="return confirm('Bạn Muốn Xóa?');">
-								<i class="halflings-icon white trash"></i> 
+								<i class="halflings-icon white trash"></i>
 							</a>
 						</td>
-					</tr>	
-					@endforeach 
-				  </tbody>  
-			  </table>  
+					</tr>
+					@endforeach
+				  </tbody>
+			  </table>
 			</div>
 		</div>
 	</div>

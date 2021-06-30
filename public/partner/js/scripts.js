@@ -1,20 +1,20 @@
 $(document).ready(function () {
 	//UI FORM ELEMENTS
 	var spinner = $('.spinner input').spinner({ min: 0 });
-	
+
 	$('#datepicker1').datepicker({
 		showOn: 'button',
-		buttonImage: 'partner/images/ico/calendar.png',
+		buttonImage: 'images/ico/calendar.png',
 		buttonImageOnly: true,
 		dateFormat: "dd-mm-yy"
 	});
 	$('#datepicker2').datepicker({
 		showOn: 'button',
-		buttonImage: 'partner/images/ico/calendar.png',
+		buttonImage: 'images/ico/calendar.png',
 		buttonImageOnly: true,
 		dateFormat: "dd-mm-yy"
 	});
-	
+
 	$( '#slider' ).slider({
 		range: "min",
 		value:1,
@@ -22,10 +22,10 @@ $(document).ready(function () {
 		max: 10,
 		step: 1
 	});
-	
+
 	//CUSTOM FORM ELEMENTS
 	$('input[type=radio],select, input[type=checkbox]').uniform();
-	
+
 	//SCROLL TO TOP BUTTON
 	$('.scroll-to-top').click(function () {
 		$('body,html').animate({
@@ -33,7 +33,7 @@ $(document).ready(function () {
 		}, 800);
 		return false;
 	});
-	
+
 	//HEADER RIBBON NAVIGATION
 	$('.ribbon li').hide();
 	$('.ribbon li.active').show();
@@ -48,15 +48,15 @@ $(document).ready(function () {
 		$(this).parent().siblings().each(function() {
 			$(this).removeClass('active');
 		});
-		$(this).parent().attr('class', 'active'); 
+		$(this).parent().attr('class', 'active');
 		$('.ribbon li.active').show();
 		$('.ribbon ul.open li').show();
 		return true;
 	});
-	
+
 	//LIGHTBOX
 	$("a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square'});
-	
+
 	//TABS
 	$('.tab-content').hide().first().show();
     $('.inner-nav li:first').addClass("active");
@@ -72,11 +72,11 @@ $(document).ready(function () {
 
     var hash = $.trim( window.location.hash );
     if (hash) $('.inner-nav a[href$="'+hash+'"]').trigger('click');
-	
+
 	//CSS
 	$('.top-right-nav li:last-child,.social li:last-child,.twins .f-item:last-child,.ribbon li:last-child,.room-types li:last-child,.three-col li:nth-child(3n),.reviews li:last-child,.three-fourth .deals .one-fourth:nth-child(3n),.full .deals .one-fourth:nth-child(4n),.locations .one-fourth:nth-child(3n),.pager span:last-child,.get_inspired li:nth-child(5n)').addClass('last');
 	$('.bottom nav li:first-child,.pager span:first-child').addClass('first');
-	
+
 	//ROOM TYPES MORE BUTTON
 	$('.more-information').slideUp();
 	$('.more-info').click(function() {
@@ -85,54 +85,54 @@ $(document).ready(function () {
 		$(this).text(txt);
 		moreinformation.stop(true, true).slideToggle('slow');
 	});
-	
-	//MAIN SEARCH 
+
+	//MAIN SEARCH
 	$('.main-search input[name=radio]').change(function() {
 		var showForm = $(this).val();
 		$('.form').hide();
 		$("#"+showForm).show();
-	}); 
-	
+	});
+
 	$('.form').hide();
 	$('.form:first').show();
 	$('.f-item:first').addClass("active");
 	$('.f-item:first span').addClass("checked");
-	
+
 	$('.f-item .radio').click(function() {
 		$('.f-item').removeClass("active");
 		$(this).parent().addClass("active");
-	});	
-	
+	});
+
 	// LIST AND GRID VIEW TOGGLE
 	$('.view-type li:first-child').addClass('active');
-		
+
 	$('.grid-view').click(function() {
 		$('.three-fourth article').attr("class", "one-fourth");
 		$('.three-fourth article:nth-child(3n)').addClass("last");
 		$('.view-type li').removeClass("active");
 		$(this).addClass("active");
 	});
-	
+
 	$('.list-view').click(function() {
 		$('.three-fourth article').attr("class", "full-width");
 		$('.view-type li').removeClass("active");
 		$(this).addClass("active");
 	});
-	
+
 	//LOGIN & REGISTER LIGHTBOX
 	$('.close').click(function() {
 		$('.lightbox').hide();
 	});
-	
+
 	//MY ACCOUNT EDIT FIELDS
 	$('.edit_field').hide();
     $('.edit').on('click', function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
         $($(this).attr('href')).toggle('slow', function(){});
     });
 	$('.edit_field a,.edit_field input[type=submit]').click(function() {
 		$('.edit_field').hide(400);
 	});
 });
-	
+
 

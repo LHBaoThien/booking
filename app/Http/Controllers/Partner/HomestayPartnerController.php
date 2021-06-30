@@ -5,16 +5,17 @@ namespace App\Http\Controllers\Partner;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 use App\Homestay;
 use App\District;
 use App\Province;
 use App\Ward;
 use App\User;
-use Illuminate\Support\Facades\DB;
 use App\Product;
 use App\ImageHomestay;
+
 
 class HomestayPartnerController extends Controller
 {

@@ -1,17 +1,17 @@
 @extends('partner.login.master-login')
 @section('content')
     <!--main-->
-	<div class="main" role="main">		
+	<div class="main" role="main">
 		<div class="wrap clearfix">
 			<!--main content-->
 			<div class="content clearfix">
 				<!--three-fourth content-->
 				<section class="three-fourth" style="padding: 70px;">
-					
+
 					<!--inner navigation-->
 					<nav class="inner-nav">
 						<ul>
-							<li><a href="#Register" title="Register">Register Account</a></li>
+							<li><a href="#Register" title="Register">Đăng ký tài khoản</a></li>
 						</ul>
 					</nav>
 					<!--//inner navigation-->
@@ -27,9 +27,9 @@
 							@if( $errors->register->has('password') )
 								<span class="errors-register"><i>{{$errors->register->first('password')}}</i></span><br/>
 							@endif
-							<h1 style="text-align: center;">Register </h1>
+							<h1 style="text-align: center;">Đăng ký </h1>
 							<div class="b-info">
-								<form action="" method="POST">									
+								<form action="" method="POST">
 									<input type="hidden" name="_token" value="{{csrf_token()}}">
 									<table>
 										<tr>
@@ -45,21 +45,21 @@
 											</td>
 										</tr>
 										<tr>
-											<th>Password</th>
+											<th>Mật khẩu</th>
 											<td>
 												<input required type="password" name="password" id="password" placeholder="Nhập mật khẩu">
 											</td>
 										</tr>
 										<tr>
-											<th>Phone</th>
+											<th>Số điện thoại</th>
 											<td>
-												<input required type="text" name="phone" id="phone" placeholder="nhập số điện thoại">
+												<input required type="text" name="phone" id="phone" placeholder="Nhập số điện thoại">
 											</td>
 										</tr>
 										<tr>
 											<td></td>
 											<td>
-												<input type="submit" name="register" value="Create Account " class="gradient-button">
+												<input type="submit" name="register" value="Tạo tài khoản" class="gradient-button">
 											</td>
 										</tr>
 									</table>
@@ -67,7 +67,7 @@
 							</div>
 						</article>
 					</section>
-					<!--//Register-->					
+					<!--//Register-->
 				</section>
 				<!--//three-fourth content-->
 			</div>

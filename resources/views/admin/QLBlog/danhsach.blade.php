@@ -5,16 +5,14 @@
 	<ul class="breadcrumb">
 		<li>
 			<i class="icon-home"></i>
-			<a href="#">Home</a> 
-			<i class="icon-angle-right"></i>
+			<a href="{{url('/admin/dashboard')}}">Home</a>
 		</li>
 		<li>
-			<a href="#">Quản Lí</a>
-			<i class="icon-angle-right"></i>
-		</li>
-		<li><a href="#">Quản Lí Bài Viết</a></li>
+            <i class="icon-angle-right"></i>
+            <a href="{{url('/admin/QLBlog/danhsach')}}">Quản Lí Bài Viết</a>
+        </li>
 	</ul>
-	<div class="row-fluid sortable">		
+	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
 				<h2><i class="halflings-icon white user"></i><span class="break"></span>Danh Sách</h2>
@@ -38,7 +36,7 @@
 						  <th style="text-align: center">Chi Tiết</th>
 						  <th style="text-align: center">Hoạt Động</th>
 					  </tr>
-				  </thead>   
+				  </thead>
 				  <tbody>
 				  	@foreach($blog as $tl)
 					<tr>
@@ -59,19 +57,19 @@
 						</td>
 						<td style="text-align: center">
 							<a class="btn btn-info" href="{{url('/admin/QLBlog/edit')}}/{{$tl->id}}">
-								<i class="halflings-icon white edit"></i>  
+								<i class="halflings-icon white edit"></i>
 							</a>
 							<a class="btn btn-danger" href="{{url('/admin/QLBlog/delete')}}/{{$tl->id}}" onclick="return confirm('Bạn Muốn Xóa?');">
-								<i class="halflings-icon white trash"></i> 
+								<i class="halflings-icon white trash"></i>
 							</a>
 						</td>
-					</tr> 
+					</tr>
 					@endforeach
 				  </tbody>
-			  </table>            
+			  </table>
 			</div>
 		</div>
-	
+
 	</div>
 	</div>
 @endsection

@@ -3,19 +3,22 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
-			</li>
-			<li>
-				<i class="icon-edit"></i>
-				<a href="#">Thêm Tiện ích</a>
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/homestay/DStienich')}}">Danh Sách Tiện Ích</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/homestay/DStienich')}}">Thêm tiện ích</a>
+            </li>
 		</ul>
 		<div class="row-fluid sortable">
 			<div class="box span12">
 				<div class="box-header" data-original-title>
-					<h2><i class="halflings-icon white edit"></i><span class="break"></span>Thêm Tiện ích</h2>
+					<h2><i class="halflings-icon white edit"></i><span class="break"></span>Thêm tiện ích</h2>
 					<div class="box-icon">
 						<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 						<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -46,26 +49,26 @@
 						  </div>
 						</div>
 						<div class="control-group">
-						  	<label class="control-label" for="status">Public BV:</label>
+						  	<label class="control-label" for="status">Trạng thái:</label>
 						  	<label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" checked="checked">Ẩn	
-							</label>	
+								<input type="radio" name="status" value="0" id="status" checked="checked">Ẩn
+							</label>
 							<label class="controls radio-inline">
-								<input type="radio" name="status" value="1" id="status">Public
+								<input type="radio" name="status" value="1" id="status">Hiện
 							</label>
 						</div>
 						<div class="form-actions">
-						 <button type="submit" class="btn btn-primary">ADD</button>
+						 <button type="submit" class="btn btn-primary">Thêm</button>
 						  <button type="reset" class="btn">Hủy</button>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>
-		<div><a href="{{url('/admin/homestay/DStienich')}}" class="btn btn-primary"><--</a></div>
+		<div><a href="{{url('/admin/homestay/DStienich')}}" class="btn btn-primary">Quay lại</a></div>
 	</div>
-	
-	
+
+
 @endsection

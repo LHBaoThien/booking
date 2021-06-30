@@ -1,7 +1,7 @@
 <header>
     <div class="wrap clearfix">
         <!--logo-->
-        <h1 class="logo"><a href="{{url('partner/trangchu')}}" title="Book Your Travel - home"><img src="partner/images/txt/logo.png" alt="Book Your Travel" /></a></h1>
+        <h1 class="logo"><a href="{{url('partner/trangchu')}}" title="Himinn Booking - Home"><img src="/partner/images/txt/logo.png" alt="Himinn Booking" /></a></h1>
         <!--//logo-->
 
         <!--ribbon-->
@@ -13,7 +13,7 @@
                             $last_name = array_pop($name);
                         ?>
                         <li class="active"> @if(Auth::check())<a title="{{Auth::user()->name}}"> @endif Hi<br/>{{$last_name}} !!</a></li>
-                        <li><a href="{{url('partner/my-account',['id' => Auth::user()->id])}}"title="Settings">Quản lý </a></li>
+                        <li><a href="{{url('partner/my-account',['id' => Auth::user()->id])}}"title="Thông tin cá nhân">Thông tin</a></li>
                         <li><a href="{{asset('partner/logout')}}" title="Đăng xuất">Đăng xuất</a></li>
                     </ul>
             </nav>
@@ -30,10 +30,10 @@
         <!--//search-->
 
         <!--contact-->
-        <div class="contact">
-            <span>24/7 Hỗ trợ </span>
-            <span class="number">1800-1989</span>
-        </div>
+        {{-- <div class="contact">
+            <span style="font-size: 14px; color:white">24/7 Hỗ trợ - Liên hệ:
+                <a href="tel:0971097399" style="color: white"> 0971 0973 99</a></span>
+        </div> --}}
 
         <!--//contact-->
     </div>

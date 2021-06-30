@@ -353,6 +353,7 @@ footer {
 
 .main-nav li:hover,
 .main-nav li.active{
+    border-radius: 5px;
     background-color: #fff;
 }
 
@@ -1056,6 +1057,7 @@ header .ribbon {
 }
 
 .one-fourth {
+    border-radius: 8px;
     float: left;
     width: 23%;
     margin: 0 2% 20px 0;
@@ -1269,7 +1271,7 @@ header .ribbon {
 
 .promo .gradient-button {
     background: #6eb1ff;
-    
+
 }
 
 .promo .gradient-button:hover {
@@ -1277,6 +1279,7 @@ header .ribbon {
 }
 
 .boxes .one-fourth {
+    box-shadow: 3px 3px 15px #8888888c;
     padding: 15px 1.35%;
     width: 20.3%;
     background: rgb(255, 255, 255);
@@ -3130,6 +3133,7 @@ label.error {
 }
 
 .main-search form {
+    border-radius: 20px;
     position: relative;
     width: 100%;
     display: inline-block;
@@ -3848,6 +3852,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 .lb-wrap {
+    border-radius: 20px;
     text-align: left;
     position: absolute;
     top: 10%;
@@ -3855,7 +3860,7 @@ button.ui-button::-moz-focus-inner {
     width: 30%;
     max-width: 350px;
     background: #001292;
-    
+
     box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 
@@ -4145,6 +4150,7 @@ img {
 }
 
 .one-fourth figure img {
+    border-radius: 8px 8px 0px 0px;
     width: 100%;
 }
 

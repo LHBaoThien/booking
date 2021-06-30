@@ -10,7 +10,7 @@ class="active"
 
 @section('content')
 	<!--main-->
-	<div class="main" role="main">		
+	<div class="main" role="main">
 		<div class="wrap clearfix">
 			<!--main content-->
 			<div class="content clearfix">
@@ -18,15 +18,15 @@ class="active"
 				<nav role="navigation" class="breadcrumbs clearfix">
 					<!--crumbs-->
 					<ul class="crumbs">
-						<li><a href="#" title="Home">Home</a></li> 
-						<li>Hot deals</li>
+						<li><a href="#" title="Home">Home</a></li>
+						<li>Khuyến mãi</li>
 					</ul>
 					<!--//crumbs-->
 				</nav>
 				<!--//breadcrumbs-->
-				
-				<!--top destinations-->			
-				
+
+				<!--top destinations-->
+
 				<section class="full">
 					@foreach($matp as $matpVal)
 						<h1 class="address-hot-deal"><a href="{{route('userSearch').'?address='.$matpVal->province->name.$urlSearch}}">{{$matpVal->province->name}}</a></h1>
@@ -50,8 +50,8 @@ class="active"
 										<span class="address"><a href="{{route('userSearch').'?address='.$homestayVal->district->name.' - '.$homestayVal->province->name.$urlSearch}}">{{$homestayVal->district->name}}</a></span>
 										<!-- <span class="rating">200</span> -->
 										<span class="price">
-											Giá 1 đêm chỉ từ  
-											<em>{{ number_format( $homestayVal->product->min('prices'),0,',','.' ) }}đ</em> 
+											Giá 1 đêm chỉ từ
+											<em>{{ number_format( $homestayVal->product->min('prices'),0,',','.' ) }}đ</em>
 										</span>
 										<div class="description">
 											<p>{{$homestayVal->title}}</p>
@@ -65,14 +65,14 @@ class="active"
 						<div class="separator"></div>
 					@endforeach
 					<!--bottom navigation-->
-				
+
 					<!--back up button-->
-					<a href="#" class="scroll-to-top" title="Back up">Top</a> 
+					<a href="#" class="scroll-to-top" title="Back up">Top</a>
 					<!--//back up button-->
 				<!--//bottom navigation-->
 				</section>
 				<!--//top destinations-->
-				
+
 			</div>
 			<!--//main content-->
 		</div>

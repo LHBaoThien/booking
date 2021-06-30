@@ -5,20 +5,18 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-			<i class="icon-home"></i>
-			<a href="#">Home</a> 
-			<i class="icon-angle-right"></i>
-		</li>
-		<li><a href="#">Quản Lí</a></li>
-		<li>
-			<i class="icon-angle-right"></i>
-			<a href="#">Quản Lí Slide</a>
-		</li>
-			<li>
-				<i class="icon-angle-right"></i>
-				<i class="icon-edit"></i>
-				<a href="#">Edit Slide</a>
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/QLSlide/danhsach')}}">Quản Lí Slide</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="#">Edit</a>
+            </li>
 		</ul>
 		<div class="row-fluid sortable">
 			<div class="box span12">
@@ -56,9 +54,9 @@
 						  <label class="control-label" for="date01">Ảnh:</label>
 						  <div class="controls">
 							<input type="file" id="date01" name="url"><br>
-							<img width="180px" height="160px" src="{{$slide->url}}" alt="">
+							<img width="180px" height="160px" src="{{ URL::to('/') }}/{{$slide->url}}" alt="">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="slogan1">Slogan:</label>
 						  <div class="controls">
@@ -72,43 +70,43 @@
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="order">Thứ Tự Slide:</label>
+						  <label class="control-label" for="order">Thứ Tự Slide: </label>
 						  <div class="controls">
 							<!-- <input type="text" id="slogan2" name="slogan2" value="{{$slide->slogan2}}"> -->
 							<select name="order" id="order">
 								@foreach($sli as $tl)
 								<option value="{{$tl->order}}"
 									 @if($tl->order == $slide->order) selected="selected"; @endif>
-									 Vị trí số:{{$tl->order}}
+									 Vị trí số: {{$tl->order}}
 								</option>
 								 @endforeach
 							</select>
 						  </div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="status">Public BV:</label>
+							<label class="control-label" for="status">Hiển thị</label>
 						  	<label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" 
+								<input type="radio" name="status" value="0" id="status"
 									@if($slide->status == 0)
 									{{"checked"}}
 									@endif
-								>Ko
+								>Ẩn
 							</label>
 							<label class="controls radio-inline">
 								<input type="radio" name="status" value="1" id="status"
 									@if($slide->status == 1)
 									{{"checked"}}
 									@endif
-								>Có
+								>Hiện
 							</label>
 						</div>
 						<div class="form-actions">
-						 <button type="submit" class="btn btn-primary">Edit</button>
+						 <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
 						 <a href="{{url('/admin/QLSlide/danhsach')}}" class="btn">Quay Lại</a>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>

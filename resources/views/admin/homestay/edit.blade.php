@@ -5,14 +5,17 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
-			</li>
-			<li>
-				<i class="icon-edit"></i>
-				<a href="#">Edit Home Stay</a>
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/homestay/ListHT')}}">Danh sách khách sạn</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="">Đổi trạng thái</a>
+            </li>
 		</ul>
 		<div class="row-fluid sortable">
 			<div class="box span12">
@@ -28,11 +31,11 @@
 					<form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					  <fieldset>
-						
+
 						<div class="control-group">
 							<label class="control-label" for="status">Public BV:</label>
 						  	<label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" 
+								<input type="radio" name="status" value="0" id="status"
 									@if($homestay->status == 0)
 									{{"checked"}}
 									@endif
@@ -51,8 +54,8 @@
 							<button type="reset" class="btn btn-danger">Reset</button></a>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>

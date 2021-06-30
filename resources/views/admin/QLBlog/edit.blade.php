@@ -4,15 +4,15 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/QLBlog/danhsach')}}">Quản Lí Bài Viết</a>
+            </li>
 			<li>
-				<a href="#">Quản lí Bài Viết</a>
-				<i class="icon-angle-right"></i> 
-			</li>
-			<li>
+                <i class="icon-angle-right"></i>
 				<i class="icon-edit"></i>
 				<a href="#">Edit Bài Viết</a>
 			</li>
@@ -66,10 +66,10 @@
 						  	<div class="controls">
 							<input type="file" id="date01" name="photo" value="{{$blog->photo}}">
 							<br>
-							<img width="180px" height="170px" src="{{$blog->photo}}" alt="">
+							<img width="180px" height="170px" src="{{ URL::to('/') }}/{{$blog->photo}}" alt="">
 						  	</div>
-						</div>   
-						
+						</div>
+
 						<div class="control-group">
 						  	<label class="control-label" for="maqh">Quận/Huyện:</label>
 						  	<div class="controls">
@@ -79,7 +79,7 @@
 								@endforeach
 							</select>
 						  	</div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  	<label class="control-label" for="editor">Bài viết:</label>
 						  	<div class="controls">
@@ -101,7 +101,7 @@
 						<div class="control-group">
 						  	<label class="control-label" for="status">Public BV:</label>
 						 	<label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" 
+								<input type="radio" name="status" value="0" id="status"
 									@if($blog->status == 0)
 									{{"checked"}}
 									@endif
@@ -120,8 +120,8 @@
 						 	<a href="{{url('/admin/QLBlog/danhsach')}}" class="btn btn-danger">Quay Lại</a>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>

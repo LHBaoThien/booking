@@ -2,13 +2,13 @@
 	<div class="wrap clearfix">
 		<!--column-->
 		<article class="one-fourth">
-			<h3>Book Your Travel</h3>
-			<p>238 Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội</p>
-			<p><em>Phone:</em> 24/7 liên hệ: 1800 1989</p>
-			<p><em>Email:</em> <a href="mailto:bookyourtravel@gmail.com" title="bookyourtravel@gmail.com">bookyourtravel@gmail.com</a></p>
+			<h3>Himinn Booking</h3>
+			<p>Nha Trang - Khánh Hòa</p>
+			<p><em>Liên hệ:</em><a href="tel:0971097399"> +84971 0973 99</a></p>
+			<p><em>Email:</em><a href="mailto:himinnbooking@gmail.com" title="himinnbooking@gmail.com"> himinnbooking@gmail.com</a></p>
 		</article>
 		<!--//column-->
-		
+
 		<!--column-->
 		<article class="one-fourth">
 			<h3>Hỗ trợ khách hàng</h3>
@@ -20,7 +20,7 @@
 			</ul>
 		</article>
 		<!--//column-->
-		
+
 		<!--column-->
 		<article class="one-fourth">
 			<h3>Theo dõi chúng tôi</h3>
@@ -36,7 +36,7 @@
 			</ul>
 		</article>
 		<!--//column-->
-		
+
 		<!--column-->
 		<article class="one-fourth">
 			<h3>Đăng ký tài khoản</h3>
@@ -48,21 +48,9 @@
 			<!-- </form> -->
 		</article>
 		<!--//column-->
-		
+
 		<section class="bottom">
-			<p class="copy">Copyright © 2020 Book Your Travel</p>
-			<nav>
-				<ul>
-					<li><a href="javascript:" title="About us">Giới thiệu</a></li>
-					<li><a href="javascript:" title="Contact">Liên hệ</a></li>
-					<li><a href="javascript:" title="Partners">Đối tác</a></li>
-					<!-- <li><a href="javascript:" title="Customer service">Customer service</a></li> -->
-					<li><a href="javascript:" title="FAQ">FAQ</a></li>
-					<!-- <li><a href="javascript:" title="Careers">Careers</a></li> -->
-					<li><a href="{{route('userConditions')}}" title="Terms & Conditions">Điều khoản và điều kiện</a></li>
-					<!-- <li><a href="javascript:" title="Privacy statement">Privacy statement</a></li> -->
-				</ul>
-			</nav>
+			<p class="copy">Copyright © 2021 Himinn Booking - Le Hoang Bao Thien</p>
 		</section>
 	</div>
 </footer>

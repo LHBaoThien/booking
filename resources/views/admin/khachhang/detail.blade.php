@@ -5,7 +5,7 @@
 				<li>
 					<i class="icon-home"></i>
 					<a href="#">Home</a>
-					<i class="icon-angle-right"></i> 
+					<i class="icon-angle-right"></i>
 				</li>
 				<li>
 					<i class="icon-edit"></i>
@@ -28,9 +28,9 @@
 							<div class="control-group">
 							  <label class="control-label" for="fileInput">Ảnh Đại Diện:</label>
 							  <div class="controls">
-								<img style="border-radius: 50%;width: 70px;height: 70px; padding-top: 3px;" src="{{$user->avatar}}" alt="">
+								<img style="border-radius: 50%;width: 70px;height: 70px; padding-top: 3px;" src="{{ URL::to('/') }}/{{$user->avatar}}" alt="">
 							  </div>
-							</div>   
+							</div>
 							<div class="control-group">
 							  <label class="control-label" for="name">Tên:</label>
 							  <div class="controls">
@@ -54,19 +54,19 @@
 							  <div class="controls">
 								<input type="text" id="address" value="{{$user->phone}}">
 							  </div>
-							</div> 
-							
+							</div>
+
 							<div class="control-group">
 							  <label class="control-label" for="ds">Số Tk:</label>
 							  <div class="controls">
 								 <input type="text" value="{{$user->bank_number}}">
 							  </div>
-							</div> 
+							</div>
 							<div class="form-actions">
 							  <a href="{{url('/admin/khachhang/danhsach')}}" class="btn btn-primary">OK</a>
 							</div>
 						  </fieldset>
-						</form>   
+						</form>
 					</div>
 			</div>
 		</div>

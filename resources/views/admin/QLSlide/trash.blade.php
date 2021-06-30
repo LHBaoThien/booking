@@ -5,13 +5,16 @@
 	<ul class="breadcrumb">
 		<li>
 			<i class="icon-home"></i>
-			<a href="#">Home</a> 
-			<i class="icon-angle-right"></i>
+			<a href="{{url('/admin/dashboard')}}">Home</a>
+
 		</li>
-		<li><a href="#">Quản Lí Slide</a></li>
+		<li>
+            <i class="icon-angle-right"></i>
+            <a href="{{url('/admin/QLSlide/danhsach')}}">Quản Lí Slide</a>
+        </li>
 		<li>
 			<i class="icon-angle-right"></i>
-			<a href="#">Thùng rác</a>
+			<a href="{{url('/admin/QLSlide/trash')}}">Thùng rác</a>
 		</li>
 	</ul>
 	@if(count($errors) > 0)
@@ -26,7 +29,7 @@
 				{{session('thongbao')}}
 			</div>
 	@endif
-	<div class="row-fluid sortable">		
+	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
 				<h2><i class="halflings-icon white user"></i><span class="break"></span>Danh Sách Slide đã xóa</h2>
@@ -46,7 +49,7 @@
 						  <th style="text-align: center">Slogan2</th>
 						  <th style="text-align: center">Hoạt Động</th>
 					  </tr>
-				  </thead>   
+				  </thead>
 				  <tbody>
 				  	@foreach($slide3 as $tl)
 					<tr>
@@ -57,14 +60,14 @@
 						<td style="text-align: center">
 							<!-- <a href="{{url('/admin/QLSlide/edit')}}/{{$tl->id}}" class="btn btn-success">Edit</a> -->
 							<a class="btn btn-success" href="{{url('/admin/QLSlide/untrash')}}/{{$tl->id}}" onclick="return confirm('Bạn Muốn Khôi Phục?');">
-								Khôi Phục 
+								Khôi Phục
 							</a>
-							
+
 						</td>
-					</tr>	
-					@endforeach 
-				  </tbody>  
-			  </table>  
+					</tr>
+					@endforeach
+				  </tbody>
+			  </table>
 			</div>
 		</div>
 	</div>

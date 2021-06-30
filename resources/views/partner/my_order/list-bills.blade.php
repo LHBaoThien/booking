@@ -6,7 +6,7 @@ List Bills
 @endsection
 @section('main')
     <!--main-->
-	<div class="main" role="main">		
+	<div class="main" role="main">
 		<div class="wrap clearfix">
 			<!--main content-->
 			<div class="content clearfix">
@@ -14,8 +14,8 @@ List Bills
 				<nav role="navigation" class="breadcrumbs clearfix">
 					<!--crumbs-->
 					<ul class="crumbs">
-                        <li><a href="{{route('trangchu')}}" title="Home">Home</a></li> 
-						<li><a  title="Hóa đơn">Hóa đơn</a></li>                      
+                        <li><a href="{{route('trangchu')}}" title="Home">Home</a></li>
+						<li><a  title="Hóa đơn">Hóa đơn</a></li>
 					</ul>
 					<!--//crumbs-->
 				</nav>
@@ -47,19 +47,19 @@ List Bills
 										</tr>
 									</thead>
 									<?php $i=0; ?>
-									@foreach ($list_Bill  as $list_BillVal)                      
+									@foreach ($list_Bill  as $list_BillVal)
 									<?php $i++; ?>
-									@if ($list_BillVal->status == 2)                                    
+									@if ($list_BillVal->status == 2)
 										<tr class="alert_success">
-									@elseif($list_BillVal->status == 1)                                    
+									@elseif($list_BillVal->status == 1)
 										<tr class="alert_danger">
-									@elseif($list_BillVal->status == 0)                                 
+									@elseif($list_BillVal->status == 0)
 										<tr class="alert_warning">
 									@endif
 										<td>{{$i}}</td>
 										@if($list_BillVal->user_id != 0)
 											<td>{{$list_BillVal->user->name}}</td>
-										@else											
+										@else
 											<td>Chưa có tài khoản</td>
 										@endif
 										<td>{{$list_BillVal->name}}</td>
@@ -68,25 +68,25 @@ List Bills
 										<td>{{$list_BillVal->order->first()->product->homestay->name}}</td>
 										<td><strong>{{ number_format( $list_BillVal->payments,0,',','.' ) }}đ</strong></td>
 										<td >
-											@if ($list_BillVal->status == 2)                                    
+											@if ($list_BillVal->status == 2)
 												Xong
-											@elseif($list_BillVal->status == 1)                                    
+											@elseif($list_BillVal->status == 1)
 												Đã hủy
-											@elseif($list_BillVal->status == 0)                                 
+											@elseif($list_BillVal->status == 0)
 												Đã đặt phòng
 											@endif
 										</td>
 										@if($list_BillVal->status != 0)
 										<td class="function_one_bills">
-											<a href="{{route('information_order', ['id' => $list_BillVal->id])}}"><img src="partner/images/ico/detail.png" alt="" width="18px" height="18px"></a>
+											<a href="{{route('information_order', ['id' => $list_BillVal->id])}}"><img src="{{ URL::to('/') }}/partner/images/ico/detail.png" alt="" width="18px" height="18px"></a>
 										</td>
 										<td></td>
 										@elseif($list_BillVal->status == 0)
 										<td class="function_bills">
-											<a href="{{route('information_order', ['id' => $list_BillVal->id])}}"><img src="partner/images/ico/detail.png" alt="" width="18px" height="18px"></a>
+											<a href="{{route('information_order', ['id' => $list_BillVal->id])}}"><img src="{{ URL::to('/') }}/partner/images/ico/detail.png" alt="" width="18px" height="18px"></a>
 										</td>
 										<td class="function_bills">
-											<a href="{{route('CancelBook', ['id'=>$list_BillVal])}}"><img src="" alt=""><img src="partner/images/ico/cancel.png" alt="" width="16px" height="16px"></a>
+											<a href="{{route('CancelBook', ['id'=>$list_BillVal])}}"><img src="" alt=""><img src="{{ URL::to('/') }}/partner/images/ico/cancel.png" alt="" width="16px" height="16px"></a>
 										</td>
 										@endif
 									</tr>
@@ -101,10 +101,10 @@ List Bills
 					</section>
 				</section>
 				<!--//three-fourth content-->
-				
+
 				<!--sidebar-->
 				<aside class="right-sidebar">
-					
+
 				</aside>
 				<!--//sidebar-->
 			</div>
@@ -119,7 +119,7 @@ List Bills
 $(document).ready(function() {
     $('#example').DataTable( {
         "ajax": "data/objects.txt",
-        "columns": [			
+        "columns": [
             { "data": "id" },
             { "data": "name" },
             { "data": "email" },

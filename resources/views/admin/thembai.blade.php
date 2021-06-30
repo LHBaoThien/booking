@@ -6,7 +6,7 @@
 				var matp= $(this).val();
 				$.get("{{url('/admin/ajax/them')}}/"+matp,function(data){
 					$("#maqh").html(data);
-					
+
 				});
 			});
 		});
@@ -17,12 +17,12 @@
 		<ul class="breadcrumb">
 			<li>
 				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
+				<a href="{{url('/admin/dashboard')}}">Home</a>
+				<i class="icon-angle-right"></i>
 			</li>
 			<li>
 				<i class="icon-edit"></i>
-				<a href="#">Thêm Bài Viết</a>
+				<a href="{{url('/admin/thembai')}}">Thêm Bài Viết</a>
 			</li>
 		</ul>
 		<div class="row-fluid sortable">
@@ -74,7 +74,7 @@
 						  <div class="controls">
 							<input type="file" id="date01" name="photo">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="matp">Tỉnh/Thành phố:</label>
 						  <div class="controls">
@@ -85,18 +85,18 @@
 								@endforeach
 							</select>
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="maqh">Quận/huyện:</label>
 						  <div class="controls">
 							<select name="maqh" id="maqh">
-								<option selectted="selected" value="">-----------chọn qh-----------</option>
+								<option selectted="selected" value="">-----------chọn quận huyện-----------</option>
 								@foreach($district as $tlu)
 								<option value="{{$tlu->maqh}}">{{$tlu->name}}</option>
 								@endforeach
 							</select>
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="editor">Bài viết:</label>
 						  <div class="controls">
@@ -118,8 +118,8 @@
 						<div class="control-group">
 						  	<label class="control-label" for="status">Public BV:</label>
 						  	<label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" checked="checked">Ẩn	
-							</label>	
+								<input type="radio" name="status" value="0" id="status" checked="checked">Ẩn
+							</label>
 							<label class="controls radio-inline">
 								<input type="radio" name="status" value="1" id="status">Public
 							</label>
@@ -129,8 +129,8 @@
 						  <button type="reset" class="btn">Hủy</button>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>

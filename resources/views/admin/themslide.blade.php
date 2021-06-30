@@ -4,12 +4,12 @@
 		<ul class="breadcrumb">
 			<li>
 				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
+				<a href="{{url('/admin/dashboard')}}">Home</a>
+				<i class="icon-angle-right"></i>
 			</li>
 			<li>
 				<i class="icon-edit"></i>
-				<a href="#">Thêm Slide</a>
+				<a href="{{url('/admin/themslide')}}">Thêm Slide</a>
 			</li>
 		</ul>
 		<div class="row-fluid sortable">
@@ -50,7 +50,7 @@
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="slogan2">Slogan2:</label>
+						  <label class="control-label" for="slogan2">Slogan 2:</label>
 						  <div class="controls">
 							<input type="text" id="slogan2" name="slogan2">
 						  </div>
@@ -60,12 +60,12 @@
 						  <div class="controls">
 							<input type="file" id="img" name="url">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="status">Public BV:</label>
 						  <label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" checked="checked">Ẩn	
-							</label>	
+								<input type="radio" name="status" value="0" id="status" checked="checked">Ẩn
+							</label>
 							<label class="controls radio-inline">
 								<input type="radio" name="status" value="1" id="status">Public
 							</label>
@@ -75,8 +75,8 @@
 						 <button type="reset" class="btn">Hủy</button>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>

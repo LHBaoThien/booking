@@ -29,7 +29,7 @@ class SearchResultController extends Controller
                 $order->status = 0;
                 $order->update();
             }
-            array_push($bill_id_success,$orderSuccessVal->bill_id); 
+            array_push($bill_id_success,$orderSuccessVal->bill_id);
         }
 
         $bill_seccess = Bill::whereIn('id',$bill_id_success)->get();
@@ -80,7 +80,7 @@ class SearchResultController extends Controller
         $check_in = date( "Y-m-d", strtotime( $datepicker1 ));
         $check_out = date( "Y-m-d", strtotime( $datepicker2 ));
         $order = Order::where([ ['status','1'] , ['date_start','<=',$check_in] , ['date_end','>=',$check_out] ])
-                        ->orWhere([ ['status','1'] , ['date_start','>=',$check_in] , ['date_end','<=',$check_out] ])  
+                        ->orWhere([ ['status','1'] , ['date_start','>=',$check_in] , ['date_end','<=',$check_out] ])
                         ->orWhere([ ['status','1'] , ['date_start','<',$check_out] , ['date_end','>=',$check_out] ])
                         ->orWhere([ ['status','1'] , ['date_start','<=',$check_in] , ['date_end','>',$check_in] ]);
 
@@ -95,9 +95,9 @@ class SearchResultController extends Controller
         $num_adult   = $request->num_adult;
         $num_chil    = $request->num_chil;
 
-        
+
         $searchAddress = $this->SearchAddress($address);
-        
+
         $homestay_id = $searchAddress['0'];
         $province    = $searchAddress['1'];
         $district    = $searchAddress['2'];
@@ -135,7 +135,7 @@ class SearchResultController extends Controller
         $num_chil = $request->num_chil;
 
         $searchAddress = $this->SearchAddress($address);
-        
+
         $homestay_id = $searchAddress['0'];
         $province = $searchAddress['1'];
         $district = $searchAddress['2'];

@@ -4,11 +4,17 @@
 	<div id="content" class="span10">
 	<ul class="breadcrumb">
 		<li>
-			<i class="icon-home"></i>
-			<a href="#">Home</a>
-			<i class="icon-angle-right"></i>
-		</li>
-		<li><a href="#">Danh Sách Tiện Ích</a></li>
+            <i class="icon-home"></i>
+            <a href="{{url('/admin/dashboard')}}">Home</a>
+        </li>
+        <li>
+            <i class="icon-angle-right"></i>
+            <a href="{{url('/admin/homestay/ListHT')}}">Danh sách khách sạn</a>
+        </li>
+		<li>
+            <i class="icon-angle-right"></i>
+            <a href="{{url('/admin/homestay/DStienich')}}">Danh Sách Tiện Ích</a>
+        </li>
 	</ul>
 	<div class="row-fluid sortable">
 		<div class="box span12">

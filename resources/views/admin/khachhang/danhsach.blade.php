@@ -4,12 +4,12 @@
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="#">Home</a> 
+					<a href="#">Home</a>
 					<i class="icon-angle-right"></i>
 				</li>
 				<li><a href="#">User</a></li>
 			</ul>
-			<div class="row-fluid sortable">		
+			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
 						<h2><i class="halflings-icon white user"></i><span class="break"></span>List Admin</h2>
@@ -31,12 +31,12 @@
 								  <th style="text-align: center">Level</th>
 								  <th style="text-align: center">Hoạt Động</th>
 							  </tr>
-						  </thead>   
+						  </thead>
 						  <tbody>
 						  	@foreach($user as $tl)
 						  	@if($tl->permision==0)
 							<tr>
-								<td style="text-align: center"><img style="border-radius: 50%;width: 50px;height: 50px; padding-top: 3px;" src="{{$tl->avatar}}" alt=""></td>
+								<td style="text-align: center"><img style="border-radius: 50%;width: 50px;height: 50px; padding-top: 3px;" src="{{ URL::to('/') }}/{{$tl->avatar}}" alt=""></td>
 								<td>{{$tl->name}}</td>
 								<td>{{$tl->created_at}}</td>
 								<td>{{$tl->email}}</td>
@@ -52,7 +52,7 @@
 										<a href="{{url('/admin/khachhang/detail')}}/{{$tl->id}}" class="btn btn-primary">Detail</a>
 										<a href="{{url('admin/khachhang/edit')}}/{{$tl->id}}" class="btn btn-primary">Edit</a>
 										<a class="btn btn-danger" href="{{url('admin/khachhang/delete')}}/{{$tl->id}} " onclick="return confirm('Bạn Muốn Xóa Đối Tượng?');">
-											<i class="halflings-icon white trash"></i> 
+											<i class="halflings-icon white trash"></i>
 										</a>
 									@endif
 								</td>
@@ -60,14 +60,14 @@
 							@endif
 							@endforeach
 						  </tbody>
-					  </table>            
+					  </table>
 					</div>
 				</div>
 			</div>
-			
 
 
-			<div class="row-fluid sortable">		
+
+			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
 						<h2><i class="halflings-icon white user"></i><span class="break"></span>List Partner</h2>
@@ -89,12 +89,12 @@
 								  <th style="text-align: center">Level</th>
 								  <th style="text-align: center">Hoạt Động</th>
 							  </tr>
-						  </thead>   
+						  </thead>
 						  <tbody>
 							@foreach($user as $tl)
 						  	@if($tl->permision==1)
 							<tr>
-								<td style="text-align: center"><img width="60px" src="{{$tl->avatar}}" alt=""></td>
+								<td style="text-align: center"><img width="60px" src="{{ URL::to('/') }}/{{$tl->avatar}}" alt=""></td>
 								<td>{{$tl->name}}</td>
 								<td>{{$tl->created_at}}</td>
 								<td>{{$tl->email}}</td>
@@ -102,14 +102,14 @@
 								<td style="text-align: center">
 									<p class="badge green">Partner</p>
 								</td>
-								<td> 
+								<td>
 									@if(Auth::user()->id==$tl->id)
 										<a href="{{url('/admin/khachhang/detail')}}/{{$tl->id}}" class="btn btn-primary">Detail</a>
 										<a href="{{url('admin/khachhang/edit')}}/{{$tl->id}}" class="btn btn-primary">Edit</a>
-									@else	
+									@else
 										<a href="{{url('/admin/khachhang/detail')}}/{{$tl->id}}" class="btn btn-primary">Detail</a>
 										<a class="btn btn-danger" href="{{url('admin/khachhang/delete')}}/{{$tl->id}}" onclick="return confirm('Bạn Muốn Xóa ?');">
-											<i class="halflings-icon white trash"></i> 
+											<i class="halflings-icon white trash"></i>
 										</a>
 									@endif
 								</td>
@@ -117,15 +117,15 @@
 							@endif
 							@endforeach
 
-							
+
 						  </tbody>
-					  </table>            
+					  </table>
 					</div>
 				</div>
 			</div>
 
 
-			<div class="row-fluid sortable">		
+			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
 						<h2><i class="halflings-icon white user"></i><span class="break"></span>List Customer</h2>
@@ -147,27 +147,27 @@
 								  <th style="text-align: center">Level</th>
 								  <th style="text-align: center">Hoạt Động</th>
 							  </tr>
-						  </thead>   
+						  </thead>
 						  <tbody>
 							@foreach($user as $tl)
 						  	@if($tl->permision==2)
 							<tr>
-								<td style="text-align: center"><img width="60px" src="{{$tl->avatar}}" alt=""></td>
+								<td style="text-align: center"><img width="60px" src="{{ URL::to('/') }}/{{$tl->avatar}}" alt=""></td>
 								<td>{{$tl->name}}</td>
 								<td>{{$tl->created_at}}</td>
 								<td>{{$tl->email}}</td>
 								<td style="text-align: center">{{$tl->phone}}</td>
-								<td style="text-align: center">	
+								<td style="text-align: center">
 									<p class="badge orange">User</p>
 								</td>
 								<td>
 								 	@if(Auth::user()->id==$tl->id)
 										<a href="{{url('/admin/khachhang/detail')}}/{{$tl->id}}" class="btn btn-primary">Detail</a>
 										<a href="{{url('admin/khachhang/edit')}}/{{$tl->id}}" class="btn btn-primary">Edit</a>
-									@else	
+									@else
 										<a href="{{url('/admin/khachhang/detail')}}/{{$tl->id}}" class="btn btn-primary">Detail</a>
 										<a class="btn btn-danger" href="{{url('admin/khachhang/delete')}}/{{$tl->id}}" onclick="return confirm('Bạn Muốn Xóa')">
-											<i class="halflings-icon white trash"></i> 
+											<i class="halflings-icon white trash"></i>
 										</a>
 									@endif
 								</td>
@@ -175,7 +175,7 @@
 							@endif
 							@endforeach
 						  </tbody>
-					  </table>            
+					  </table>
 					</div>
 				</div>
 			</div>

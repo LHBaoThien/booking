@@ -1,68 +1,56 @@
 <footer>
-    <div class="wrap clearfix">
-        <!--column-->
-        <article class="one-fourth">
-            <h3>Book Your Travel</h3>
-            <p>Tòa nhà HTC, 236B & 238 Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội.</p>
-            <p><em>P:</em> 0888519575 / 0359989090</p>
-            <p><em>E:</em> <a href="" title="booking@mail.com">booking-travel@gmail.com</a></p>
-        </article>
-        <!--//column-->
-        
-        <!--column-->
-        <article class="one-fourth">
-            <h3>Customer support</h3>
-            <ul>
-                <li><a href="#" title="Faq">Faq</a></li>
-                <li><a href="#" title="How do I make a reservation?">How do I make a reservation?</a></li>
-                <li><a href="#" title="Payment options">Payment options</a></li>
-                <li><a href="#" title="Booking tips">Booking tips</a></li>
-            </ul>
-        </article>
-        <!--//column-->
-        
-        <!--column-->
-        <article class="one-fourth">
-            <h3>Follow us</h3>
-            <ul class="social">
-                <li class="facebook"><a href="#" title="facebook">facebook</a></li>
-                {{-- <li class="youtube"><a href="#" title="youtube">youtube</a></li> --}}
-                {{-- <li class="rss"><a href="#" title="rss">rss</a></li> --}}
-                <li class="linkedin"><a href="#" title="linkedin">linkedin</a></li>
-                <li class="googleplus"><a href="#" title="googleplus">googleplus</a></li>
-                <li class="twitter"><a href="#" title="twitter">twitter</a></li>
-                {{-- <li class="vimeo"><a href="#" title="vimeo">vimeo</a></li>
-                <li class="pinterest"><a href="#" title="pinterest">pinterest</a></li> --}}
-            </ul>
-        </article>
-        <!--//column-->
-        
-        <!--column-->
-        <article class="one-fourth last">
-            <h3>Contacts with us</h3>
-            <form id="newsletter" action="newsletter.php" method="post">
-                <fieldset>
-                    <input type="email" id="newsletter_signup" name="newsletter_signup" placeholder="Enter your email here" />
-                    <input type="submit" id="newsletter_submit" name="newsletter_submit" value="Signup" class="gradient-button" />
-                </fieldset>
-            </form>
-        </article>
-        <!--//column-->
-        
-        <section class="bottom">
-            <p class="copy">Copyright 2020 Book your travel ltd. All rights reserved</p>
-            <nav>
-                <ul>
-                    <li><a href="#" title="About us">About us</a></li>
-                    <li><a href="contact.html" title="Contact">Contact</a></li>
-                    <li><a href="#" title="Partners">Partners</a></li>
-                    {{-- <li><a href="#" title="Customer service">Customer service</a></li>
-                    <li><a href="#" title="FAQ">FAQ</a></li>
-                    <li><a href="#" title="Careers">Careers</a></li>
-                    <li><a href="#" title="Terms & Conditions">Terms &amp; Conditions</a></li>
-                    <li><a href="#" title="Privacy statement">Privacy statement</a></li> --}}
-                </ul>
-            </nav>
-        </section>
-    </div>
+	<div class="wrap clearfix">
+		<!--column-->
+		<article class="one-fourth">
+			<h3>Himinn Booking</h3>
+			<p>Nha Trang - Khánh Hòa</p>
+			<p><em>Liên hệ:</em><a href="tel:0971097399"> +84971 0973 99</a></p>
+			<p><em>Email:</em><a href="mailto:himinnbooking@gmail.com" title="himinnbooking@gmail.com"> himinnbooking@gmail.com</a></p>
+		</article>
+		<!--//column-->
+
+		<!--column-->
+		<article class="one-fourth">
+			<h3>Hỗ trợ khách hàng</h3>
+			<ul>
+				<li><a href="{{route('userConditions')}}" title="Điều khoản và điều kiện">Điều khoản và điều kiện</a></li>
+				<li><a href="javascript:" title="Làm cách nào để đặt chỗ?">Làm cách nào để đặt chỗ?</a></li>
+				<!-- <li><a href="javascript:" title="Payment options">Payment options</a></li> -->
+				<li><a href="javascript:" title="Mẹo đặt phòng">Mẹo đặt phòng</a></li>
+			</ul>
+		</article>
+		<!--//column-->
+
+		<!--column-->
+		<article class="one-fourth">
+			<h3>Theo dõi chúng tôi</h3>
+			<ul class="social">
+				<li class="facebook"><a href="javascript:" title="facebook">facebook</a></li>
+				<li class="youtube"><a href="javascript:" title="youtube">youtube</a></li>
+				<!-- <li class="rss"><a href="javascript:" title="rss">rss</a></li> -->
+				<!-- <li class="linkedin"><a href="javascript:" title="linkedin">linkedin</a></li> -->
+				<li class="googleplus"><a href="javascript:" title="googleplus">googleplus</a></li>
+				<li class="twitter"><a href="javascript:" title="twitter">twitter</a></li>
+				<!-- <li class="vimeo"><a href="javascript:" title="vimeo">vimeo</a></li> -->
+				<li class="pinterest"><a href="javascript:" title="pinterest">pinterest</a></li>
+			</ul>
+		</article>
+		<!--//column-->
+
+		<!--column-->
+		<article class="one-fourth">
+			<h3>Đăng ký tài khoản</h3>
+			<!-- <form id="newsletter" action="newsletter.php" method="post"> -->
+				<fieldset>
+					<input type="email" id="email_signup" name="email_signup" placeholder="Nhập email của bạn tại đây" />
+					<input type="submit" id="signUp"  name="signUp" value="Đăng ký" onclick="singUp()" class="gradient-button" />
+				</fieldset>
+			<!-- </form> -->
+		</article>
+		<!--//column-->
+
+		<section class="bottom">
+			<p class="copy">Copyright © 2021 Himinn Booking - Le Hoang Bao Thien</p>
+		</section>
+	</div>
 </footer>

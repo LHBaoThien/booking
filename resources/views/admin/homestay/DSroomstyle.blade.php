@@ -4,20 +4,22 @@
 	<div id="content" class="span10">
 	<ul class="breadcrumb">
 		<li>
-			<i class="icon-home"></i>
-			<a href="#">Home</a>
-			<i class="icon-angle-right"></i>
-		</li>
+            <i class="icon-home"></i>
+            <a href="{{url('/admin/dashboard')}}">Home</a>
+        </li>
+        <li>
+            <i class="icon-angle-right"></i>
+            <a href="{{url('/admin/homestay/ListHT')}}">Danh sách khách sạn</a>
+        </li>
 		<li>
-			<a href="#">HomeStay</a>
-			<i class="icon-angle-right"></i>
-		</li>
-		<li><a href="#">Danh Sách Style</a></li>
+            <i class="icon-angle-right"></i>
+            <a href="{{url('/admin/homestay/DSroomstyle')}}">Danh sách kiểu phòng</a>
+        </li>
 	</ul>
 	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
-				<h2><i class="halflings-icon white user"></i><span class="break"></span>Danh Sách Style</h2>
+				<h2><i class="halflings-icon white user"></i><span class="break"></span>Danh sách kiểu phòng</h2>
 				<div class="box-icon">
 					<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 					<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>

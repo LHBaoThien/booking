@@ -4,15 +4,15 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/QLBlog/danhsach')}}">Quản Lí Bài Viết</a>
+            </li>
 			<li>
-				<a href="#">Quản lí Bài Viết</a>
-				<i class="icon-angle-right"></i>
-			</li>
-			<li>
+                <i class="icon-angle-right"></i>
 				<i class="icon-edit"></i>
 				<a href="#">Detail</a>
 			</li>
@@ -40,9 +40,9 @@
 						<div class="control-group">
 						  <label class="control-label" for="date01">Ảnh:</label>
 						  <div class="controls">
-						  	<img width="120px" src="{{$blog->photo}}" alt="">
+						  	<img width="120px" src="{{ URL::to('/') }}/{{$blog->photo}}" alt="">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="description">Mô tả:</label>
 						  <div class="controls">
@@ -54,7 +54,7 @@
 						  <div class="controls">
 							<input type="text" id="maqh" name="maqh" value="{{$blog->district->name}}">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="editor">Bài viết:</label>
 						  <div class="controls">
@@ -76,7 +76,7 @@
 						<div class="control-group">
 						  	<label class="control-label" for="status">Public BV:</label>
 						  	<label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" 
+								<input type="radio" name="status" value="0" id="status"
 									@if($blog->status == 0)
 									{{"checked"}}
 									@endif
@@ -94,8 +94,8 @@
 						 <a href="{{url('/admin/QLBlog/danhsach')}}" class="btn btn-success">OK</a>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>

@@ -201,7 +201,7 @@ My Account
 								<tr>
 									<th>Ảnh đại diện: </th>
 									<td>
-										<img src="{{$user->avatar}}" alt="avatar" width="70" height="70" style="margin: 0 auto;">
+										<img src="{{ URL::to('/') }}/{{$user->avatar}}" alt="avatar" width="70" height="70" style="margin: 0 auto;">
 										@if(Session::get('edit_avatar') == 'success')
 											<i class="done_account">{{Session::get('massage')}}</i>
 										@elseif( count($errors->avatar) >0)

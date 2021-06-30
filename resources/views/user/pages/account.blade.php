@@ -16,7 +16,7 @@ My Account
 				$.ajax({
 					type:"get",
 					url: '../get-district/'+cid,//Please see the note at the end of the post**
-					success:function(res){       
+					success:function(res){
 						if(res.length !== 0){
 							$("#districts").empty();
 							$("#wards").empty();
@@ -42,7 +42,7 @@ My Account
 				$.ajax({
 					type:"get",
 					url: '../get-ward/'+cid,//Please see the note at the end of the post**
-					success:function(res){       
+					success:function(res){
 						if(res){
 							$("#wards").empty();
 							$("#wards").append('<option></option>');
@@ -58,7 +58,7 @@ My Account
 @endsection
 @section('content')
 	<!--main-->
-	<div class="main" role="main">		
+	<div class="main" role="main">
 		<div class="wrap clearfix">
 			<!--main content-->
 			<div class="content clearfix">
@@ -67,16 +67,16 @@ My Account
 					<!--crumbs-->
 					<ul class="crumbs">
 						<li><a href="{{route('userHomePage')}}" title="Home">Home</a></li>
-						<li><a href="#" title="My Account">My Account</a></li>                                    
+						<li><a href="#" title="My Account">My Account</a></li>
 					</ul>
 					<!--//crumbs-->
-				
+
 				</nav>
 				<!--//breadcrumbs-->
 
 				<!--three-fourth content-->
 				<section class="three-fourth">
-					<h1>My account 
+					<h1>My account
 						<span class="alert-account">
 							@if(Session::get('rating') == 'success')
 								<i class="done_account">{{Session::get('massage')}}</i>
@@ -94,7 +94,7 @@ My Account
 						</ul>
 					</nav>
 					<!--//inner navigation-->
-					
+
 					<!--MySettings-->
 					<section id="MySettings" class="tab-content">
 						<article class="mysettings">
@@ -105,7 +105,7 @@ My Account
 									<td>{{$user->name}}&nbsp&nbsp
 										@if(Session::get('edit_name') == 'success')
 											<i class="done_account">{{Session::get('massage')}}</i>
-										@endif	
+										@endif
 										<!--edit fields-->
 										<div class="edit_field" id="field1">
 											<form action="{{route('userEditName',['id' => $id])}}" method="post">
@@ -209,7 +209,7 @@ My Account
 								<tr>
 									<th>Ảnh đại diện: </th>
 									<td>
-										<img src="{{$user->avatar}}" alt="avatar" width="70" height="70">
+										<img src="{{ URL::to('/') }}/{{$user->avatar}}" alt="avatar" width="70" height="70">
 										@if(Session::get('edit_avatar') == 'success')
 											<i class="done_account">{{Session::get('massage')}}</i>
 										@elseif( count($errors->avatar) >0)
@@ -237,7 +237,7 @@ My Account
 												<i class="done_account">{{Session::get('massage')}}</i>
 											@elseif(Session::get('edit_address') == 'fail')
 												<i class="error_account">{{Session::get('massage')}}</i>
-											@endif	
+											@endif
 									@elseif(empty($user->address_detail) && !empty($user->xaid))
 										<td>{{$user->ward->name.', '.$user->ward->district->name.', '.$user->ward->district->province->name}}
 										<br/>
@@ -254,7 +254,7 @@ My Account
 											@elseif(Session::get('edit_address') == 'fail')
 												<i class="error_account">{{Session::get('massage')}}</i>
 											@endif
-									@endif	
+									@endif
 										<!--edit fields-->
 										<div class="edit_field" id="field6">
 											<form action="{{route('userEditAddress',['id' => $id])}}" method="post" >
@@ -291,7 +291,7 @@ My Account
 						</article>
 					</section>
 					<!--//MySettings-->
-					
+
 					<!--MyReviews-->
 					<section id="MyBookings" class="tab-content">
 						@foreach( $billBooking as $billBookingVal )
@@ -354,7 +354,7 @@ My Account
 						{{ $billBooking->withQueryString()->links('vendor.pagination.custom') }}
 					</section>
 					<!--//MyReviews-->
-					
+
 					<!--My Bookings-->
 					<section id="MyHistorys" class="tab-content">
 						@foreach($billHistory as $billHistoryVal)
@@ -382,7 +382,7 @@ My Account
 											<td>
 												@foreach($billHistoryVal->order as $orderHistory)
 													{{$orderHistory->product->roomType->name}} <br/>
-												@endforeach					
+												@endforeach
 											</td>
 										</tr>
 										<tr>
@@ -419,12 +419,12 @@ My Account
 													<dd style="display: block; height: auto;">
 														<div class="starVoted" style=" width: 130px;">
 															@for( $i=$billHistoryVal->rating->point; $i--; $i >= 0 )
-																<img src="user/images/ico/star-rating-on.png" alt="" />
+																<img src="{{ URL::to('/') }}/user/images/ico/star-rating-on.png" alt="" />
 															@endfor
 															@for( $i=5-$billHistoryVal->rating->point; $i--; $i >= 0 )
-																<img src="user/images/ico/star-rating-off.png" alt="" />
+																<img src="{{ URL::to('/') }}/user/images/ico/star-rating-off.png" alt="" />
 															@endfor
-														</div>	
+														</div>
 													</dd>
 													<!--//Star rating-->
 													<textarea readonly="readonly" name="comment" id="comment" cols="10" rows="3">{{$billHistoryVal->rating->comment}}</textarea>
@@ -441,43 +441,43 @@ My Account
 														<textarea name="comment" id="comment" cols="10" rows="3"></textarea>
 														<input type="submit" class="gradient-button" id="addRating" name="addRating" value="Gửi">
 													</form>
-												@endif											
+												@endif
 												</td>
 											</tr>
 										@endif
 									</table>
 								</div>
-								
+
 								<div class="actions">
 									<a href="{{route('userRoomDetail').'?id='.$orderHistoryTake_1->product->homestay->id}}" class="gradient-button">Book again</a>
 									<!-- <a href="#" class="gradient-button">Remove from list</a> -->
 								</div>
 							</article>
 							<!--//booking-->
-						@endforeach 
+						@endforeach
 						{{ $billHistory->withQueryString()->links('vendor.pagination.custom') }}
 					</section>
-					<!--//My Bookings-->	
+					<!--//My Bookings-->
 				</section>
 				<!--//three-fourth content-->
-				
+
 				<!--sidebar-->
 				<aside class="right-sidebar">
 
 					<!--Need Help Booking?-->
-					<article class="default clearfix">	
+					<article class="default clearfix">
 						<h2>Hỗ trợ đặt phòng?</h2>
 						<p>Gọi cho nhóm dịch vụ khách hàng của chúng tôi theo số dưới đây để nói chuyện với một trong những cố vấn của chúng tôi, những người sẽ giúp bạn với tất cả các nhu cầu kỳ nghỉ của bạn.</p>
-						<p class="number">1800 1989</p>
+						<p class="number">0971 0973 99</p>
 					</article>
 					<!--//Need Help Booking?-->
-					
+
 					<!--Ads-->
 					<article class="default clearfix">
-						<img src="uploads/Ads/ad.png" alt="">
+						<img src="/uploads/Ads/ad.png" alt="">
 					</article>
 					<!--//Ads-->
-					
+
 				</aside>
 				<!--//sidebar-->
 			</div>

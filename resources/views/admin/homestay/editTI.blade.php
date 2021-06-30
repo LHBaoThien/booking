@@ -3,11 +3,15 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/homestay/DStienich')}}">Danh Sách Tiện Ích</a>
+            </li>
 			<li>
+                <i class="icon-angle-right"></i>
 				<i class="icon-edit"></i>
 				<a href="#">Sửa Tiện ích</a>
 			</li>
@@ -33,34 +37,34 @@
 						  </div>
 						</div>
 						<div class="control-group">
-						  	<label class="control-label" for="status">Public BV:</label>
+						  	<label class="control-label" for="status">Trạng thái</label>
 						  	<label class="controls radio-inline">
-								<input type="radio" name="status" value="0" id="status" 
+								<input type="radio" name="status" value="0" id="status"
 									@if($EditTI->status==0)
 										checked="checked"
 									@endif
-								>Ẩn	
-							</label>	
+								>Ẩn
+							</label>
 							<label class="controls radio-inline">
 								<input type="radio" name="status" value="1" id="status"
 									@if($EditTI->status==1)
 										checked="checked"
 									@endif
-								>Public
+								>Hiện
 							</label>
 						</div>
 						<div class="form-actions">
-						 <button type="submit" class="btn btn-primary">Edit</button>
+						 <button type="submit" class="btn btn-primary">Sửa</button>
 						  <button type="reset" class="btn">Hủy</button>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>
-		<div><a href="{{url('/admin/homestay/DStienich')}}" class="btn btn-primary"><--</a></div>
+		<div><a href="{{url('/admin/homestay/DStienich')}}" class="btn btn-primary">Quay lại</a></div>
 	</div>
-	
-	
+
+
 @endsection

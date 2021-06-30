@@ -1275,7 +1275,7 @@ header .ribbon {
 
 .promo .gradient-button {
     background: #ffd400;
-    
+
 }
 
 .promo .gradient-button:hover {
@@ -3558,7 +3558,7 @@ aside input[type="submit"] {
 
 .bookings .b-info {
     float: left;
-    width: 72%;
+    width: 100%;
 }
 
 .bookings .actions {
@@ -3862,7 +3862,7 @@ button.ui-button::-moz-focus-inner {
     width: 30%;
     max-width: 350px;
     background: #0018c3;
-    
+
     box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 

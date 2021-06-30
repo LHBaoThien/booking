@@ -1,36 +1,31 @@
 <header>
 		<div class="wrap clearfix">
 			<!--logo-->
-			<h1 class="logo"><a href="{{url('')}}" title="Book Your Travel - home"><img src="partner/images/txt/logo.png" alt="Book Your Travel" /></a></h1>
+            <h1 class="logo"><a href="{{url('/')}}" title="Himinn Booking - Home"><img src="/partner/images/txt/logo.png" alt="Himinn Booking" /></a></h1>
 			<!--//logo-->
-			
-			{{-- <div class="ribbon">				
-				<nav>
-						<ul class="profile-nav">
-						<li class="active"><a>Xin cháo</a></li>
-						<li><a href="{{asset('logout')}}" title="Logout">Logout</a></li>
-						<li><a href="partner/login/login-and-register"title="Settings">Settings</a></li>
-						</ul>
-				</nav>
-			</div> --}}
-			
+
 			<!--search-->
-			<div class="search">
+			{{-- <div class="search">
 				<form id="search-form" method="get" action="search-form">
-					<input type="search" placeholder="Search entire site here" name="site_search" id="site_search" /> 
+					<input type="search" placeholder="Search entire site here" name="site_search" id="site_search" />
 					<input type="submit" id="submit-site-search" value="submit-site-search" name="submit-site-search"/>
 				</form>
-			</div>
+			</div> --}}
 			<!--//search-->
-			
+
 			<!--contact-->
-			<div class="contact">
-				<span ><a href="{{url('partner/login-partner')}}" style= "text-decoration: none ;color: ivory">Đăng nhập</a></span>
-			<span ><a href="{{url('partner/register-partner')}}" style= "text-decoration: none ;color: ivory">Đăng ký</a></span>
+			<div style="margin-top:30px">
+				<span style="font-size: 12px; background: ivory; margin-left: 60%; border-radius:10px; padding: 10px;">
+                    <a href="{{url('partner/login-partner')}}" style="text-decoration: none; color:#0f0ba3;">Đăng nhập</a>
+                </span>
+
+			    <span style="font-size: 12px; background: ivory; margin-left: 2%; border-radius:10px; padding: 10px">
+                    <a href="{{url('partner/register-partner')}}" style= "text-decoration: none ;color: #0f0ba3">Đăng ký</a>
+                </span>
 			</div>
 			<!--//contact-->
 		</div>
-		
+
 		<!--main navigation-->
 		{{-- <nav class="main-nav" role="navigation" id="nav">
 			<ul class="wrap">

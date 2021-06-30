@@ -1,21 +1,21 @@
 @extends('partner.login.master-login')
 @section('content')
     <!--main-->
-	<div class="main" role="main">		
+	<div class="main" role="main">
 		<div class="wrap clearfix">
 			<!--main content-->
 			<div class="content clearfix">
 				<!--three-fourth content-->
 				<section class="three-fourth" style="padding: 70px;">
-					
+
 					<!--inner navigation-->
 					<nav class="inner-nav">
 						<ul>
-							<li><a href="#Login" title="Login">Login Account</a></li>
+							<li><a href="#Login" title="Login">Đăng nhập</a></li>
 						</ul>
 					</nav>
 					<!--//inner navigation-->
-					
+
 					<!--Login account-->
 					<section id="Login" class="tab-content login-tab">
 						<!--booking-->
@@ -33,19 +33,19 @@
                                     <span class="errors-register">{{Session::get('massage')}}</span>
                             @endif
 							<div class="b-info">
-								<h1 style="text-align: center;">Login</h1>
+								<h1 style="text-align: center;">Đăng nhập</h1>
 								<form action="" method="POST" >
 									@csrf
 									<table style="margin :0 auto;">
 										<input type="hidden" name="_token" value="{{csrf_token()}}">
 										<tr>
-											<th>E-mail address</th>
+											<th>E-mail</th>
 											<td>
 											<input required type="email" id="email" name="email" />
 											</td>
 										</tr>
 										<tr>
-											<th>Password</th>
+											<th>Mật khẩu</th>
 											<td>
 												<input required type="password" id="password" name="password" />
 											</td>
@@ -73,9 +73,9 @@
 							</div>
 						</article>
 						<!--//booking-->
-						
+
 					</section>
-					<!--//Login account-->					
+					<!--//Login account-->
 				</section>
 				<!--//three-fourth content-->
 			</div>

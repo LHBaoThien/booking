@@ -13,7 +13,7 @@ class="active"
 
 @section('content')
 	<!--main-->
-	<div class="main" role="main">		
+	<div class="main" role="main">
 		<div class="wrap clearfix">
 			<!--main content-->
 			<div class="content clearfix">
@@ -22,8 +22,8 @@ class="active"
 					<!--crumbs-->
 					<ul class="crumbs">
 						<li><a href="{{route('userHomePage')}}" title="Home">Home</a></li>
-						<li><a href="{{route('userBlog')}}" title="Blog">Blog</a></li> 
-						<li>{{$blogDetailVal->title}}</li>                                       
+						<li><a href="{{route('userBlog')}}" title="Blog">Blog</a></li>
+						<li>{{$blogDetailVal->title}}</li>
 					</ul>
 					<!--//crumbs-->
 				</nav>
@@ -44,7 +44,7 @@ class="active"
 						</div>
 					</section>
 				<!--//three-fourth content-->
-				
+
 				<!--right sidebar-->
 				<aside class="right-sidebar">
 					@if(Count($homestaySuggest))
@@ -61,7 +61,7 @@ class="active"
 											</span>
 										</h3>
 										<span id="address">{{$homestaySuggestVal->province->name}}</span>
-										<p>Từ <span class="price">{{ number_format( $homestaySuggestVal->product->min('prices'),0,',','.' ) }}<small>/đêm</small></span></p>	
+										<p>Từ <span class="price">{{ number_format( $homestaySuggestVal->product->min('prices'),0,',','.' ) }}<small>/đêm</small></span></p>
 									</a>
 								</div>
 							@endforeach
@@ -77,10 +77,10 @@ class="active"
 					<!--//Ads-->
 
 					<!--Need Help Booking?-->
-					<article class="default clearfix">	
+					<article class="default clearfix">
 						<h2>Hỗ trợ đặt phòng?</h2>
 						<p>Gọi cho nhóm dịch vụ khách hàng của chúng tôi theo số dưới đây để nói chuyện với một trong những cố vấn của chúng tôi, những người sẽ giúp bạn với tất cả các nhu cầu kỳ nghỉ của bạn.</p>
-						<p class="number">1800 1989</p>
+						<p class="number">0971 0973 99</p>
 					</article>
 					<!--//Need Help Booking?-->
 				</aside>
@@ -89,7 +89,7 @@ class="active"
                 <!--bottom navigation-->
                 <div class="bottom-nav">
                     <!--back up button-->
-                    <a href="#" class="scroll-to-top" title="Back up">Back up</a> 
+                    <a href="#" class="scroll-to-top" title="Back up">Back up</a>
                     <!--//back up button-->
                 </div>
                 <!--//bottom navigation-->

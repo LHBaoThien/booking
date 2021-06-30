@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 09, 2021 lúc 03:28 PM
+-- Thời gian đã tạo: Th6 30, 2021 lúc 06:58 PM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `travelbooking`
+-- Cơ sở dữ liệu: `travelbooking_v2.0`
 --
 
 -- --------------------------------------------------------
@@ -40,6 +40,55 @@ CREATE TABLE `bills` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `bills`
+--
+
+INSERT INTO `bills` (`id`, `user_id`, `name`, `email`, `phone`, `note`, `status`, `payments`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(23, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 2, 570000, '2020-09-11 11:42:30', '2020-09-11 17:48:23', NULL),
+(24, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 2, 300000, '2020-09-11 11:43:14', '2020-09-11 17:48:23', NULL),
+(25, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 1, 300000, '2020-09-11 11:43:51', '2020-09-11 11:46:05', NULL),
+(26, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 2, 1015000, '2020-09-11 11:44:29', '2020-09-11 17:48:23', NULL),
+(27, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 2, 1800000, '2020-09-11 11:45:01', '2020-09-14 16:50:56', NULL),
+(28, NULL, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', NULL, 1, 950000, '2020-09-11 18:01:19', '2020-09-11 19:02:08', NULL),
+(29, NULL, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', NULL, 2, 300000, '2020-09-11 18:05:32', '2020-09-14 16:50:56', NULL),
+(30, 0, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', NULL, 2, 285000, '2020-09-11 18:11:50', '2020-09-14 16:50:56', NULL),
+(31, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', 'aaaa', 2, 285000, '2020-09-11 18:21:56', '2020-09-15 18:03:01', NULL),
+(32, 4, 'Lê Duy Linh', 'linhduyle1998@gmail.com', '0652521651', NULL, 2, 1015000, '2020-09-15 19:57:17', '2020-09-21 16:36:56', NULL),
+(33, 4, 'Lê Duy Linh', 'linhduyle1998@gmail.com', '0652521651', NULL, 2, 300000, '2020-09-15 19:57:56', '2020-09-17 15:27:25', NULL),
+(34, 4, 'Lê Duy Linh', 'linhduyle1998@gmail.com', '0652521651', NULL, 2, 300000, '2020-09-15 19:59:12', '2020-09-21 16:36:56', NULL),
+(35, 4, 'Lê Duy Linh', 'linhduyle1998@gmail.com', '0652521651', NULL, 1, 300000, '2020-09-15 22:48:34', '2020-09-17 17:01:54', NULL),
+(36, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 1, 400000, '2020-09-17 15:53:42', '2020-09-17 17:01:54', NULL),
+(37, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 1, 400000, '2020-09-17 15:54:34', '2020-09-17 17:01:54', NULL),
+(38, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 1, 285000, '2020-09-17 15:58:17', '2020-09-17 17:01:54', NULL),
+(39, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 1, 475000, '2020-09-17 17:04:17', '2020-09-17 17:06:02', NULL),
+(40, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', 'aaaaaaa', 1, 285000, '2020-09-17 17:46:39', '2020-09-17 17:47:27', NULL),
+(41, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', 'bbbbbb', 2, 285000, '2020-09-17 17:52:21', '2020-09-17 17:52:30', NULL),
+(42, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', 'ccccccc', 2, 285000, '2020-09-17 17:54:24', '2020-09-21 16:36:56', NULL),
+(44, 4, 'Linh Lee', 'linhduyle1998@gmail.com', '0652521651', NULL, 2, 400000, '2020-09-17 18:00:45', '2020-09-21 16:36:56', NULL),
+(45, 4, 'Linh Lee', 'linhduyle1998@gmail.com', '0652521651', NULL, 2, 380000, '2020-09-17 18:04:00', '2020-09-24 17:04:08', NULL),
+(46, 0, 'Linh', 'linhlee.dom@gmail.com', '0388271679', 'linhlee', 2, 475000, '2020-09-17 18:05:20', '2020-09-21 16:36:56', NULL),
+(47, 0, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271556', 'linhleedom', 1, 380000, '2020-09-17 18:07:36', '2020-09-17 18:07:57', NULL),
+(48, 0, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', 'linhleedom', 1, 380000, '2020-09-17 18:10:06', '2020-09-17 18:12:47', NULL),
+(49, 0, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', 'AAAAAA', 2, 475000, '2020-09-17 18:24:23', '2020-09-21 16:36:56', NULL),
+(50, 0, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', 'BBBBBBB', 1, 475000, '2020-09-17 18:25:55', '2020-09-17 18:26:26', NULL),
+(51, 2, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', 'cgffgdf', 2, 475000, '2020-09-21 16:44:04', '2020-09-21 17:48:36', NULL),
+(52, 2, 'Linh Lee', 'linhlee.dom@gmail.com', '0388271679', 'fvxcvcxv', 2, 1015000, '2020-09-21 18:00:05', '2020-09-25 17:00:27', NULL),
+(53, 0, 'Linh', 'leduylinh1998.nc@gmail.com', '0388271679', 'Tặng kèm người không', 2, 285000, '2020-09-25 16:54:35', '2020-09-25 17:00:28', NULL),
+(54, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 2, 400000, '2020-09-25 16:59:04', '2020-09-25 17:00:28', NULL),
+(55, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 2, 475000, '2020-09-25 17:21:16', '2021-06-02 15:04:05', NULL),
+(56, 3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', '0388271679', NULL, 2, 475000, '2020-09-25 17:23:29', '2021-06-02 15:04:05', NULL),
+(57, 0, 'Mi Hee', 'hihinewbie99@gmail.com', '0971097399', NULL, 2, 585000, '2021-06-11 03:27:29', '2021-06-23 05:19:47', NULL),
+(58, 6, 'Mi Hee', 'hihinewbie99@gmail.com', '0971097399', NULL, 2, 380000, '2021-06-11 03:33:23', '2021-06-23 05:19:47', NULL),
+(59, 6, 'Linh Lee 2', 'linhlee.dom@gmail.com', '0388271556', NULL, 2, 300000, '2021-06-11 04:06:31', '2021-06-23 05:19:47', NULL),
+(60, 0, 'Mi Hee', 'hihinewbie99@gmail.com', '0971097399', NULL, 2, 300000, '2021-06-11 04:17:09', '2021-06-23 05:19:47', NULL),
+(61, 8, 'test', 'anhdv001@gmail.com', '0123456789', 'đâsd', 1, 380000, '2021-06-11 05:09:46', '2021-06-11 05:27:10', NULL),
+(62, 8, 'test', 'anhdv001@gmail.com', '0123456789', 'ádasdasdasdasd', 1, 380000, '2021-06-11 05:20:52', '2021-06-11 05:27:18', NULL),
+(63, 8, 'test', 'anhdv001@gmail.com', '0123456789', 'áđâsd', 2, 380000, '2021-06-11 05:27:51', '2021-06-23 05:19:47', NULL),
+(64, 2, 'Mi Hee', 'hihinewbie99@gmail.com', '0971097399', 'zsrys', 1, 570000, '2021-06-23 05:49:16', '2021-06-23 05:54:32', NULL),
+(65, 10, 'Thúy', 'phanhongocthuy.59ttql@gmail.com', '0931185811', 'Nô', 2, 380000, '2021-06-28 14:27:21', '2021-06-30 13:10:28', NULL),
+(66, 11, 'Mi Hee', 'yunheemi.troi@gmail.com', '0971097399', NULL, 2, 380000, '2021-06-28 19:39:12', '2021-06-30 13:10:28', NULL);
 
 -- --------------------------------------------------------
 
@@ -66,16 +115,18 @@ CREATE TABLE `blogs` (
 --
 
 INSERT INTO `blogs` (`id`, `title`, `photo`, `description`, `post`, `alias`, `maqh`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Khu du lịch Sun World Danang Wonders', 'uploads/blog/13-12-20176-3606-1513140507.png', 'Khu du lịch Sun World Danang Wonders sẽ trở thành “Xứ sở băng giá” với tuyết trắng ngập tràn, ngôi làng Bắc Âu như cổ tích từ 20 đến 30/12.', '<p>Khu du lịch Sun World Danang Wonders sẽ trở th&agrave;nh &ldquo;Xứ sở băng gi&aacute;&rdquo; với tuyết trắng ngập tr&agrave;n, ng&ocirc;i l&agrave;ng Bắc &Acirc;u như cổ t&iacute;ch từ 20 đến 30/12.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20174-9555-1513140507.png\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p>M&ugrave;a Gi&aacute;ng sinh n&agrave;y, du kh&aacute;ch đến Sun World Danang Wonders sẽ ngạc nhi&ecirc;n trước một khung cảnh được trang ho&agrave;ng lộng lẫy, hệt như một ng&ocirc;i l&agrave;ng ch&acirc;u &Acirc;u được mang về v&agrave; đặt trong c&ocirc;ng vi&ecirc;n giữa l&ograve;ng Đ&agrave; Nẵng.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20176-3606-1513140507.png\" style=\"height:611px; width:950px\" /></p>\r\n\r\n<p>Từ lối v&agrave;o, tiếng nhạc Gi&aacute;ng sinh reo vang rộn r&agrave;ng, &Ocirc;ng gi&agrave; Noel h&oacute;m hỉnh v&agrave; người Tuyết dễ thương lu&ocirc;n ch&agrave;o đ&oacute;n du kh&aacute;ch bằng nụ cười th&acirc;n thiện. Khu vực trung t&acirc;m được trang ho&agrave;ng tựa như ng&ocirc;i l&agrave;ng Bắc &Acirc;u xinh đẹp &ndash; qu&ecirc; hương của &ocirc;ng gi&agrave; Santa Claus v&agrave; những c&acirc;u chuyện cổ t&iacute;ch Gi&aacute;ng sinh diệu kỳ. Ng&ocirc;i nh&agrave; v&agrave; c&acirc;y th&ocirc;ng phủ đầy tuyết trắng x&oacute;a, cỗ xe tuần lộc chở &ocirc;ng gi&agrave; Noel c&ugrave;ng t&uacute;i qu&agrave; mang tặng cho trẻ nhỏ sẽ l&agrave; điểm check-in l&yacute; tưởng cho c&aacute;c du kh&aacute;ch muốn lưu giữ những khoảnh khắc l&atilde;ng mạn, ấm &aacute;p trong m&ugrave;a Gi&aacute;ng sinh.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20176-8110-1513140508.png\" style=\"height:636px; width:950px\" /></p>\r\n\r\n<p>Kh&ocirc;ng kh&iacute; rộn r&agrave;ng khắp c&ocirc;ng vi&ecirc;n với nhiều hoạt động biểu diễn nghệ thuật ch&acirc;u &Acirc;u tại khu vực Cổng th&agrave;nh v&agrave; Sun Wheel. Du kh&aacute;ch sẽ được thưởng thức m&uacute;a Balle tuyết v&agrave; thi&ecirc;n nga, biểu diễn Flash Mob B&agrave; gi&agrave; v&agrave; &Ocirc;ng gi&agrave; Noel vui nhộn</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20177-8289-1513140508.png\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p>Với c&aacute;c b&eacute;, đ&acirc;y sẽ l&agrave; một Noel vui vẻ với những bức h&igrave;nh đẹp chụp c&ugrave;ng những c&acirc;y th&ocirc;ng Noel &ldquo;di động&rdquo; v&agrave; được nhận những m&oacute;n qu&agrave; Gi&aacute;ng sinh độc đ&aacute;o. Với c&aacute;c bạn trẻ, đ&acirc;y l&agrave; dịp để chẳng cần sang ch&acirc;u &Acirc;u cũng c&oacute; thể ngắm tuyết rơi l&atilde;ng mạn v&agrave; đ&ugrave;a nghịch với người Tuyết trong một m&ugrave;a Gi&aacute;ng sinh đậm chất Bắc &Acirc;u. C&ograve;n với c&aacute;c &ocirc;ng bố, b&agrave; mẹ, kh&ocirc;ng c&oacute; nơi n&agrave;o tuyệt hơn &ldquo;Xứ sở băng gi&aacute;&rdquo; giữa miền nhiệt đới n&agrave;y, để cả nh&agrave; c&oacute; một m&ugrave;a Gi&aacute;ng sinh thật &yacute; nghĩa.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-201710-383610991-8209-1513140508.png\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p>Một m&ugrave;a Gi&aacute;ng sinh nữa lại về, năm mới cũng cận kề. C&ugrave;ng trảy hội băng tuyết với Sun World Danang Wonders v&agrave; trải nghiệm những dư vị mới lạ m&agrave; c&ocirc;ng vi&ecirc;n d&agrave;nh tặng ri&ecirc;ng cho du kh&aacute;ch, như một m&oacute;n qu&agrave; Gi&aacute;ng sinh thay cho lời tri &acirc;n.</p>', 'khu-du-lich-sun-world-danang-wonders', '493HH', 1, NULL, NULL, NULL),
-(2, 'Ba Na Hills Golf Club tại Đà Nẵng nhận danh hiệu sân Golf tốt nhất Châu Á', 'uploads/blog/1-12-201745-5490-1512121902.png', 'Ba Na Hills Golf Club vừa nhận giải thưởng do World Golf Awards trao tặng sau 7 tháng bình chọn.', '<p>Ng&agrave;y 25/11, tại Lễ trao giải thưởng golf thế giới World Golf Awards diễn ra ở La Manga del Mar (T&acirc;y Ban Nha), Ba Na Hills Golf Club được vinh danh l&agrave; s&acirc;n golf tốt nhất ch&acirc;u &Aacute; v&agrave; s&acirc;n golf tốt nhất Việt Nam.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/1-12-201745-5490-1512121902.png\" style=\"height:635px; width:950px\" /></p>\r\n\r\n<p>Đại diện s&acirc;n golf ở Đ&agrave; Nẵng l&ecirc;n nhận giải thưởng.</p>\r\n\r\n<p>Đ&acirc;y l&agrave; kết quả sau 7 th&aacute;ng b&igrave;nh chọn với h&agrave;ng trăm ngh&igrave;n phiếu bầu của c&aacute;c chuy&ecirc;n gia h&agrave;ng đầu trong lĩnh vực golf v&agrave; du lịch, c&aacute;c doanh nghiệp lữ h&agrave;nh, người chơi golf v&agrave; c&ocirc;ng ch&uacute;ng đến từ 40 quốc gia tr&ecirc;n thế giới.World Golf Awards ra mắt từ năm 2014 được đ&aacute;nh gi&aacute; l&agrave; giải thưởng uy t&iacute;n nhất trong ng&agrave;nh du lịch golf v&agrave; năm nay c&oacute; quy m&ocirc; lớn nhất.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/1-12-201746-735373932-4762-1512121902.png\" style=\"height:534px; width:950px\" /></p>\r\n\r\n<p>S&acirc;n golf mang đến cho người chơi những trải nghiệm với chất lượng dịch vụ mang đẳng cấp 5 sao.</p>\r\n\r\n<p>Đ&acirc;y l&agrave; năm thứ hai li&ecirc;n tiếp s&acirc;n golf n&agrave;y nhận giải thưởng của ng&agrave;nh c&ocirc;ng nghiệp golf to&agrave;n cầu. Th&aacute;ng 11/2016, nơi đ&acirc;y nhận danh hiệu &ldquo;S&acirc;n golf mới tốt nhất thế giới&rdquo; từ giải thưởng World Golf Awards diễn ra tại Bồ Đ&agrave;o Nha, v&agrave; giải thưởng &ldquo;S&acirc;n golf mới tốt nhất ch&acirc;u &Aacute; Th&aacute;i B&igrave;nh Dương&rdquo; tại Hội nghị cấp cao Golf ch&acirc;u &Aacute; Th&aacute;i B&igrave;nh Dương ở Th&aacute;i Lan.Bắt đầu đi v&agrave;o hoạt động từ th&aacute;ng 3/2016, s&acirc;n golf do tập đo&agrave;n Sun Group l&agrave;m chủ đầu tư, tập đo&agrave;n IMG quản l&yacute; đ&atilde; trở th&agrave;nh địa điểm chơi golf ấn tượng bậc nhất Việt Nam. Được thiết kế bởi cựu golf thủ số 1 thế giới Luke Donald, s&acirc;n golf c&oacute; bố cục h&agrave;i h&ograve;a, xen lẫn giữa địa h&igrave;nh sườn n&uacute;i l&agrave; hồ nước, d&ograve;ng suối v&agrave; thảm thực vật xanh được chăm s&oacute;c kỹ lưỡng.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/1-12-201755-3140-1512121903.png\" style=\"height:633px; width:950px\" /></p>\r\n\r\n<p>Để biết th&ecirc;m th&ocirc;ng tin về s&acirc;n golf hoặc đặt giờ chơi, du kh&aacute;ch tham khảo tại website.</p>\r\n\r\n<p>T&iacute;nh năng nổi trội nhất của s&acirc;n golf l&agrave; sự linh hoạt cho người chơi. Luke Donald đ&atilde; bố tr&iacute; năm bệ ph&aacute;t b&oacute;ng để c&aacute;c golf thủ c&oacute; thể tận hưởng v&ograve;ng golf d&agrave;i ngắn kh&aacute;c nhau. B&ecirc;n cạnh đ&oacute;, đ&acirc;y l&agrave; s&acirc;n golf duy nhất ở miền Trung được thắp s&aacute;ng về đ&ecirc;m, nhằm thỏa m&atilde;n nhu cầu đam m&ecirc; của những người bận rộn.</p>', 'ba-na-hills-golf-club-tai-da-nang-nhan-danh-hieu-san-golf-tot-nhat-chau-a', '493HH', 1, NULL, NULL, NULL),
-(3, 'Chùa Linh Ứng – Địa danh không thể bỏ qua khi tới Đà Nẵng', 'uploads/blog/Chua-linh-ung-2.jpg', 'Nằm cách trung tâm thành phố Đà Nẵng 10 km về phía Đông Bắc, ở độ cao 693 m so với mực nước biển', '<p>Ch&ugrave;a Linh Ứng được x&acirc;y dựng theo phong c&aacute;ch hiện đại kết hợp với n&eacute;t truyền thống vốn c&oacute; của c&aacute;c ng&ocirc;i ch&ugrave;a tại Việt Nam, m&aacute;i ng&oacute;i được uốn cong c&oacute; h&igrave;nh con rồng, c&aacute;c cột trụ to v&agrave; vững chắc được người thợ tỉa t&oacute;t rất kỹ lưỡng tạo th&agrave;nh h&igrave;nh những con rồng uốn lượn một c&aacute;ch tinh xảo v&agrave; nghệ thuật.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-1.jpg\" style=\"height:750px; width:1000px\" /></p>\r\n\r\n<p>Điểm nhấn quan trọng của ch&ugrave;a Linh Ứng B&atilde;i Bụt l&agrave; tượng Phật Qu&aacute;n Thế &Acirc;m được xem l&agrave; cao nhất Việt Nam (67 m). Tượng đứng tựa lưng v&agrave;o n&uacute;i, khu&ocirc;n mặt hướng ra biển với đ&ocirc;i mắt hiền từ, một tay b&agrave; bắt ấn tam muội, tay kia lại cầm b&igrave;nh nước cam lộ như rưới an b&igrave;nh cho những ngư d&acirc;n đang vươn khơi xa, mang theo bao lời cầu mong về một vụ m&ugrave;a s&oacute;ng y&ecirc;n biển lặng v&agrave; quốc th&aacute;i d&acirc;n an.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-2.jpg\" style=\"height:501px; width:900px\" /></p>\r\n\r\n<p>Ngo&agrave;i việc được biết đến như một ng&ocirc;i ch&ugrave;a đẹp, lớn v&agrave;&hellip; trẻ nhất trong 3 ng&ocirc;i &ldquo;Linh Ứng Tự&rdquo; ở Đ&agrave; Nẵng, Ch&ugrave;a Linh Ứng B&atilde;i Bụt c&ograve;n được biết đến bỡi nơi c&oacute; tượng Phật Quan Thế &Acirc;m cao nhất Việt Nam.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-3.jpg\" style=\"height:750px; width:1000px\" /></p>\r\n\r\n<p>Một điều đặc biệt nữa của ch&ugrave;a Linh Ứng ch&iacute;nh l&agrave; cho d&ugrave; đứng bất kỳ đ&acirc;u trong l&ograve;ng Đ&agrave; Nẵng cũng sẽ đều dễ d&agrave;ng tr&ocirc;ng thấy tượng Phật B&agrave; Quan Thế &Acirc;m. Ch&iacute;nh v&igrave; nằm ở địa thế cao nhất của b&aacute;n đảo Sơn Tr&agrave; n&ecirc;n ngay từ cổng ch&ugrave;a, du kh&aacute;ch đ&atilde; c&oacute; thể đưa tầm mắt hướng ra xa to&agrave;n bộ đ&ocirc; thị trẻ Đ&agrave; Nẵng. C&ograve;n nếu đổi hướng nh&igrave;n về ph&iacute;a biển, Mỹ Kh&ecirc; sẽ trong tầm nh&igrave;n với cả b&atilde;i biển nước trong xanh c&ugrave;ng bờ c&aacute;t d&agrave;i trắng mịn, chạy v&ograve;ng cung theo con đường dưới ch&acirc;n n&uacute;i của b&aacute;n đảo Sơn Tr&agrave;.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-4.jpg\" style=\"height:665px; width:1000px\" /></p>\r\n\r\n<p>Với vẻ đẹp nguy nga, tr&aacute;ng lệ, c&ugrave;ng danh tiếng vang rộng khắp cả nước, n&ecirc;n Ch&ugrave;a Linh Ứng lu&ocirc;n khiến cho c&aacute;c du kh&aacute;ch phải t&ograve; m&ograve;, muốn được gh&eacute; thăm v&agrave; chi&ecirc;m ngưỡng vẻ đẹp của ng&ocirc;i ch&ugrave;a linh thi&ecirc;ng nhất của th&agrave;nh phố biển Đ&agrave; Nẵng. V&agrave; nếu bạn sắp c&oacute; tour&nbsp;<a href=\"https://www.vnbooking.com/city/da-nang-hotels.html\">du lịch Đ&agrave; Nẵng</a>&nbsp;th&igrave; đừng qu&ecirc;n đặt ch&acirc;n tới Linh Ứng Tự nh&eacute;!</p>', 'chua-linh-ung-dia-danh-khong-the-bo-qua-khi-toi-da-nang', '493HH', 1, NULL, NULL, NULL),
-(4, 'Mộc Châu hứa hẹn cho mùa valentine trọn vẹn', 'uploads/blog/neu1421312085.jpg', 'Với khung cảnh lãng mạn và nguyên sơ, Mộc Châu hứa hẹn sẽ mang đến cho những cặp uyên ương một mùa valentine ngọt ngào và trọn vẹn nhất', '<p><strong>Đồi ch&egrave; tr&aacute;i tim</strong></p>\r\n\r\n<p>Một địa điểm l&yacute; tưởng khi đến với Mộc Ch&acirc;u trong ng&agrave;y lễ valentine sắp tới ch&iacute;nh l&agrave; đồi ch&egrave; h&igrave;nh tr&aacute;i tim, với những s&oacute;ng ch&egrave; uốn lượn, chạy h&uacute;t tầm mắt, một m&agrave;u xanh mơn mởn rạng ngời c&ugrave;ng với hương ch&egrave; thơm ng&agrave;o ngạt khắp cao nguy&ecirc;n tạo n&ecirc;n một vẻ đẹp ho&agrave;n mỹ d&agrave;nh cho c&aacute;c cặp đ&ocirc;i y&ecirc;u th&iacute;ch sự l&atilde;ng mạn tự nhi&ecirc;n.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/doi-che-moc-chau.jpg\"><img alt=\"doi che moc chau\" src=\"https://img.blogdulich.vn/2015/02/doi-che-moc-chau.jpg\" style=\"height:633px; width:950px\" /></a><br />\r\n<strong>Tinh kh&ocirc;i vườn cải trắng</strong></p>\r\n\r\n<p>Hoa cải được trồng k&iacute;n cả một quả đồi, k&eacute;o d&agrave;i từ lũng n&agrave;y đến ch&acirc;n n&uacute;i kia, khắp kh&ocirc;ng gian bao la rộng lớn được phủ bằng một m&agrave;u trắng tinh kh&ocirc;i tạo n&ecirc;n một khung cảnh thần ti&ecirc;n, l&atilde;ng mạn. C&ograve;n điều g&igrave; tuyệt vời hơn khi s&aacute;nh bước c&ugrave;ng người ấy giữa kh&ocirc;ng gian bạt ng&agrave;n chỉ c&oacute; 2 người, m&agrave;u trắng tinh kh&ocirc;i của hoa cải tựa như t&igrave;nh y&ecirc;u trong s&aacute;ng của đ&ocirc;i lứa.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/neu1421312085.jpg\"><img alt=\"neu1421312085\" src=\"https://img.blogdulich.vn/2015/02/neu1421312085.jpg\" style=\"height:633px; width:950px\" /></a></p>\r\n\r\n<p><strong>B&aacute;t ng&aacute;t đồi th&ocirc;ng bản &Aacute;ng</strong></p>\r\n\r\n<p>Một Đ&agrave; Lạt đầy mộng mơ nằm giữa khung trời của cao nguy&ecirc;n Mộc Ch&acirc;u. C&aacute;c đ&ocirc;i t&igrave;nh nh&acirc;n c&oacute; thể thu&ecirc; bạt cắm trại giữa rừng th&ocirc;ng xanh, v&uacute;t thẳng l&ecirc;n trời cao, vươn l&ecirc;n đ&oacute;n nắng mai. Đi xe đạp đ&ocirc;i ngắm ho&agrave;ng h&ocirc;n, mặt trời từ từ xuống n&uacute;i khuất sau những rặng th&ocirc;ng le l&oacute;i ch&uacute;t &aacute;nh s&aacute;ng cuối ng&agrave;y m&agrave;u mật v&agrave;ng ấm &aacute;p, hay lang thang v&agrave;o rừng th&ocirc;ng, men theo đồng ruộng trải d&agrave;i, s&oacute;ng đ&ocirc;i quanh hồ,&hellip;</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/rung_thong.jpg\"><img alt=\"rung_thong\" src=\"https://img.blogdulich.vn/2015/02/rung_thong.jpg\" style=\"height:602px; width:950px\" /></a></p>\r\n\r\n<p><strong>Th&aacute;c Dải Yếm</strong></p>\r\n\r\n<p>D&ograve;ng th&aacute;c đổ ầm ầm, trắng x&oacute;a chảy xuống tạo d&ograve;ng chảy nhỏ, tr&ocirc;i hiền h&ograve;a, m&agrave;u xanh như soi gương, nơi đ&acirc;y được nhiều cặp uy&ecirc;n ương chọn l&agrave; điểm đến h&ograve; hẹn, thề non hẹn biển, cũng l&agrave; nơi thi&ecirc;ng li&ecirc;ng để minh chứng cho t&igrave;nh y&ecirc;u lứa đ&ocirc;i. Nơi đ&acirc;y c&ograve;n mang đậm dấu ấn c&acirc;u chuyện t&igrave;nh l&atilde;ng mạn về th&aacute;c Dải Yếm.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/thac-dai-yem_Sac-mau-ty.jpg\"><img alt=\"thac-dai-yem_Sac-mau-ty\" src=\"https://img.blogdulich.vn/2015/02/thac-dai-yem_Sac-mau-ty.jpg\" style=\"height:633px; width:950px\" /></a><br />\r\n<strong>Rừng đ&agrave;o</strong></p>\r\n\r\n<p>Trong kh&ocirc;ng kh&iacute; m&ugrave;a xu&acirc;n &ugrave;a về, hoa đ&agrave;o Mộc Ch&acirc;u thời điểm n&agrave;y đ&atilde; nở bung rực rỡ xen với những chồi xanh non l&aacute; mới, từng c&agrave;nh hoa &ugrave;a xuống, tạo v&ograve;m, ngước mắt nh&igrave;n l&ecirc;n chỉ thấy một v&ugrave;ng trời chấm hồng, c&ograve;n g&igrave; l&atilde;ng m&atilde;n hơn khi s&oacute;ng đ&ocirc;i c&ugrave;ng người ấy tr&ecirc;n con đường thắm đ&agrave;o xu&acirc;n trong ng&agrave;y lễ n&agrave;y.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/du-lich-sapa-3-ngay-7.jpg\"><img alt=\"hoa đào\" src=\"https://img.blogdulich.vn/2015/02/du-lich-sapa-3-ngay-7.jpg\" style=\"height:602px; width:950px\" /></a></p>\r\n\r\n<p>C&ograve;n chần chờ g&igrave; nữa, chuẩn bị kế hoạch đến Mộc Ch&acirc;u đ&oacute;n valentine c&ugrave;ng người ấy, để ghi lại những khoảnh khắc đẹp tuyệt vời trong ng&agrave;y lễ n&agrave;y. Ch&uacute;c c&aacute;c bạn m&ugrave;a valentine thật ngọt ng&agrave;o!</p>', 'moc-chau-hua-hen-cho-mua-valentine-tron-ven', '156HH', 1, NULL, NULL, NULL),
-(5, 'Chia sẻ kinh nghiệm du lịch Phú Quốc', 'uploads/blog/tour_packages-Copy.png', 'Du lịch Phú Quốc nên đi vào thời điểm nào là tốt? Ăn gì, chơi ở đâu khi đến Phú Quốc? Nên ở khách sạn nào ở Phú Quốc?', '<p>Đ&oacute; l&agrave; một số c&acirc;u hỏi thường gặp khi&nbsp; du lịch đảo Ph&uacute; Quốc &ndash; đảo Ngọc của Việt Nam v&agrave; để giải đ&aacute;p những c&acirc;u hỏi tr&ecirc;n th&igrave; dưới đ&acirc;y l&agrave; một số th&ocirc;ng tin đầy đủ v&agrave; cần thiết d&agrave;nh cho những ai đang c&oacute; &yacute; định du h&iacute; tới h&ograve;n đảo xinh đẹp n&agrave;y.</p>\r\n\r\n<p><img alt=\"tour_packages (Copy)\" src=\"https://img.blogdulich.vn/2016/04/tour_packages-Copy.png\" style=\"height:570px; width:950px\" /></p>\r\n\r\n<h1><strong>Thời điểm th&iacute;ch hợp nhất để du lịch Ph&uacute; Quốc:</strong></h1>\r\n\r\n<p>Kh&aacute;c với kh&iacute; hậu 4 m&ugrave;a r&otilde; rệt ở miền Bắc th&igrave; Ph&uacute; Quốc c&oacute; kiểu thời tiết kh&iacute; hậu nhiệt đới gi&oacute; m&ugrave;a ph&acirc;n biệt 2 m&ugrave;a r&otilde; rệt: m&ugrave;a mưa từ th&aacute;ng 5 đến th&aacute;ng 10 v&agrave; m&ugrave;a kh&ocirc; l&agrave; từ th&aacute;ng 11 đến hết th&aacute;ng 4 năm sau. Nhiệt độ nơi đ&acirc;y quanh năm m&aacute;t mẻ dao động từ 26 &ndash; 28 độ do đ&oacute; bất kỳ thời điểm n&agrave;o bạn đến Ph&uacute; Quốc đều c&oacute; được sự thoải m&aacute;i nhất định nhưng thời gian đẹp nhất vẫn l&agrave; m&ugrave;a kh&ocirc; tức l&agrave; từ th&aacute;ng 11 đến th&aacute;ng 4(biển đẹp hiền h&ograve;a , kh&ocirc;ng mưa)</p>\r\n\r\n<h2><strong>Phương tiện di chuyển đến đảo Ph&uacute; Quốc &ndash; Du lịch ph&uacute; quốc&nbsp;</strong></h2>\r\n\r\n<p>Đi từ H&agrave; Nội v&agrave;o Ph&uacute; Quốc lựa chọn tối ưu nhất về phương tiện di chuyển chắc chắn l&agrave; m&aacute;y bay, bạn c&oacute; thể lựa chọn một trong những h&atilde;ng m&aacute;y bay vietnam arline, vietjet hoặc jetstar&hellip;</p>\r\n\r\n<p><img alt=\"tour-du-lich-phu-quoc\" src=\"https://img.blogdulich.vn/2016/04/tour-du-lich-phu-quoc.jpg\" style=\"height:736px; width:950px\" /></p>\r\n\r\n<p>Nếu ở S&agrave;i G&ograve;n bạn c&oacute; thể tới Ph&uacute; Quốc bằng một trong hai phương tiện chủ yếu m&aacute;y bay hoặc &ocirc; t&ocirc;. Đi xe &ocirc; t&ocirc; ra bến xe Miền T&acirc;y mua v&eacute; đi từ HCM tới Rạch Gi&aacute; (hoặc H&agrave; Ti&ecirc;n) v&agrave; từ Rạch Gi&aacute; (H&agrave; Ti&ecirc;n) mua v&eacute; t&agrave;u sang đảo Ph&uacute; Quốc.</p>\r\n\r\n<h3><strong>N&ecirc;n ở resort cao cấp hay kh&aacute;ch sạn b&igrave;nh d&acirc;n khi du lịch&nbsp;Ph&uacute; Quốc ?</strong></h3>\r\n\r\n<p>Ph&uacute; Quốc l&agrave; một trong những điểm du lịch hấp dẫn của nước ta, nơi đ&acirc;y c&oacute; rất nhiều resort v&agrave; kh&aacute;ch sạn cao cấp cho tới b&igrave;nh d&acirc;n do đ&oacute; việc ở resort cao cấp hay kh&aacute;ch sạn b&igrave;nh d&acirc;n c&ograve;n t&ugrave;y thuộc v&agrave;o t&uacute;i tiền của bạn. Dưới đ&acirc;y l&agrave; tư vấn tổng hợp những resort cao cấp v&agrave; những&nbsp;<strong><a href=\"http://www.vnbooking.com/city/phu-quoc-hotels.html\">kh&aacute;ch sạn Ph&uacute; Quốc</a></strong>&nbsp;b&igrave;nh d&acirc;n gi&aacute; rẻ để mọi người c&ugrave;ng tham khảo:</p>\r\n\r\n<p><img alt=\"cong-vao-vinpearl-phu-quoc\" src=\"https://img.blogdulich.vn/2016/04/cong-vao-vinpearl-phu-quoc.jpg\" style=\"height:565px; width:950px\" /></p>\r\n\r\n<p><strong>Vinpearl Ph&uacute; Quốc Resort</strong>&nbsp;l&agrave; một resort cao cấp 5 sao với vị tr&iacute; đắc địa &nbsp;tr&ecirc;n đảo Ph&uacute; Quốc nghỉ dưỡng tại đ&acirc;y du kh&aacute;ch c&oacute; thể dễ d&agrave;ng di chuyển tới những địa danh du lịch nổi tiếng của Ph&uacute; Quốc &ndash;&nbsp;<a href=\"http://www.vnbooking.com/hotel/vinpearl-resort-phu-quoc.html\" target=\"_blank\">Vinpearl Resort Ph&uacute; Quốc</a>&nbsp;gồm&nbsp;750 ph&ograve;ng nghỉ dưỡng cực sang trọng với kết cấu nội thất, tiện nghi hiện đại mức gi&aacute; của resort n&agrave;y thuộc dạng cực khủng 3.400.000đ/đ&ecirc;m đối với ph&ograve;ng Deluxe Garden Veiw v&agrave; khoảng 55 triệu đồng đối với hạng ph&ograve;ng 4 BR Presidential Suite Villa (Full board)</p>\r\n\r\n<p><img alt=\"96681_hotelimage_39533329\" src=\"https://img.blogdulich.vn/2016/04/96681_hotelimage_39533329.jpg\" style=\"height:543px; width:950px\" /></p>\r\n\r\n<p><strong>Eden Resort Ph&uacute; Quốc&nbsp;</strong>: L&agrave; resort đạt ti&ecirc;u chuẩn 4 sao &nbsp;Eden Resort Ph&uacute; Quốc sở hữu 166 ph&ograve;ng nghỉ được đ&aacute;nh gi&aacute; l&agrave; cực tốt với c&aacute;c tiện nghi cao cấp được b&agrave;i tr&iacute; h&agrave;i h&ograve;a. Khi nghỉ dưỡng ở Eden Resort du kh&aacute;ch c&oacute; thể hướng tầm mắt của m&igrave;nh ngắm những b&atilde;i biển đẹp hay đắm ch&igrave;m trong thơ mộng của khu vườn t&igrave;nh y&ecirc;u. Nh&agrave; h&agrave;ng của Eden Resort v&ocirc; c&ugrave;ng hấp dẫn bởi khung cảnh l&atilde;ng mạn với c&aacute;c m&oacute;n ăn quốc tế v&agrave; những m&oacute;n ăn đặc sản mang thương hiệu Ph&uacute; Quốc..Mức gi&aacute; của Resort &nbsp;n&agrave;y đối với hạng ph&ograve;ng Garden View Deluxe l&agrave; 2.300.000đ/đ&ecirc;m</p>\r\n\r\n<p><img alt=\"92494_hotelimage_4\" src=\"https://img.blogdulich.vn/2016/04/92494_hotelimage_4.jpg\" style=\"height:543px; width:950px\" /></p>\r\n\r\n<p><strong>Thi&ecirc;n Thanh Resort Ph&uacute; Quốc</strong>: Thuộc danh s&aacute;ch những kh&aacute;ch sạn 3 sao ở Ph&uacute; Quốc tọa lạc tr&ecirc;n một vị tr&iacute; đẹp của B&atilde;i D&agrave;i thuộc &nbsp;thị trấn Đ&ocirc;ng Dương &ndash; b&atilde;i biển trung t&acirc;m của Đảo Ph&uacute; Quốc. Nghỉ dưỡng ở đ&acirc;y du kh&aacute;ch sẽ được kh&aacute;m ph&aacute; sự y&ecirc;n b&igrave;nh của những c&aacute;nh rừng nguy&ecirc;n sinh, c&aacute;c ng&ocirc;i l&agrave;ng ven biển quanh năm với nghề ch&agrave;i lưới người d&acirc;n nơi đ&acirc;y rất mến kh&aacute;ch bạn sẽ c&oacute; cảm gi&aacute;c đang nghỉ dưỡng tại ch&iacute;nh ng&ocirc;i nh&agrave; của m&igrave;nh khi đến với Thi&ecirc;n Thanh Resort.</p>\r\n\r\n<p><strong>Ng&agrave;n Sao Resort Ph&uacute; Quốc:&nbsp;</strong>l&agrave; kh&aacute;ch sạn 2 sao nằm tại khu vực trung t&acirc;m th&agrave;nh phố, nghỉ dưỡng tại đ&acirc;y bạn sẽ thoải m&aacute;i thời gian để đi đến những địa điểm du lịch c&oacute; tiếng ở Ph&uacute; Quốc như: Long Beach, Coco Devi Center, b&atilde;i Trường&hellip;</p>\r\n\r\n<p>Ng&agrave;n Sao Resort c&oacute; 74 ph&ograve;ng nghỉ rộng r&atilde;i v&agrave; tho&aacute;ng m&aacute;t tr&ecirc;n ngọn đồi lộng gi&oacute; với kiến tr&uacute;c h&agrave;i h&ograve;a, b&atilde;i đỗ xe, nh&agrave; h&agrave;ng, qu&aacute;n caf&eacute;,&hellip; v&agrave; rất rất nhiều dịch vụ tiện &iacute;ch kh&aacute;c sẽ khiến bạn y&ecirc;u nơi đ&acirc;y hơn bao giờ hết.</p>', 'chia-se-kinh-nghiem-du-lich-phu-quoc', '911HH', 1, NULL, NULL, NULL),
-(6, 'Các địa điểm tham quan khi đến Sầm Sơn', 'uploads/blog/anh-2-hon-trong-mai.jpg', 'Từ những năm đầu thế kỉ 20, người Pháp đã nhận ra vẻ đẹp và tiềm năng du lịch của Sầm Sơn', '<h2>Từ những năm đầu thế kỉ 20, người Ph&aacute;p đ&atilde; nhận ra vẻ đẹp v&agrave; tiềm năng du lịch của Sầm Sơn, bắt đầu khai th&aacute;c v&agrave; biến Sầm Sơn th&agrave;nh nơi nghỉ dưỡng l&yacute; tưởng. Sầm Sơn được trời ph&uacute; cho một v&ugrave;ng trời nước m&ecirc;nh m&ocirc;ng xanh ngắt với b&atilde;i c&aacute;t trắng mịn d&agrave;i hơn 10&nbsp;km, s&oacute;ng đ&aacute;nh mạnh, nhiều hải sản qu&yacute; v&agrave; đặc biệt c&oacute; d&atilde;y n&uacute;i Trường Lệ với c&aacute;c thắng t&iacute;ch.</h2>\r\n\r\n<ol>\r\n	<li>\r\n	<h3><strong>C&aacute;c địa điểm vui chơi l&acirc;u đời ở Sầm Sơn</strong></h3>\r\n	</li>\r\n</ol>\r\n\r\n<p>Tới Sầm Sơn trước hết phải ngắm cảnh biển v&agrave; tắm biển. Mỗi b&igrave;nh m&igrave;nh thức giấc ngắm mặt trời l&ecirc;n, mỗi chiều về xuống biển tắm dưới l&agrave;n nước m&aacute;t trong xanh hay mỗi khi m&agrave;n đ&ecirc;m bu&ocirc;ng xuống c&ugrave;ng nhau tản bộ b&ecirc;n bờ biển lắng nghe tiếng s&oacute;ng vỗ&hellip; . Vẻ đẹp của Sầm Sơn c&ugrave;ng với sức cuốn h&uacute;t v&ocirc; h&igrave;nh của n&oacute; sẽ khiến bạn cảm thấy những mệt mỏi căng thẳng biến mất, t&acirc;m trạng thoải m&aacute;i, b&igrave;nh an v&agrave; thanh thản.</p>\r\n\r\n<p>Dọc bờ biển l&agrave; h&agrave;ng dừa duy&ecirc;n d&aacute;ng chạy d&agrave;i vung những t&agrave;u l&aacute; r&igrave; r&agrave;o trước gi&oacute;, h&ograve;a c&ugrave;ng nắng v&agrave;ng biển xanh tạo n&ecirc;n khung cảnh b&igrave;nh y&ecirc;n đến lạ.</p>\r\n\r\n<p>Kh&ocirc;ng chỉ c&oacute; tắm biển, Sầm Sơn c&ograve;n c&oacute; nhiều danh thắng l&acirc;u đời với nhiều &yacute; nghĩa.</p>\r\n\r\n<p><strong>H&ograve;n Trống M&aacute;i</strong></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-2-hon-trong-mai.jpg\" style=\"height:708px; width:950px\" /></p>\r\n\r\n<p>Đ&acirc;y l&agrave; t&ecirc;n gọi của hai h&ograve;n đ&aacute; tr&ecirc;n đỉnh n&uacute;i Trường Lệ v&agrave; c&oacute; h&igrave;nh d&aacute;ng của một đ&ocirc;i chim đang chụm đầu v&agrave; nghi&ecirc;ng mỏ v&agrave;o nhau, gắn liền với truyền thuyết về một mối t&igrave;nh chung thủy. H&ograve;n Trống M&aacute;i l&agrave; địa điểm m&agrave; du kh&aacute;ch n&ecirc;n qu&eacute; qua một lần khi đến Sầm Sơn.</p>\r\n\r\n<p><strong>Ch&ugrave;a C&ocirc; Ti&ecirc;n</strong></p>\r\n\r\n<p>Ng&ocirc;i ch&ugrave;a nằm ở ph&iacute;a Nam n&uacute;i Trường Lệ với vị thế rất đẹp v&agrave; tho&aacute;ng đ&atilde;ng. Ch&ugrave;a C&ocirc; Ti&ecirc;n nổi tiếng v&igrave; sự linh thi&ecirc;ng suốt bao đời nay, l&agrave; điểm lui tới được du kh&aacute;ch y&ecirc;u mến.</p>\r\n\r\n<p><strong>Đền Độc Cước</strong></p>\r\n\r\n<p>Ng&ocirc;i đền nằm tr&ecirc;n đỉnh n&uacute;i Cổ Giải, thuộc d&atilde;y n&uacute;i Trường Lệ ngay cạnh b&atilde;i biển Sầm Sơn. Đền Độc Cước được x&acirc;y dựng từ thời Trần (1225 &ndash; 1400). Đến nay đ&atilde; trải qua nhiều lần s&oacute;ng gi&oacute; chiến tranh nhưng ng&ocirc;i đền vẫn nguy&ecirc;n vẹn v&agrave; rất linh thi&ecirc;ng.</p>\r\n\r\n<p><strong>N&uacute;i Trường Lệ</strong></p>\r\n\r\n<p>N&uacute;i Trường Lệ vừa mang vẻ oai nghi&ecirc;m h&ugrave;ng vĩ vừa mềm mại uốn lượn. L&agrave; một d&atilde;y n&uacute;i d&agrave;i, từ th&agrave;nh phố Thanh H&oacute;a đi theo quốc lộ 47 về ph&iacute;a Đ&ocirc;ng, du kh&aacute;ch sẽ thấy sự biến h&oacute;a h&igrave;nh d&aacute;ng l&uacute;c cao l&uacute;c thấp l&ocirc; nh&ocirc;, từng tầng từng lớp v&agrave; cuối c&ugrave;ng l&agrave; một pho tượng to lớn hiện l&ecirc;n. Mỗi đoạn n&uacute;i, h&ograve;n n&uacute;i nhỏ gắn liền với một sự t&iacute;ch, một huyền thoại với h&igrave;nh d&aacute;ng kỳ lạ sẽ gợi mở cho du kh&aacute;ch tưởng tượng v&agrave; rồi như hiện hữu ngay trước mặt.</p>\r\n\r\n<ol start=\"2\">\r\n	<li>\r\n	<h2><strong>C&aacute;c địa điểm vui chơi mới mở tại Sầm Sơn</strong></h2>\r\n	</li>\r\n</ol>\r\n\r\n<p><strong>FLC Sầm Sơn</strong></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-3-flc-sam-son.jpg\" style=\"height:589px; width:950px\" /></p>\r\n\r\n<p>FLC Sầm Sơn l&agrave; nơi nghỉ dưỡng v&agrave; giải tr&iacute; bậc nhất hiện nay tại Việt Nam nhờ vị tr&iacute; đắc địa giao thoa giữa biển v&agrave; d&ograve;ng s&ocirc;ng M&atilde; với tổng diện t&iacute;ch l&ecirc;n đến 92,4 ha.</p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-5-flc-samson-golf-links.jpg\" style=\"height:632px; width:950px\" /></p>\r\n\r\n<p>FLC đ&atilde; đưa v&agrave;o hoạt động ba cơ sở lưu tr&uacute; ch&iacute;nh tại Sầm Sơn, bao gồm kh&aacute;ch sạn FLC Luxury Hotel Samson, FLC Luxury Resort Samson v&agrave; khu Villa FLC Luxury Samson.</p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-4-flc-samson-be-boi.jpg\" style=\"height:627px; width:950px\" /></p>\r\n\r\n<p>Kh&aacute;ch du lịch sử dụng dịch vụ lưu tr&uacute; tại FLC Luxury Hotel Samson, FLC Luxury Resort Samson sẽ được thụ hưởng to&agrave;n bộ c&aacute;c tiện &iacute;ch 5 sao của quần thể như&nbsp; bể bơi nước mặn ngo&agrave;i trời lớn nhất Việt Nam, hệ thống 152 bể bơi tr&ecirc;n to&agrave;n resort, s&acirc;n golf dạng links 18 hố, trung t&acirc;m hội nghị quốc tế 1.300 chỗ, hệ thống nh&agrave; h&agrave;ng kh&aacute;ch sạn, gym, spa 5 sao&hellip;</p>\r\n\r\n<p>Đặt ph&ograve;ng FLC Sầm Sơn tại:&nbsp;<a href=\"https://www.facebook.com/flcluxurysamson/\">https://www.facebook.com/flcluxurysamson/</a></p>\r\n\r\n<p><strong>Vạn Ch&agrave;i Resort</strong></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-6-Van-Chai-Resort-Sam-son-e1502785873225.jpg\" style=\"height:713px; width:950px\" /></p>\r\n\r\n<p>Nếu như FLC Sầm Sơn mang đến kh&ocirc;ng gian sang trọng hiện đại mang phong c&aacute;ch ch&acirc;u &Acirc;u th&igrave; Vạn Ch&agrave;i Resort sẽ mang lại cho du kh&aacute;ch một kh&ocirc;ng gian kiến tr&uacute;c truyền thống của l&agrave;ng qu&ecirc; Bắc Bộ Việt Nam kết hợp tinh tế với tiện nghi hiện đại trong kh&ocirc;ng gian thi&ecirc;n nhi&ecirc;n xanh.</p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-7-van-chai-resort.jpg\" style=\"height:594px; width:950px\" /></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-8phong-van-chai-resort.jpg\" style=\"height:600px; width:950px\" /></p>\r\n\r\n<p>Vạn Ch&agrave;i Resort hệt như một ốc đảo thanh b&igrave;nh biệt lập v&agrave; một kh&ocirc;ng gian thơ mộng, kh&aacute;c biệt với&nbsp;<strong>c</strong>&aacute;c resort ở Sầm Sơn. Tuổi đời của khu nghỉ dưỡng cũng kh&aacute; cao, vậy n&ecirc;n đội ngũ nh&acirc;n vi&ecirc;n ở đ&acirc;y phần lớn l&agrave; người đ&atilde; ch&iacute;nh chắn v&agrave; trưởng th&agrave;nh,&nbsp;mang những n&eacute;t chất ph&aacute;c, gần gũi của một v&ugrave;ng qu&ecirc; miền Trung nắng gi&oacute;.</p>', 'cac-dia-diem-tham-quan-khi-den-sam-son', '382HH', 1, NULL, NULL, NULL),
-(7, 'Tổng quan quần thể nghỉ dưỡng FLC Sầm Sơn', 'uploads/blog/tong-quan-FLC-Sam-Son-1.jpg', 'Du lịch Sầm Sơn ngày càng được phát triển, diện mạo của Sầm Sơn ngày càng trở nên khởi sắc hơn, nhất là khi FLC Sầm Sơn xuất hiện', '<p>Du lịch Sầm Sơn ng&agrave;y c&agrave;ng được ph&aacute;t triển, diện mạo của Sầm Sơn ng&agrave;y c&agrave;ng trở n&ecirc;n khởi sắc hơn, nhất l&agrave; khi&nbsp;<strong><em>FLC Sầm Sơn</em>&nbsp;</strong>xuất hiện. Nếu như trước đ&acirc;y, biển Sầm Sơn chỉ thu h&uacute;t kh&aacute;ch du lịch v&agrave;o những dịp h&egrave; n&oacute;ng nực, th&igrave; giờ đ&acirc;y quanh năm tại đ&acirc;y vẫn thu h&uacute;t h&agrave;ng triệu lượt du kh&aacute;ch bởi hệ thống 152 bể bơi trong nh&agrave; v&agrave; ngo&agrave;i trời, bể bơi nước n&oacute;ng tại quần thể khu du lịch sinh th&aacute;i&nbsp;<a href=\"http://flcresortsamson.com/\">FLC Resort Sầm Sơn</a>.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-1\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-1.jpg\" style=\"height:558px; width:950px\" /></p>\r\n\r\n<p>Nguồn: Samson.org.vn</p>\r\n\r\n<p><strong><em>FLC Sầm Sơn</em></strong>&nbsp;tọa lạc tại đường Hồ Xu&acirc;n Hương, x&atilde; Quảng Cư, thị x&atilde; Sầm Sơn, tỉnh Thanh H&oacute;a; l&agrave; nơi giao thoa giữa biển v&agrave; d&ograve;ng s&ocirc;ng M&atilde;, gi&aacute;p khu du lịch biển Sầm Sơn,&nbsp;<em>FLC Sầm Sơn</em>&nbsp;được x&acirc;y dựng trở th&agrave;nh một nơi nghỉ ngơi v&agrave; giải tr&iacute; bậc nhất cả nước. Đ&acirc;y l&agrave; một tổ hợp dịch vụ biệt thự- liền kề- shophouse- shoptel- condetel với quy m&ocirc; hơn 2 triệu m2 được ph&aacute;t triển th&agrave;nh quần thể khu du lịch nghỉ dưỡng sinh th&aacute;i cao cấp với đầy đủ dịch vụ được ph&aacute;t triển đồng bộ gồm: S&acirc;n golf, khu biệt thự nghĩ dưỡng 5 sao, kh&aacute;ch sạn 5 sao, khu Bungalow &Agrave; La Carte, bể bơi nước mặt, trung t&acirc;m hội nghị quốc tế, c&aacute;c khu vui chơi giải tr&iacute; trong nh&agrave; v&agrave; ngo&agrave;i trời c&ugrave;ng hơn 1000 căn biệt thự.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-2\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-2.jpg\" style=\"height:527px; width:950px\" /></p>\r\n\r\n<p>Bể bơi trong nh&agrave; cao cấp</p>\r\n\r\n<p>Điểm nhấn của quần thể nghỉ dưỡng n&agrave;y ch&iacute;nh l&agrave;&nbsp;<em>FLC Sầm Sơn</em>&nbsp;Golf Links, được quản l&yacute; v&agrave; triển khai thi c&ocirc;ng bởi Flagstick, đơn vị quản l&yacute; s&acirc;n golf h&agrave;ng đầu của Mỹ. Với sự kết hợp n&agrave;y, FLC mong muốn mang đến một s&acirc;n golf đẳng cấp thế giới cả về thiết kế lẫn chất lượng.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-4\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-4.jpg\" style=\"height:535px; width:950px\" /></p>\r\n\r\n<p>S&acirc;n golf tại FLC Sầm Sơn</p>\r\n\r\n<p>Bất k&igrave; du kh&aacute;ch n&agrave;o đến đ&acirc;y cũng sẽ cảm thấy cho&aacute;ng ngợp kh&ocirc;ng chỉ v&igrave; hệ thống c&aacute;c bể bơi, m&agrave; nơi đ&acirc;y c&ograve;n c&oacute; bể bơi nước mặn ngo&agrave;i trời lớn nhất Việt Nam với diện t&iacute;ch 5.100m2.</p>\r\n\r\n<p>Li&ecirc;n hệ&nbsp;<a href=\"https://www.vnbooking.com/\"><strong>đặt ph&ograve;ng trực tuyến gi&aacute; rẻ</strong></a></p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-3\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-3.jpg\" style=\"height:527px; width:950px\" /></p>\r\n\r\n<p>B&ecirc;n cạnh bể bơi ngo&agrave;i trời</p>\r\n\r\n<p>Đến với&nbsp;<em>FLC Sầm Sơn</em>&nbsp;bạn sẽ được lạc v&agrave;o thi&ecirc;n đường ẩm thực với những m&oacute;n ăn đa dạng của nhiều khu vực tr&ecirc;n thế giới. Nh&agrave; h&agrave;ng&nbsp; Fresh C&aacute; được thiết kế với kh&ocirc;ng gian thư th&aacute;i, nhẹ nh&agrave;ng ngay cạnh bể bơi nước mặn &amp; hướng ra biển mang đến cho bạn những m&oacute;n ăn &Acirc;u &ndash; &Aacute; đa dạng, tiệc buffet ho&agrave;n hảo.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-5\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-5.jpg\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p><em>FLC Sầm Sơn</em>&nbsp;c&ograve;n cho x&acirc;y dựng hệ thống Bar như Zen bar, Tabaha Bar, Aqua Bar với thiết kế độc đ&aacute;o, tuyệt đẹp, phục vụ cả tiệc BBQ ngo&agrave;i trời. Ngo&agrave;i ra, tại đ&acirc;y c&ograve;n c&oacute; s&acirc;n Tennis, khu vui chơi trẻ em trong nh&agrave; &amp; ngo&agrave;i trời, khu vực tập gymn, yoga, taichi đầy đủ tiện &iacute;ch hiện đại bậc nhất tr&ecirc;n thế giới.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-6\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-6.jpg\" style=\"height:527px; width:950px\" /></p>\r\n\r\n<p>H&atilde;y tới&nbsp;<a href=\"https://www.vnbooking.com/hotel/flc-luxury-hotel-sam-son.html\"><em>FLC Sầm Sơn</em></a>&nbsp;để tận hưởng sự kết hợp giữa n&eacute;t mới mẽ v&agrave; cổ điển, phương ph&aacute;p trị liệu truyền thống, với c&aacute;c kĩ thuật d&agrave;i hay ngắn, trị liệu với dầu hoặc kh&ocirc;ng dầu, đơn giản hoặc mang n&eacute;t ri&ecirc;ng trong kh&ocirc;ng gian hiện đại, đầy sức sống tại Spa cao cấp.</p>', 'tong-quan-quan-the-nghi-duong-flc-sam-son', '382HH', 1, NULL, NULL, NULL),
-(8, 'Kinh nghiệm du lịch Sầm Sơn không bị “chặt chém”', 'uploads/blog/bai-bien-sam-son.jpg', 'Sầm Sơn là vùng đất được thiên nhiên ưu đãi với bãi biển đẹp nổi tiếng bên núi Trường Lệ, nằm ở phía đông tỉnh Thanh Hóa,', '<p>Sầm Sơn l&agrave; v&ugrave;ng đất được thi&ecirc;n nhi&ecirc;n ưu đ&atilde;i với b&atilde;i biển đẹp nổi tiếng b&ecirc;n n&uacute;i Trường Lệ, nằm ở ph&iacute;a đ&ocirc;ng tỉnh Thanh H&oacute;a, c&aacute;ch th&agrave;nh phố khoảng 16km. Lần đầu ti&ecirc;n đến đ&acirc;y, bạn sẽ ấn tượng ngay với những con s&oacute;ng kh&ocirc;ng ngừng đổ v&agrave;o n&ecirc;n c&aacute;t mịn, những h&agrave;ng c&acirc;y xanh tr&ecirc;n bờ biển, thấp tho&aacute;ng d&atilde;y n&uacute;i nhấp nh&ocirc; b&ecirc;n bờ biển tạo n&ecirc;n một khung cảnh đẹp n&ecirc;n thơ. Nơi đ&acirc;y c&ograve;n l&agrave; v&ugrave;ng đất gi&agrave;u bản sắc văn h&oacute;a độc đ&aacute;o với nhiều lễ hội truyền thống. Tuy nhi&ecirc;n, những năm gần đ&acirc;y Sầm Sơn bị du kh&aacute;ch phản &aacute;nh kh&ocirc;ng tốt về chất lượng dịch vụ k&eacute;m v&agrave; nạn &ldquo;ch&eacute;m chặt&rdquo; qu&aacute; nhiều. Tham khảo những kinh nghiệm dưới đ&acirc;y để c&oacute; được một chuyến du lịch vui vẻ v&agrave; tiết kiệm!</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/bai-bien-sam-son.jpg\"><img alt=\"Bãi biển Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/bai-bien-sam-son.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p><em>B&atilde;i biển Sầm Sơn</em></p>\r\n\r\n<p><strong>Thời điểm n&agrave;o th&igrave; th&iacute;ch hợp?</strong></p>\r\n\r\n<p>Từ th&aacute;ng 6 đến th&aacute;ng 8 (giữa m&ugrave;a du lịch) l&agrave; thời điểm tốt nhất để đến Sầm Sơn. Tuy nhi&ecirc;n l&uacute;c n&agrave;y gi&aacute; cả c&aacute;c dịch vụ cũng l&agrave; đắt nhất. Du lịch biển Sầm Sơn th&igrave; khoảng 3 ng&agrave;y 2 đ&ecirc;m l&agrave; hợp l&yacute; nhất với chi ph&iacute; vừa sức v&agrave; tham quan được nhiều nơi.</p>\r\n\r\n<p><strong>Đi Sầm Sơn n&ecirc;n mang g&igrave;?</strong></p>\r\n\r\n<p>Ngo&agrave;i những thứ kh&ocirc;ng thể thiếu như quần &aacute;o, tiền nong,&hellip; th&igrave; để chuyến đi chơi tr&ecirc;n biển được ho&agrave;n hảo, bạn cần lưu &yacute;:</p>\r\n\r\n<p>&ndash; Đi chơi biển, bạn n&ecirc;n chọn quần &aacute;o, gi&agrave;y d&eacute;p, t&uacute;i x&aacute;ch, mũ&hellip; c&agrave;ng m&agrave;u sắc c&agrave;ng tốt. Bạn nhớ mang theo kem chống nắng, mũ rộng v&agrave;nh v&agrave; đ&ocirc;i d&eacute;p xỏ ng&oacute;n.</p>\r\n\r\n<p>&ndash; Nếu mang đồng hồ th&igrave; chọn loại water proof (kh&ocirc;ng thấm nước). D&ugrave; đi &ocirc; t&ocirc;, bạn cũng đừng qu&ecirc;n chiếc &ocirc; v&agrave; &aacute;o mưa.</p>\r\n\r\n<p>&ndash; N&ecirc;n mang chiếc khăn tắm của m&igrave;nh theo, bởi đ&oacute; l&agrave; vũ kh&iacute; đa năng: d&ugrave;ng để che nắng, l&oacute;t chỗ nằm, quấn ngang người&hellip; Hơn nữa, nếu chiếc khăn c&oacute; m&agrave;u sắc rực rỡ cũng gi&uacute;p người kh&aacute;c t&igrave;m bạn dễ hơn đấy.</p>\r\n\r\n<p>&ndash; Nhớ mang theo con dao nhỏ (loại chuy&ecirc;n dụng cho picnic), thức ăn gi&agrave;u chất bột (như b&aacute;nh). Khi bơi v&agrave; vận động tr&ecirc;n biển, bạn ti&ecirc;u hao nhiều năng lượng n&ecirc;n nhanh bị đ&oacute;i. L&uacute;c ấy, bất kỳ thực phẩm n&agrave;o cũng khiến bạn cảm thấy ngon miệng; v&agrave; con dao nhỏ rất cần thiết để bạn cắt tr&aacute;i c&acirc;y, b&aacute;nh, mở đồ hộp&hellip;</p>\r\n\r\n<p><strong>Phương tiện đi lại?</strong></p>\r\n\r\n<p><em>C&aacute;ch đến Sầm Sơn:</em></p>\r\n\r\n<p>Sầm Sơn c&aacute;ch H&agrave; Nội khoảng 170km, c&aacute;c bạn c&oacute; thể đi &ocirc; t&ocirc; từ c&aacute;c bến xe Mỹ Đ&igrave;nh, Gi&aacute;p B&aacute;t, Lương Y&ecirc;n với gi&aacute; v&eacute; khoảng 70 &ndash; 120 ngh&igrave;n đồng (t&ugrave;y v&agrave;o chất lượng xe) v&agrave; mất khoảng 5h để đến Sầm Sơn.</p>\r\n\r\n<p>Với qu&atilde;ng đường 170km kh&aacute; ph&ugrave; hợp cho 1 chuyến phượt vui vẻ bằng xe m&aacute;y, nhưng c&aacute;c bạn phải ch&uacute; &yacute; an to&agrave;n.</p>\r\n\r\n<p>Hoặc c&aacute;c bạn c&oacute; thể ra Ga H&agrave; Nội hoặc Ga Long Bi&ecirc;n để đi T&agrave;u Hỏa về Ga Thanh H&oacute;a, gi&aacute; v&eacute; dao đồng từ 70 &ndash; 150 ngh&igrave;n đồng (t&ugrave;y v&agrave;o chất lượng toa). Đến Ga Thanh H&oacute;a bạn c&oacute; thể đi xe bus đến Sầm Sơn (gi&aacute; v&eacute; khoảng 10 ngh&igrave;n đồng/ lượt).</p>\r\n\r\n<p><em>Di chuyển ở Sầm Sơn:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em><strong>&nbsp;&nbsp;<em>&nbsp;&nbsp;</em></strong></p>\r\n\r\n<p>Nếu đi gần th&igrave; n&ecirc;n đi bộ, vừa đi dạo thư th&aacute;i ngắm cảnh Sầm Sơn, vừa tiết kiệm cho chuyến đi của bạn.</p>\r\n\r\n<p>Nếu đi xa hơn bạn c&oacute; thể đi taxi, x&iacute;ch l&ocirc; hoặc xe điện nhưng ch&uacute; &yacute; nếu kh&ocirc;ng biết khoảng c&aacute;ch địa điểm bạn đi th&igrave; phải hỏi trước người ở nh&agrave; nghỉ trước để biết ước t&iacute;nh đường.</p>\r\n\r\n<p>Đi x&iacute;ch l&ocirc; bạn ch&uacute; &yacute; phải l&agrave;m gi&aacute; trước v&agrave; cần ch&uacute; &yacute; nhiều xe thi thoảng đi cứ lắc lắc, đ&aacute;nh v&otilde;ng để qu&yacute; kh&aacute;ch rơi v&iacute;, đồng hồ, điện thoại để lấy cắp.</p>\r\n\r\n<p>Hoặc bạn cũng c&oacute; thể thu&ecirc; xe đạp đ&ocirc;i, xe đạp 3 m&agrave; tự do ngắm cảnh, vui chơi thỏa th&iacute;ch.</p>\r\n\r\n<p><strong>Nghỉ đ&acirc;u rẻ?</strong></p>\r\n\r\n<p>Việc đặt ph&ograve;ng ở Sầm Sơn kh&aacute; kh&oacute; khăn bởi ở đ&acirc;y rất đ&ocirc;ng kh&aacute;ch,ặc biệt l&agrave; v&agrave;o ng&agrave;y lễ, ng&agrave;y nghỉ. V&igrave; thề nếu bạn muốn c&oacute; ph&ograve;ng th&igrave; n&ecirc;n đặt trước (đặt trước c&agrave;ng l&acirc;u gi&aacute; c&agrave;ng rẻ).</p>\r\n\r\n<p>Nếu bạn l&agrave; Học sinh, sinh vi&ecirc;n, n&ecirc;n chọn nh&agrave; nghỉ (kh&aacute;ch sạn) xa xa b&atilde;i biển sẽ rẻ hơn. C&ograve;n nếu c&oacute; điều kiện th&igrave; bạn c&oacute; thể dừng ch&acirc;n tại c&aacute;c nh&agrave; nghỉ (kh&aacute;ch sạn) tại đường Hồ Xu&acirc;n Hương, đ&acirc;y l&agrave; con đường song song với bờ biển, từ nh&agrave; nghỉ (kh&aacute;ch sạn) bạn c&oacute; thể nh&igrave;n ra ph&iacute;a bờ biền để ngắm cảnh, h&oacute;ng gi&oacute;. Mức gi&aacute; dao động từ 400.000 &ndash; 800.000 vnđ/đ&ecirc;m với ph&ograve;ng đầy đủ điều h&ograve;a, ti vi, tủ lạnh,&hellip;</p>\r\n\r\n<blockquote>\r\n<p>Tham khảo:&nbsp;<a href=\"http://www.vnbooking.com/city/sam-son-hotels.html?sid=105\">Kh&aacute;ch sạn gi&aacute; tốt ở Sầm Sơn</a></p>\r\n</blockquote>\r\n\r\n<p><strong>Ăn g&igrave;?</strong></p>\r\n\r\n<p>Th&ocirc;ng thường nh&agrave; nghỉ n&agrave;o cũng c&oacute; nh&agrave; h&agrave;ng lu&ocirc;n n&ecirc;n bạn c&oacute; thể ăn ngay tại nh&agrave; nghỉ, mỗi suất ăn khoảng từ 30k &ndash; 50k/ suất, m&oacute;n ăn được thay đổi, chất lượng cũng tốt.</p>\r\n\r\n<p>Nếu muốn rẻ hơn một ch&uacute;t th&igrave; bạn đi l&ecirc;n ra đường ch&iacute;nh v&agrave; ăn ở c&aacute;c h&agrave;ng cơm b&igrave;nh d&acirc;n như ở H&agrave; Nội. Nếu bạn c&oacute; ng&acirc;n s&aacute;ch kha kh&aacute; c&oacute; thể ăn đặc sản ở c&aacute;c nh&agrave; h&agrave;ng ngay mặt biển (nh&agrave; h&agrave;ng tốt nhất l&agrave; Phuong Linh &ndash; giao giữa b&atilde;i B &amp; C, địa điểm đẹp , đồ ăn ngon , đầu bếp rất giỏi mỗi tội hơi đắt, hoặc nh&agrave; h&agrave;ng Anh Nu&ocirc;i &ndash; B&atilde;i C,&hellip; N&oacute;i chung đi ăn c&aacute;c bạn n&ecirc;n l&agrave;m gi&aacute; trước, ăn cua, ghẹ th&igrave; phải l&agrave;m gi&aacute; xong, v&agrave;o c&acirc;n trực tiếp xem bao nhi&ecirc;u con&hellip; )</p>\r\n\r\n<p>Một số m&oacute;n bạn n&ecirc;n thử khi đến Sầm Sơn:</p>\r\n\r\n<p>&ndash;&nbsp;<em>Nem chua:</em>&nbsp;Nhắc đến Thanh H&oacute;a th&igrave; kh&ocirc;ng thể kh&ocirc;ng nhắc đến m&oacute;n nem chua quen thuộc của v&ugrave;ng đất n&agrave;y, ch&iacute;nh v&igrave; vậy nếu c&oacute; dịp đến Sầm Sơn th&igrave; đừng n&ecirc;n bỏ qua đặc sản đặc trưng n&agrave;y. Nem được l&agrave;m từ thịt sống, b&igrave; lợn c&ugrave;ng c&aacute;c gia vị như ti&ecirc;u, tỏi, ớt cho l&ecirc;n men đến ch&iacute;n, khi ăn c&oacute; vị dịu đậm đ&agrave;.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/nem-chua.jpg\"><img alt=\"nem chua\" src=\"https://img.blogdulich.vn/2015/04/nem-chua.jpg\" style=\"height:586px; width:950px\" /></a></p>\r\n\r\n<p>&ndash;&nbsp;<em>B&aacute;nh cuốn:</em>&nbsp;B&aacute;nh cuốn một hương vị rất ri&ecirc;ng ở biển Sầm Sơn c&oacute; vị dai, mềm khi cắn một miếng, nước chấm pha ngon, vị rất đặc trưng. B&aacute;nh cuốn thường ăn sau khi đ&atilde; thưởng thức b&aacute;nh x&egrave;o, với c&aacute;i gi&ograve;n đ&ocirc;m đốp trong miệng, b&eacute;o ngậy khi cắn, rồi đến vị của nh&acirc;n, n&agrave;o mộc nhĩ, thịt lợn bằm, miến mằn mặn, cay của hạt ti&ecirc;u, thơm của h&agrave;nh&hellip;</p>\r\n\r\n<p><em>&ndash; Ch&aacute;o lươn</em>: Chắc hẳn du kh&aacute;ch n&agrave;o đ&atilde; từng du lịch biển Sầm Sơn chắc kh&ocirc;ng thể qu&ecirc;n được m&oacute;n ch&aacute;o lươn quen thuộc. Gọi l&agrave; ch&aacute;o nhưng n&oacute; lại giống như canh vậy, nước ch&aacute;o kh&ocirc;ng s&aacute;nh m&agrave; rất lo&atilde;ng, hạt gạo c&ograve;n nguy&ecirc;n nhưng khi ăn c&oacute; cảm gi&aacute;c mềm mại của hạt gạo kh&ocirc;ng cứng như cơm nhưng lại kh&ocirc;ng mềm như những hạt gạo c&ograve;n s&oacute;t lại trong nồi ch&aacute;o b&igrave;nh thường.</p>\r\n\r\n<p><em>&ndash; Mực nhồi thịt</em>: M&oacute;n mực nhồi thịt l&agrave; một đặc trưng rất ri&ecirc;ng của v&ugrave;ng biển Sầm Sơn, nhất l&agrave; thưởng thức khi c&ograve;n n&oacute;ng sốt, vỏ mực tươi d&agrave;y khi nướng săn chắc, dai dai lẫn m&ugrave;i thơm của vị thịt nhồi tỏa ra khiến ta c&oacute; một cảm gi&aacute;c ngon tuyệt rất đặc biệt.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/muc-nhoi-thit-sam-son.jpg\"><img alt=\"Mực nhồi thịt - đặc trưng riêng của Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/muc-nhoi-thit-sam-son.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>Mực nhồi thịt &ndash; đặc trưng ri&ecirc;ng của Sầm Sơn</p>\r\n\r\n<p><em>Lưu &yacute;</em>: d&ugrave; ăn g&igrave;, ăn ở đ&acirc;u th&igrave; trước khi đặt m&oacute;n c&aacute;c bạn n&ecirc;n l&agrave;m gi&aacute; trước, để đỡ bị chặt ch&eacute;m, nếu cẩn thận th&igrave; khi thống nhất gi&aacute; cả bạn n&ecirc;n ghi &acirc;m lại để đề ph&ograve;ng t&igrave;nh huống xấu nhất xảy ra. V&iacute; dụ như c&acirc;u chuyện của một du kh&aacute;ch: &ldquo;mặc cả trứng vịt lộn 5k, b&aacute;n h&agrave;ng đồng &yacute;. Ăn xong 10 quả t&iacute;nh hết 95k, thắc mắc th&igrave; chủ qu&aacute;n trả lời: quả đầu ti&ecirc;n chị mặc cả 5k, c&aacute;c quả sau chị c&oacute; mặc cả đ&acirc;u? Vẫn 10k/quả&rdquo;</p>\r\n\r\n<p><strong>Điểm vui chơi giải tr&iacute; ở Sầm Sơn?</strong></p>\r\n\r\n<p>Đến Sầm Sơn th&igrave; điều trước ti&ecirc;n l&agrave; phải ngắm v&agrave; tắm biển thỏa th&iacute;ch. C&aacute;c bạn c&oacute; thể ngắm b&igrave;nh minh tr&ecirc;n biển hoặc tham gia k&eacute;o lưới c&ugrave;ng với d&acirc;n ch&agrave;i v&agrave;o buổi sớm.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/binh-minh-tren-bien-sam-son.jpg\"><img alt=\"Bình minh trên biển Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/binh-minh-tren-bien-sam-son.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>B&igrave;nh minh tr&ecirc;n biển Sầm Sơn</p>\r\n\r\n<p>Ngo&agrave;i ra đến Sầm Sơn c&ograve;n nhiều điểm tham quan như:</p>\r\n\r\n<p>&ndash; N&uacute;i Trường Lệ:&nbsp;n&uacute;i cao 76 m&eacute;t nằm s&aacute;t biển với c&aacute;c v&aacute;ch đ&aacute; dựng đứng h&ugrave;ng vĩ v&agrave; l&atilde;ng mạn. Đến với n&uacute;i Trường Lệ, bạn sẽ được tham quan đền Độc Cước, đền C&ocirc; Ti&ecirc;n, đền T&ocirc; Hiến Th&agrave;nh&hellip; hoặc nền m&oacute;ng những biệt thự Ph&aacute;p x&acirc;y dựng đầu thế kỷ 20. V&agrave; đặc biệt, một địa danh bạn cũng kh&ocirc;ng n&ecirc;n bỏ qua khi đến đ&acirc;y l&agrave; h&ograve;n Trống M&aacute;i. H&ograve;n Trống M&aacute;i đ&atilde; được xem l&agrave; một trong những biểu tượng của Sầm Sơn.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/hon-trong-mai.jpg\"><img alt=\"Hòn Trống Mái - một trong những biểu tượng của Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/hon-trong-mai.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>H&ograve;n Trống M&aacute;i &ndash; một trong những biểu tượng của Sầm Sơn</p>\r\n\r\n<p>&ndash; Thủy Ti&ecirc;n Cung: nằm ở ch&acirc;n n&uacute;i Trường Lệ.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/den-tho-ba-trieu.jpg\"><img alt=\"Đền thờ Bà Triệu\" src=\"https://img.blogdulich.vn/2015/04/den-tho-ba-trieu.jpg\" style=\"height:535px; width:950px\" /></a></p>\r\n\r\n<p>Đền thờ B&agrave; Triệu</p>\r\n\r\n<p>&ndash; Bạn c&oacute; thể đi thăm th&agrave;nh nh&agrave; Hồ thuộc huyện Vĩnh Lộc; suối c&aacute; thần ở l&agrave;ng Ngọc, X&atilde; Cẩm Lương; đền thờ B&agrave; Triệu tại n&uacute;i Gai, thuộc l&agrave;ng Ph&uacute; Điền, động Từ Thức c&ograve;n gọi l&agrave; B&iacute;ch Đ&agrave;o thuộc huyện Nga Sơn&hellip;</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/thanh-nha-ho.jpg\"><img alt=\"Thành nhà Hồ\" src=\"https://img.blogdulich.vn/2015/04/thanh-nha-ho.jpg\" style=\"height:513px; width:950px\" /></a></p>\r\n\r\n<p>Th&agrave;nh nh&agrave; Hồ</p>\r\n\r\n<p>&ndash; Chợ Sầm Sơn: đ&acirc;y l&agrave; điểm đến bạn kh&ocirc;ng thể bỏ qua trong chuyến du lịch Sầm Sơn. Sầm Sơn c&oacute; 2 chợ ch&iacute;nh (chợ trong v&agrave; chợ ngo&agrave;i). Du kh&aacute;ch n&ecirc;n đi chợ trong, c&oacute; rất nhiều đồ hải sản tươi ngon m&agrave; gi&aacute; cũng rẻ hơn đại l&yacute; hải sản.</p>\r\n\r\n<p>&ndash; Hoặc đi chơi ở khu du lịch sinh th&aacute;i (gần Vạn Ch&agrave;i Resort), đi c&acirc;u t&ocirc;m, c&acirc;u c&aacute;,&hellip;</p>\r\n\r\n<p>&ndash; Nếu muốn tổ chức tiệc t&ugrave;ng th&igrave; tối c&oacute; thể đến c&aacute;c qu&aacute;n nhạc sống (qu&aacute;n Nhịp Sống Trẻ ở b&atilde;i B hoặc một số qu&aacute;n kh&aacute;c ở b&atilde;i C) rất đ&ocirc;ng vui, c&oacute; thể l&ecirc;n đăng k&yacute; h&aacute;t tặng nhau thoải m&aacute;i, đến tiết mục dancing th&igrave; nhảy nh&oacute;t tưng bừng cả qu&aacute;n. Nhưng cafe, sinh tố, nước hoa quả ở đ&acirc;y rất ch&aacute;n, bạn n&ecirc;n gọi bia hoặc đồ uống đ&oacute;ng lon cho an to&agrave;n</p>\r\n\r\n<p>Sầm Sơn l&agrave; một điểm đến l&yacute; tưởng, tuy nhi&ecirc;n hiện tượng &ldquo;chặt ch&eacute;m&rdquo; ở đ&acirc;y kh&aacute; phố biển, v&igrave; thế h&atilde;y l&agrave; một du kh&aacute;ch th&ocirc;ng minh để tự bảo vệ m&igrave;nh.</p>', 'kinh-nghiem-du-lich-sam-son-khong-bi-chat-chem', '382HH', 1, NULL, NULL, NULL);
+(2, 'Khu du lịch Sun World Danang Wonders', 'uploads/blog/13-12-20176-3606-1513140507.png', 'Khu du lịch Sun World Danang Wonders sẽ trở thành “Xứ sở băng giá” với tuyết trắng ngập tràn, ngôi làng Bắc Âu như cổ tích từ 20 đến 30/12.', '<p>Khu du lịch Sun World Danang Wonders sẽ trở th&agrave;nh &ldquo;Xứ sở băng gi&aacute;&rdquo; với tuyết trắng ngập tr&agrave;n, ng&ocirc;i l&agrave;ng Bắc &Acirc;u như cổ t&iacute;ch từ 20 đến 30/12.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20174-9555-1513140507.png\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p>M&ugrave;a Gi&aacute;ng sinh n&agrave;y, du kh&aacute;ch đến Sun World Danang Wonders sẽ ngạc nhi&ecirc;n trước một khung cảnh được trang ho&agrave;ng lộng lẫy, hệt như một ng&ocirc;i l&agrave;ng ch&acirc;u &Acirc;u được mang về v&agrave; đặt trong c&ocirc;ng vi&ecirc;n giữa l&ograve;ng Đ&agrave; Nẵng.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20176-3606-1513140507.png\" style=\"height:611px; width:950px\" /></p>\r\n\r\n<p>Từ lối v&agrave;o, tiếng nhạc Gi&aacute;ng sinh reo vang rộn r&agrave;ng, &Ocirc;ng gi&agrave; Noel h&oacute;m hỉnh v&agrave; người Tuyết dễ thương lu&ocirc;n ch&agrave;o đ&oacute;n du kh&aacute;ch bằng nụ cười th&acirc;n thiện. Khu vực trung t&acirc;m được trang ho&agrave;ng tựa như ng&ocirc;i l&agrave;ng Bắc &Acirc;u xinh đẹp &ndash; qu&ecirc; hương của &ocirc;ng gi&agrave; Santa Claus v&agrave; những c&acirc;u chuyện cổ t&iacute;ch Gi&aacute;ng sinh diệu kỳ. Ng&ocirc;i nh&agrave; v&agrave; c&acirc;y th&ocirc;ng phủ đầy tuyết trắng x&oacute;a, cỗ xe tuần lộc chở &ocirc;ng gi&agrave; Noel c&ugrave;ng t&uacute;i qu&agrave; mang tặng cho trẻ nhỏ sẽ l&agrave; điểm check-in l&yacute; tưởng cho c&aacute;c du kh&aacute;ch muốn lưu giữ những khoảnh khắc l&atilde;ng mạn, ấm &aacute;p trong m&ugrave;a Gi&aacute;ng sinh.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20176-8110-1513140508.png\" style=\"height:636px; width:950px\" /></p>\r\n\r\n<p>Kh&ocirc;ng kh&iacute; rộn r&agrave;ng khắp c&ocirc;ng vi&ecirc;n với nhiều hoạt động biểu diễn nghệ thuật ch&acirc;u &Acirc;u tại khu vực Cổng th&agrave;nh v&agrave; Sun Wheel. Du kh&aacute;ch sẽ được thưởng thức m&uacute;a Balle tuyết v&agrave; thi&ecirc;n nga, biểu diễn Flash Mob B&agrave; gi&agrave; v&agrave; &Ocirc;ng gi&agrave; Noel vui nhộn</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-20177-8289-1513140508.png\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p>Với c&aacute;c b&eacute;, đ&acirc;y sẽ l&agrave; một Noel vui vẻ với những bức h&igrave;nh đẹp chụp c&ugrave;ng những c&acirc;y th&ocirc;ng Noel &ldquo;di động&rdquo; v&agrave; được nhận những m&oacute;n qu&agrave; Gi&aacute;ng sinh độc đ&aacute;o. Với c&aacute;c bạn trẻ, đ&acirc;y l&agrave; dịp để chẳng cần sang ch&acirc;u &Acirc;u cũng c&oacute; thể ngắm tuyết rơi l&atilde;ng mạn v&agrave; đ&ugrave;a nghịch với người Tuyết trong một m&ugrave;a Gi&aacute;ng sinh đậm chất Bắc &Acirc;u. C&ograve;n với c&aacute;c &ocirc;ng bố, b&agrave; mẹ, kh&ocirc;ng c&oacute; nơi n&agrave;o tuyệt hơn &ldquo;Xứ sở băng gi&aacute;&rdquo; giữa miền nhiệt đới n&agrave;y, để cả nh&agrave; c&oacute; một m&ugrave;a Gi&aacute;ng sinh thật &yacute; nghĩa.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/13-12-201710-383610991-8209-1513140508.png\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p>Một m&ugrave;a Gi&aacute;ng sinh nữa lại về, năm mới cũng cận kề. C&ugrave;ng trảy hội băng tuyết với Sun World Danang Wonders v&agrave; trải nghiệm những dư vị mới lạ m&agrave; c&ocirc;ng vi&ecirc;n d&agrave;nh tặng ri&ecirc;ng cho du kh&aacute;ch, như một m&oacute;n qu&agrave; Gi&aacute;ng sinh thay cho lời tri &acirc;n.</p>', 'khu-du-lich-sun-world-danang-wonders', '493HH', 1, '2020-09-06 12:47:19', '2020-09-06 12:47:19', NULL),
+(3, 'Ba Na Hills Golf Club tại Đà Nẵng nhận danh hiệu sân Golf tốt nhất Châu Á', 'uploads/blog/1-12-201745-5490-1512121902.png', 'Ba Na Hills Golf Club vừa nhận giải thưởng do World Golf Awards trao tặng sau 7 tháng bình chọn.', '<p>Ng&agrave;y 25/11, tại Lễ trao giải thưởng golf thế giới World Golf Awards diễn ra ở La Manga del Mar (T&acirc;y Ban Nha), Ba Na Hills Golf Club được vinh danh l&agrave; s&acirc;n golf tốt nhất ch&acirc;u &Aacute; v&agrave; s&acirc;n golf tốt nhất Việt Nam.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/1-12-201745-5490-1512121902.png\" style=\"height:635px; width:950px\" /></p>\r\n\r\n<p>Đại diện s&acirc;n golf ở Đ&agrave; Nẵng l&ecirc;n nhận giải thưởng.</p>\r\n\r\n<p>Đ&acirc;y l&agrave; kết quả sau 7 th&aacute;ng b&igrave;nh chọn với h&agrave;ng trăm ngh&igrave;n phiếu bầu của c&aacute;c chuy&ecirc;n gia h&agrave;ng đầu trong lĩnh vực golf v&agrave; du lịch, c&aacute;c doanh nghiệp lữ h&agrave;nh, người chơi golf v&agrave; c&ocirc;ng ch&uacute;ng đến từ 40 quốc gia tr&ecirc;n thế giới.World Golf Awards ra mắt từ năm 2014 được đ&aacute;nh gi&aacute; l&agrave; giải thưởng uy t&iacute;n nhất trong ng&agrave;nh du lịch golf v&agrave; năm nay c&oacute; quy m&ocirc; lớn nhất.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/1-12-201746-735373932-4762-1512121902.png\" style=\"height:534px; width:950px\" /></p>\r\n\r\n<p>S&acirc;n golf mang đến cho người chơi những trải nghiệm với chất lượng dịch vụ mang đẳng cấp 5 sao.</p>\r\n\r\n<p>Đ&acirc;y l&agrave; năm thứ hai li&ecirc;n tiếp s&acirc;n golf n&agrave;y nhận giải thưởng của ng&agrave;nh c&ocirc;ng nghiệp golf to&agrave;n cầu. Th&aacute;ng 11/2016, nơi đ&acirc;y nhận danh hiệu &ldquo;S&acirc;n golf mới tốt nhất thế giới&rdquo; từ giải thưởng World Golf Awards diễn ra tại Bồ Đ&agrave;o Nha, v&agrave; giải thưởng &ldquo;S&acirc;n golf mới tốt nhất ch&acirc;u &Aacute; Th&aacute;i B&igrave;nh Dương&rdquo; tại Hội nghị cấp cao Golf ch&acirc;u &Aacute; Th&aacute;i B&igrave;nh Dương ở Th&aacute;i Lan.Bắt đầu đi v&agrave;o hoạt động từ th&aacute;ng 3/2016, s&acirc;n golf do tập đo&agrave;n Sun Group l&agrave;m chủ đầu tư, tập đo&agrave;n IMG quản l&yacute; đ&atilde; trở th&agrave;nh địa điểm chơi golf ấn tượng bậc nhất Việt Nam. Được thiết kế bởi cựu golf thủ số 1 thế giới Luke Donald, s&acirc;n golf c&oacute; bố cục h&agrave;i h&ograve;a, xen lẫn giữa địa h&igrave;nh sườn n&uacute;i l&agrave; hồ nước, d&ograve;ng suối v&agrave; thảm thực vật xanh được chăm s&oacute;c kỹ lưỡng.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/12/1-12-201755-3140-1512121903.png\" style=\"height:633px; width:950px\" /></p>\r\n\r\n<p>Để biết th&ecirc;m th&ocirc;ng tin về s&acirc;n golf hoặc đặt giờ chơi, du kh&aacute;ch tham khảo tại website.</p>\r\n\r\n<p>T&iacute;nh năng nổi trội nhất của s&acirc;n golf l&agrave; sự linh hoạt cho người chơi. Luke Donald đ&atilde; bố tr&iacute; năm bệ ph&aacute;t b&oacute;ng để c&aacute;c golf thủ c&oacute; thể tận hưởng v&ograve;ng golf d&agrave;i ngắn kh&aacute;c nhau. B&ecirc;n cạnh đ&oacute;, đ&acirc;y l&agrave; s&acirc;n golf duy nhất ở miền Trung được thắp s&aacute;ng về đ&ecirc;m, nhằm thỏa m&atilde;n nhu cầu đam m&ecirc; của những người bận rộn.</p>', 'ba-na-hills-golf-club-tai-da-nang-nhan-danh-hieu-san-golf-tot-nhat-chau-a', '493HH', 1, '2020-09-06 12:39:15', '2020-09-06 12:39:15', NULL),
+(4, 'Chùa Linh Ứng – Địa danh không thể bỏ qua khi tới Đà Nẵng', 'uploads/blog/Chua-linh-ung-2.jpg', 'Nằm cách trung tâm thành phố Đà Nẵng 10 km về phía Đông Bắc, ở độ cao 693 m so với mực nước biển', '<p>Ch&ugrave;a Linh Ứng được x&acirc;y dựng theo phong c&aacute;ch hiện đại kết hợp với n&eacute;t truyền thống vốn c&oacute; của c&aacute;c ng&ocirc;i ch&ugrave;a tại Việt Nam, m&aacute;i ng&oacute;i được uốn cong c&oacute; h&igrave;nh con rồng, c&aacute;c cột trụ to v&agrave; vững chắc được người thợ tỉa t&oacute;t rất kỹ lưỡng tạo th&agrave;nh h&igrave;nh những con rồng uốn lượn một c&aacute;ch tinh xảo v&agrave; nghệ thuật.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-1.jpg\" style=\"height:750px; width:1000px\" /></p>\r\n\r\n<p>Điểm nhấn quan trọng của ch&ugrave;a Linh Ứng B&atilde;i Bụt l&agrave; tượng Phật Qu&aacute;n Thế &Acirc;m được xem l&agrave; cao nhất Việt Nam (67 m). Tượng đứng tựa lưng v&agrave;o n&uacute;i, khu&ocirc;n mặt hướng ra biển với đ&ocirc;i mắt hiền từ, một tay b&agrave; bắt ấn tam muội, tay kia lại cầm b&igrave;nh nước cam lộ như rưới an b&igrave;nh cho những ngư d&acirc;n đang vươn khơi xa, mang theo bao lời cầu mong về một vụ m&ugrave;a s&oacute;ng y&ecirc;n biển lặng v&agrave; quốc th&aacute;i d&acirc;n an.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-2.jpg\" style=\"height:501px; width:900px\" /></p>\r\n\r\n<p>Ngo&agrave;i việc được biết đến như một ng&ocirc;i ch&ugrave;a đẹp, lớn v&agrave;&hellip; trẻ nhất trong 3 ng&ocirc;i &ldquo;Linh Ứng Tự&rdquo; ở Đ&agrave; Nẵng, Ch&ugrave;a Linh Ứng B&atilde;i Bụt c&ograve;n được biết đến bỡi nơi c&oacute; tượng Phật Quan Thế &Acirc;m cao nhất Việt Nam.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-3.jpg\" style=\"height:750px; width:1000px\" /></p>\r\n\r\n<p>Một điều đặc biệt nữa của ch&ugrave;a Linh Ứng ch&iacute;nh l&agrave; cho d&ugrave; đứng bất kỳ đ&acirc;u trong l&ograve;ng Đ&agrave; Nẵng cũng sẽ đều dễ d&agrave;ng tr&ocirc;ng thấy tượng Phật B&agrave; Quan Thế &Acirc;m. Ch&iacute;nh v&igrave; nằm ở địa thế cao nhất của b&aacute;n đảo Sơn Tr&agrave; n&ecirc;n ngay từ cổng ch&ugrave;a, du kh&aacute;ch đ&atilde; c&oacute; thể đưa tầm mắt hướng ra xa to&agrave;n bộ đ&ocirc; thị trẻ Đ&agrave; Nẵng. C&ograve;n nếu đổi hướng nh&igrave;n về ph&iacute;a biển, Mỹ Kh&ecirc; sẽ trong tầm nh&igrave;n với cả b&atilde;i biển nước trong xanh c&ugrave;ng bờ c&aacute;t d&agrave;i trắng mịn, chạy v&ograve;ng cung theo con đường dưới ch&acirc;n n&uacute;i của b&aacute;n đảo Sơn Tr&agrave;.</p>\r\n\r\n<p><img alt=\"\" src=\"https://img.blogdulich.vn/2017/06/Ch%C3%B9a-linh-%E1%BB%A9ng-4.jpg\" style=\"height:665px; width:1000px\" /></p>\r\n\r\n<p>Với vẻ đẹp nguy nga, tr&aacute;ng lệ, c&ugrave;ng danh tiếng vang rộng khắp cả nước, n&ecirc;n Ch&ugrave;a Linh Ứng lu&ocirc;n khiến cho c&aacute;c du kh&aacute;ch phải t&ograve; m&ograve;, muốn được gh&eacute; thăm v&agrave; chi&ecirc;m ngưỡng vẻ đẹp của ng&ocirc;i ch&ugrave;a linh thi&ecirc;ng nhất của th&agrave;nh phố biển Đ&agrave; Nẵng. V&agrave; nếu bạn sắp c&oacute; tour&nbsp;<a href=\"https://www.vnbooking.com/city/da-nang-hotels.html\">du lịch Đ&agrave; Nẵng</a>&nbsp;th&igrave; đừng qu&ecirc;n đặt ch&acirc;n tới Linh Ứng Tự nh&eacute;!</p>', 'chua-linh-ung-dia-danh-khong-the-bo-qua-khi-toi-da-nang', '493HH', 1, '2020-09-06 12:45:13', '2020-09-06 12:45:13', NULL),
+(5, 'Mộc Châu hứa hẹn cho mùa valentine trọn vẹn', 'uploads/blog/neu1421312085.jpg', 'Với khung cảnh lãng mạn và nguyên sơ, Mộc Châu hứa hẹn sẽ mang đến cho những cặp uyên ương một mùa valentine ngọt ngào và trọn vẹn nhất', '<p><strong>Đồi ch&egrave; tr&aacute;i tim</strong></p>\r\n\r\n<p>Một địa điểm l&yacute; tưởng khi đến với Mộc Ch&acirc;u trong ng&agrave;y lễ valentine sắp tới ch&iacute;nh l&agrave; đồi ch&egrave; h&igrave;nh tr&aacute;i tim, với những s&oacute;ng ch&egrave; uốn lượn, chạy h&uacute;t tầm mắt, một m&agrave;u xanh mơn mởn rạng ngời c&ugrave;ng với hương ch&egrave; thơm ng&agrave;o ngạt khắp cao nguy&ecirc;n tạo n&ecirc;n một vẻ đẹp ho&agrave;n mỹ d&agrave;nh cho c&aacute;c cặp đ&ocirc;i y&ecirc;u th&iacute;ch sự l&atilde;ng mạn tự nhi&ecirc;n.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/doi-che-moc-chau.jpg\"><img alt=\"doi che moc chau\" src=\"https://img.blogdulich.vn/2015/02/doi-che-moc-chau.jpg\" style=\"height:633px; width:950px\" /></a><br />\r\n<strong>Tinh kh&ocirc;i vườn cải trắng</strong></p>\r\n\r\n<p>Hoa cải được trồng k&iacute;n cả một quả đồi, k&eacute;o d&agrave;i từ lũng n&agrave;y đến ch&acirc;n n&uacute;i kia, khắp kh&ocirc;ng gian bao la rộng lớn được phủ bằng một m&agrave;u trắng tinh kh&ocirc;i tạo n&ecirc;n một khung cảnh thần ti&ecirc;n, l&atilde;ng mạn. C&ograve;n điều g&igrave; tuyệt vời hơn khi s&aacute;nh bước c&ugrave;ng người ấy giữa kh&ocirc;ng gian bạt ng&agrave;n chỉ c&oacute; 2 người, m&agrave;u trắng tinh kh&ocirc;i của hoa cải tựa như t&igrave;nh y&ecirc;u trong s&aacute;ng của đ&ocirc;i lứa.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/neu1421312085.jpg\"><img alt=\"neu1421312085\" src=\"https://img.blogdulich.vn/2015/02/neu1421312085.jpg\" style=\"height:633px; width:950px\" /></a></p>\r\n\r\n<p><strong>B&aacute;t ng&aacute;t đồi th&ocirc;ng bản &Aacute;ng</strong></p>\r\n\r\n<p>Một Đ&agrave; Lạt đầy mộng mơ nằm giữa khung trời của cao nguy&ecirc;n Mộc Ch&acirc;u. C&aacute;c đ&ocirc;i t&igrave;nh nh&acirc;n c&oacute; thể thu&ecirc; bạt cắm trại giữa rừng th&ocirc;ng xanh, v&uacute;t thẳng l&ecirc;n trời cao, vươn l&ecirc;n đ&oacute;n nắng mai. Đi xe đạp đ&ocirc;i ngắm ho&agrave;ng h&ocirc;n, mặt trời từ từ xuống n&uacute;i khuất sau những rặng th&ocirc;ng le l&oacute;i ch&uacute;t &aacute;nh s&aacute;ng cuối ng&agrave;y m&agrave;u mật v&agrave;ng ấm &aacute;p, hay lang thang v&agrave;o rừng th&ocirc;ng, men theo đồng ruộng trải d&agrave;i, s&oacute;ng đ&ocirc;i quanh hồ,&hellip;</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/rung_thong.jpg\"><img alt=\"rung_thong\" src=\"https://img.blogdulich.vn/2015/02/rung_thong.jpg\" style=\"height:602px; width:950px\" /></a></p>\r\n\r\n<p><strong>Th&aacute;c Dải Yếm</strong></p>\r\n\r\n<p>D&ograve;ng th&aacute;c đổ ầm ầm, trắng x&oacute;a chảy xuống tạo d&ograve;ng chảy nhỏ, tr&ocirc;i hiền h&ograve;a, m&agrave;u xanh như soi gương, nơi đ&acirc;y được nhiều cặp uy&ecirc;n ương chọn l&agrave; điểm đến h&ograve; hẹn, thề non hẹn biển, cũng l&agrave; nơi thi&ecirc;ng li&ecirc;ng để minh chứng cho t&igrave;nh y&ecirc;u lứa đ&ocirc;i. Nơi đ&acirc;y c&ograve;n mang đậm dấu ấn c&acirc;u chuyện t&igrave;nh l&atilde;ng mạn về th&aacute;c Dải Yếm.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/thac-dai-yem_Sac-mau-ty.jpg\"><img alt=\"thac-dai-yem_Sac-mau-ty\" src=\"https://img.blogdulich.vn/2015/02/thac-dai-yem_Sac-mau-ty.jpg\" style=\"height:633px; width:950px\" /></a><br />\r\n<strong>Rừng đ&agrave;o</strong></p>\r\n\r\n<p>Trong kh&ocirc;ng kh&iacute; m&ugrave;a xu&acirc;n &ugrave;a về, hoa đ&agrave;o Mộc Ch&acirc;u thời điểm n&agrave;y đ&atilde; nở bung rực rỡ xen với những chồi xanh non l&aacute; mới, từng c&agrave;nh hoa &ugrave;a xuống, tạo v&ograve;m, ngước mắt nh&igrave;n l&ecirc;n chỉ thấy một v&ugrave;ng trời chấm hồng, c&ograve;n g&igrave; l&atilde;ng m&atilde;n hơn khi s&oacute;ng đ&ocirc;i c&ugrave;ng người ấy tr&ecirc;n con đường thắm đ&agrave;o xu&acirc;n trong ng&agrave;y lễ n&agrave;y.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/02/du-lich-sapa-3-ngay-7.jpg\"><img alt=\"hoa đào\" src=\"https://img.blogdulich.vn/2015/02/du-lich-sapa-3-ngay-7.jpg\" style=\"height:602px; width:950px\" /></a></p>\r\n\r\n<p>C&ograve;n chần chờ g&igrave; nữa, chuẩn bị kế hoạch đến Mộc Ch&acirc;u đ&oacute;n valentine c&ugrave;ng người ấy, để ghi lại những khoảnh khắc đẹp tuyệt vời trong ng&agrave;y lễ n&agrave;y. Ch&uacute;c c&aacute;c bạn m&ugrave;a valentine thật ngọt ng&agrave;o!</p>', 'moc-chau-hua-hen-cho-mua-valentine-tron-ven', '156HH', 1, '2020-09-06 12:51:57', '2020-09-06 12:51:57', NULL),
+(6, 'Chia sẻ kinh nghiệm du lịch Phú Quốc', 'uploads/blog/tour_packages-Copy.png', 'Du lịch Phú Quốc nên đi vào thời điểm nào là tốt ? Ăn gì, chơi ở đâu khi đến Phú Quốc?  nên ở khách sạn nào ở Phú Quốc?', '<p>Đ&oacute; l&agrave; một số c&acirc;u hỏi thường gặp khi&nbsp; du lịch đảo Ph&uacute; Quốc &ndash; đảo Ngọc của Việt Nam v&agrave; để giải đ&aacute;p những c&acirc;u hỏi tr&ecirc;n th&igrave; dưới đ&acirc;y l&agrave; một số th&ocirc;ng tin đầy đủ v&agrave; cần thiết d&agrave;nh cho những ai đang c&oacute; &yacute; định du h&iacute; tới h&ograve;n đảo xinh đẹp n&agrave;y.</p>\r\n\r\n<p><img alt=\"tour_packages (Copy)\" src=\"https://img.blogdulich.vn/2016/04/tour_packages-Copy.png\" style=\"height:570px; width:950px\" /></p>\r\n\r\n<h1><strong>Thời điểm th&iacute;ch hợp nhất để du lịch Ph&uacute; Quốc:</strong></h1>\r\n\r\n<p>Kh&aacute;c với kh&iacute; hậu 4 m&ugrave;a r&otilde; rệt ở miền Bắc th&igrave; Ph&uacute; Quốc c&oacute; kiểu thời tiết kh&iacute; hậu nhiệt đới gi&oacute; m&ugrave;a ph&acirc;n biệt 2 m&ugrave;a r&otilde; rệt: m&ugrave;a mưa từ th&aacute;ng 5 đến th&aacute;ng 10 v&agrave; m&ugrave;a kh&ocirc; l&agrave; từ th&aacute;ng 11 đến hết th&aacute;ng 4 năm sau. Nhiệt độ nơi đ&acirc;y quanh năm m&aacute;t mẻ dao động từ 26 &ndash; 28 độ do đ&oacute; bất kỳ thời điểm n&agrave;o bạn đến Ph&uacute; Quốc đều c&oacute; được sự thoải m&aacute;i nhất định nhưng thời gian đẹp nhất vẫn l&agrave; m&ugrave;a kh&ocirc; tức l&agrave; từ th&aacute;ng 11 đến th&aacute;ng 4(biển đẹp hiền h&ograve;a , kh&ocirc;ng mưa)</p>\r\n\r\n<h2><strong>Phương tiện di chuyển đến đảo Ph&uacute; Quốc &ndash; Du lịch ph&uacute; quốc&nbsp;</strong></h2>\r\n\r\n<p>Đi từ H&agrave; Nội v&agrave;o Ph&uacute; Quốc lựa chọn tối ưu nhất về phương tiện di chuyển chắc chắn l&agrave; m&aacute;y bay, bạn c&oacute; thể lựa chọn một trong những h&atilde;ng m&aacute;y bay vietnam arline, vietjet hoặc jetstar&hellip;</p>\r\n\r\n<p><img alt=\"tour-du-lich-phu-quoc\" src=\"https://img.blogdulich.vn/2016/04/tour-du-lich-phu-quoc.jpg\" style=\"height:736px; width:950px\" /></p>\r\n\r\n<p>Nếu ở S&agrave;i G&ograve;n bạn c&oacute; thể tới Ph&uacute; Quốc bằng một trong hai phương tiện chủ yếu m&aacute;y bay hoặc &ocirc; t&ocirc;. Đi xe &ocirc; t&ocirc; ra bến xe Miền T&acirc;y mua v&eacute; đi từ HCM tới Rạch Gi&aacute; (hoặc H&agrave; Ti&ecirc;n) v&agrave; từ Rạch Gi&aacute; (H&agrave; Ti&ecirc;n) mua v&eacute; t&agrave;u sang đảo Ph&uacute; Quốc.</p>\r\n\r\n<h3><strong>N&ecirc;n ở resort cao cấp hay kh&aacute;ch sạn b&igrave;nh d&acirc;n khi du lịch&nbsp;Ph&uacute; Quốc ?</strong></h3>\r\n\r\n<p>Ph&uacute; Quốc l&agrave; một trong những điểm du lịch hấp dẫn của nước ta, nơi đ&acirc;y c&oacute; rất nhiều resort v&agrave; kh&aacute;ch sạn cao cấp cho tới b&igrave;nh d&acirc;n do đ&oacute; việc ở resort cao cấp hay kh&aacute;ch sạn b&igrave;nh d&acirc;n c&ograve;n t&ugrave;y thuộc v&agrave;o t&uacute;i tiền của bạn. Dưới đ&acirc;y l&agrave; tư vấn tổng hợp những resort cao cấp v&agrave; những&nbsp;<strong><a href=\"http://www.vnbooking.com/city/phu-quoc-hotels.html\">kh&aacute;ch sạn Ph&uacute; Quốc</a></strong>&nbsp;b&igrave;nh d&acirc;n gi&aacute; rẻ để mọi người c&ugrave;ng tham khảo:</p>\r\n\r\n<p><img alt=\"cong-vao-vinpearl-phu-quoc\" src=\"https://img.blogdulich.vn/2016/04/cong-vao-vinpearl-phu-quoc.jpg\" style=\"height:565px; width:950px\" /></p>\r\n\r\n<p><strong>Vinpearl Ph&uacute; Quốc Resort</strong>&nbsp;l&agrave; một resort cao cấp 5 sao với vị tr&iacute; đắc địa &nbsp;tr&ecirc;n đảo Ph&uacute; Quốc nghỉ dưỡng tại đ&acirc;y du kh&aacute;ch c&oacute; thể dễ d&agrave;ng di chuyển tới những địa danh du lịch nổi tiếng của Ph&uacute; Quốc &ndash;&nbsp;<a href=\"http://www.vnbooking.com/hotel/vinpearl-resort-phu-quoc.html\" target=\"_blank\">Vinpearl Resort Ph&uacute; Quốc</a>&nbsp;gồm&nbsp;750 ph&ograve;ng nghỉ dưỡng cực sang trọng với kết cấu nội thất, tiện nghi hiện đại mức gi&aacute; của resort n&agrave;y thuộc dạng cực khủng 3.400.000đ/đ&ecirc;m đối với ph&ograve;ng Deluxe Garden Veiw v&agrave; khoảng 55 triệu đồng đối với hạng ph&ograve;ng 4 BR Presidential Suite Villa (Full board)</p>\r\n\r\n<p><img alt=\"96681_hotelimage_39533329\" src=\"https://img.blogdulich.vn/2016/04/96681_hotelimage_39533329.jpg\" style=\"height:543px; width:950px\" /></p>\r\n\r\n<p><strong>Eden Resort Ph&uacute; Quốc&nbsp;</strong>: L&agrave; resort đạt ti&ecirc;u chuẩn 4 sao &nbsp;Eden Resort Ph&uacute; Quốc sở hữu 166 ph&ograve;ng nghỉ được đ&aacute;nh gi&aacute; l&agrave; cực tốt với c&aacute;c tiện nghi cao cấp được b&agrave;i tr&iacute; h&agrave;i h&ograve;a. Khi nghỉ dưỡng ở Eden Resort du kh&aacute;ch c&oacute; thể hướng tầm mắt của m&igrave;nh ngắm những b&atilde;i biển đẹp hay đắm ch&igrave;m trong thơ mộng của khu vườn t&igrave;nh y&ecirc;u. Nh&agrave; h&agrave;ng của Eden Resort v&ocirc; c&ugrave;ng hấp dẫn bởi khung cảnh l&atilde;ng mạn với c&aacute;c m&oacute;n ăn quốc tế v&agrave; những m&oacute;n ăn đặc sản mang thương hiệu Ph&uacute; Quốc..Mức gi&aacute; của Resort &nbsp;n&agrave;y đối với hạng ph&ograve;ng Garden View Deluxe l&agrave; 2.300.000đ/đ&ecirc;m</p>\r\n\r\n<p><img alt=\"92494_hotelimage_4\" src=\"https://img.blogdulich.vn/2016/04/92494_hotelimage_4.jpg\" style=\"height:543px; width:950px\" /></p>\r\n\r\n<p><strong>Thi&ecirc;n Thanh Resort Ph&uacute; Quốc</strong>: Thuộc danh s&aacute;ch những kh&aacute;ch sạn 3 sao ở Ph&uacute; Quốc tọa lạc tr&ecirc;n một vị tr&iacute; đẹp của B&atilde;i D&agrave;i thuộc &nbsp;thị trấn Đ&ocirc;ng Dương &ndash; b&atilde;i biển trung t&acirc;m của Đảo Ph&uacute; Quốc. Nghỉ dưỡng ở đ&acirc;y du kh&aacute;ch sẽ được kh&aacute;m ph&aacute; sự y&ecirc;n b&igrave;nh của những c&aacute;nh rừng nguy&ecirc;n sinh, c&aacute;c ng&ocirc;i l&agrave;ng ven biển quanh năm với nghề ch&agrave;i lưới người d&acirc;n nơi đ&acirc;y rất mến kh&aacute;ch bạn sẽ c&oacute; cảm gi&aacute;c đang nghỉ dưỡng tại ch&iacute;nh ng&ocirc;i nh&agrave; của m&igrave;nh khi đến với Thi&ecirc;n Thanh Resort.</p>\r\n\r\n<p><strong>Ng&agrave;n Sao Resort Ph&uacute; Quốc:&nbsp;</strong>l&agrave; kh&aacute;ch sạn 2 sao nằm tại khu vực trung t&acirc;m th&agrave;nh phố, nghỉ dưỡng tại đ&acirc;y bạn sẽ thoải m&aacute;i thời gian để đi đến những địa điểm du lịch c&oacute; tiếng ở Ph&uacute; Quốc như: Long Beach, Coco Devi Center, b&atilde;i Trường&hellip;</p>\r\n\r\n<p>Ng&agrave;n Sao Resort c&oacute; 74 ph&ograve;ng nghỉ rộng r&atilde;i v&agrave; tho&aacute;ng m&aacute;t tr&ecirc;n ngọn đồi lộng gi&oacute; với kiến tr&uacute;c h&agrave;i h&ograve;a, b&atilde;i đỗ xe, nh&agrave; h&agrave;ng, qu&aacute;n caf&eacute;,&hellip; v&agrave; rất rất nhiều dịch vụ tiện &iacute;ch kh&aacute;c sẽ khiến bạn y&ecirc;u nơi đ&acirc;y hơn bao giờ hết.</p>', 'chia-se-kinh-nghiem-du-lich-phu-quoc', '911HH', 1, '2020-09-06 13:13:57', '2020-09-06 13:13:57', NULL),
+(7, 'Các địa điểm tham quan khi đến Sầm Sơn', 'uploads/blog/anh-2-hon-trong-mai.jpg', 'Từ những năm đầu thế kỉ 20, người Pháp đã nhận ra vẻ đẹp và tiềm năng du lịch của Sầm Sơn', '<h2>Từ những năm đầu thế kỉ 20, người Ph&aacute;p đ&atilde; nhận ra vẻ đẹp v&agrave; tiềm năng du lịch của Sầm Sơn, bắt đầu khai th&aacute;c v&agrave; biến Sầm Sơn th&agrave;nh nơi nghỉ dưỡng l&yacute; tưởng. Sầm Sơn được trời ph&uacute; cho một v&ugrave;ng trời nước m&ecirc;nh m&ocirc;ng xanh ngắt với b&atilde;i c&aacute;t trắng mịn d&agrave;i hơn 10&nbsp;km, s&oacute;ng đ&aacute;nh mạnh, nhiều hải sản qu&yacute; v&agrave; đặc biệt c&oacute; d&atilde;y n&uacute;i Trường Lệ với c&aacute;c thắng t&iacute;ch.</h2>\r\n\r\n<ol>\r\n	<li>\r\n	<h3><strong>C&aacute;c địa điểm vui chơi l&acirc;u đời ở Sầm Sơn</strong></h3>\r\n	</li>\r\n</ol>\r\n\r\n<p>Tới Sầm Sơn trước hết phải ngắm cảnh biển v&agrave; tắm biển. Mỗi b&igrave;nh m&igrave;nh thức giấc ngắm mặt trời l&ecirc;n, mỗi chiều về xuống biển tắm dưới l&agrave;n nước m&aacute;t trong xanh hay mỗi khi m&agrave;n đ&ecirc;m bu&ocirc;ng xuống c&ugrave;ng nhau tản bộ b&ecirc;n bờ biển lắng nghe tiếng s&oacute;ng vỗ&hellip; . Vẻ đẹp của Sầm Sơn c&ugrave;ng với sức cuốn h&uacute;t v&ocirc; h&igrave;nh của n&oacute; sẽ khiến bạn cảm thấy những mệt mỏi căng thẳng biến mất, t&acirc;m trạng thoải m&aacute;i, b&igrave;nh an v&agrave; thanh thản.</p>\r\n\r\n<p>Dọc bờ biển l&agrave; h&agrave;ng dừa duy&ecirc;n d&aacute;ng chạy d&agrave;i vung những t&agrave;u l&aacute; r&igrave; r&agrave;o trước gi&oacute;, h&ograve;a c&ugrave;ng nắng v&agrave;ng biển xanh tạo n&ecirc;n khung cảnh b&igrave;nh y&ecirc;n đến lạ.</p>\r\n\r\n<p>Kh&ocirc;ng chỉ c&oacute; tắm biển, Sầm Sơn c&ograve;n c&oacute; nhiều danh thắng l&acirc;u đời với nhiều &yacute; nghĩa.</p>\r\n\r\n<p><strong>H&ograve;n Trống M&aacute;i</strong></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-2-hon-trong-mai.jpg\" style=\"height:708px; width:950px\" /></p>\r\n\r\n<p>Đ&acirc;y l&agrave; t&ecirc;n gọi của hai h&ograve;n đ&aacute; tr&ecirc;n đỉnh n&uacute;i Trường Lệ v&agrave; c&oacute; h&igrave;nh d&aacute;ng của một đ&ocirc;i chim đang chụm đầu v&agrave; nghi&ecirc;ng mỏ v&agrave;o nhau, gắn liền với truyền thuyết về một mối t&igrave;nh chung thủy. H&ograve;n Trống M&aacute;i l&agrave; địa điểm m&agrave; du kh&aacute;ch n&ecirc;n qu&eacute; qua một lần khi đến Sầm Sơn.</p>\r\n\r\n<p><strong>Ch&ugrave;a C&ocirc; Ti&ecirc;n</strong></p>\r\n\r\n<p>Ng&ocirc;i ch&ugrave;a nằm ở ph&iacute;a Nam n&uacute;i Trường Lệ với vị thế rất đẹp v&agrave; tho&aacute;ng đ&atilde;ng. Ch&ugrave;a C&ocirc; Ti&ecirc;n nổi tiếng v&igrave; sự linh thi&ecirc;ng suốt bao đời nay, l&agrave; điểm lui tới được du kh&aacute;ch y&ecirc;u mến.</p>\r\n\r\n<p><strong>Đền Độc Cước</strong></p>\r\n\r\n<p>Ng&ocirc;i đền nằm tr&ecirc;n đỉnh n&uacute;i Cổ Giải, thuộc d&atilde;y n&uacute;i Trường Lệ ngay cạnh b&atilde;i biển Sầm Sơn. Đền Độc Cước được x&acirc;y dựng từ thời Trần (1225 &ndash; 1400). Đến nay đ&atilde; trải qua nhiều lần s&oacute;ng gi&oacute; chiến tranh nhưng ng&ocirc;i đền vẫn nguy&ecirc;n vẹn v&agrave; rất linh thi&ecirc;ng.</p>\r\n\r\n<p><strong>N&uacute;i Trường Lệ</strong></p>\r\n\r\n<p>N&uacute;i Trường Lệ vừa mang vẻ oai nghi&ecirc;m h&ugrave;ng vĩ vừa mềm mại uốn lượn. L&agrave; một d&atilde;y n&uacute;i d&agrave;i, từ th&agrave;nh phố Thanh H&oacute;a đi theo quốc lộ 47 về ph&iacute;a Đ&ocirc;ng, du kh&aacute;ch sẽ thấy sự biến h&oacute;a h&igrave;nh d&aacute;ng l&uacute;c cao l&uacute;c thấp l&ocirc; nh&ocirc;, từng tầng từng lớp v&agrave; cuối c&ugrave;ng l&agrave; một pho tượng to lớn hiện l&ecirc;n. Mỗi đoạn n&uacute;i, h&ograve;n n&uacute;i nhỏ gắn liền với một sự t&iacute;ch, một huyền thoại với h&igrave;nh d&aacute;ng kỳ lạ sẽ gợi mở cho du kh&aacute;ch tưởng tượng v&agrave; rồi như hiện hữu ngay trước mặt.</p>\r\n\r\n<ol start=\"2\">\r\n	<li>\r\n	<h2><strong>C&aacute;c địa điểm vui chơi mới mở tại Sầm Sơn</strong></h2>\r\n	</li>\r\n</ol>\r\n\r\n<p><strong>FLC Sầm Sơn</strong></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-3-flc-sam-son.jpg\" style=\"height:589px; width:950px\" /></p>\r\n\r\n<p>FLC Sầm Sơn l&agrave; nơi nghỉ dưỡng v&agrave; giải tr&iacute; bậc nhất hiện nay tại Việt Nam nhờ vị tr&iacute; đắc địa giao thoa giữa biển v&agrave; d&ograve;ng s&ocirc;ng M&atilde; với tổng diện t&iacute;ch l&ecirc;n đến 92,4 ha.</p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-5-flc-samson-golf-links.jpg\" style=\"height:632px; width:950px\" /></p>\r\n\r\n<p>FLC đ&atilde; đưa v&agrave;o hoạt động ba cơ sở lưu tr&uacute; ch&iacute;nh tại Sầm Sơn, bao gồm kh&aacute;ch sạn FLC Luxury Hotel Samson, FLC Luxury Resort Samson v&agrave; khu Villa FLC Luxury Samson.</p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-4-flc-samson-be-boi.jpg\" style=\"height:627px; width:950px\" /></p>\r\n\r\n<p>Kh&aacute;ch du lịch sử dụng dịch vụ lưu tr&uacute; tại FLC Luxury Hotel Samson, FLC Luxury Resort Samson sẽ được thụ hưởng to&agrave;n bộ c&aacute;c tiện &iacute;ch 5 sao của quần thể như&nbsp; bể bơi nước mặn ngo&agrave;i trời lớn nhất Việt Nam, hệ thống 152 bể bơi tr&ecirc;n to&agrave;n resort, s&acirc;n golf dạng links 18 hố, trung t&acirc;m hội nghị quốc tế 1.300 chỗ, hệ thống nh&agrave; h&agrave;ng kh&aacute;ch sạn, gym, spa 5 sao&hellip;</p>\r\n\r\n<p>Đặt ph&ograve;ng FLC Sầm Sơn tại:&nbsp;<a href=\"https://www.facebook.com/flcluxurysamson/\">https://www.facebook.com/flcluxurysamson/</a></p>\r\n\r\n<p><strong>Vạn Ch&agrave;i Resort</strong></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-6-Van-Chai-Resort-Sam-son-e1502785873225.jpg\" style=\"height:713px; width:950px\" /></p>\r\n\r\n<p>Nếu như FLC Sầm Sơn mang đến kh&ocirc;ng gian sang trọng hiện đại mang phong c&aacute;ch ch&acirc;u &Acirc;u th&igrave; Vạn Ch&agrave;i Resort sẽ mang lại cho du kh&aacute;ch một kh&ocirc;ng gian kiến tr&uacute;c truyền thống của l&agrave;ng qu&ecirc; Bắc Bộ Việt Nam kết hợp tinh tế với tiện nghi hiện đại trong kh&ocirc;ng gian thi&ecirc;n nhi&ecirc;n xanh.</p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-7-van-chai-resort.jpg\" style=\"height:594px; width:950px\" /></p>\r\n\r\n<p><img alt=\"cac dia diem tham quan khi du lich Sam Son\" src=\"https://img.blogdulich.vn/2017/08/anh-8phong-van-chai-resort.jpg\" style=\"height:600px; width:950px\" /></p>\r\n\r\n<p>Vạn Ch&agrave;i Resort hệt như một ốc đảo thanh b&igrave;nh biệt lập v&agrave; một kh&ocirc;ng gian thơ mộng, kh&aacute;c biệt với&nbsp;<strong>c</strong>&aacute;c resort ở Sầm Sơn. Tuổi đời của khu nghỉ dưỡng cũng kh&aacute; cao, vậy n&ecirc;n đội ngũ nh&acirc;n vi&ecirc;n ở đ&acirc;y phần lớn l&agrave; người đ&atilde; ch&iacute;nh chắn v&agrave; trưởng th&agrave;nh,&nbsp;mang những n&eacute;t chất ph&aacute;c, gần gũi của một v&ugrave;ng qu&ecirc; miền Trung nắng gi&oacute;.</p>', 'cac-dia-diem-tham-quan-khi-den-sam-son', '382HH', 1, '2020-09-06 13:17:05', '2020-09-06 13:17:05', NULL),
+(8, 'Tổng quan quần thể nghỉ dưỡng FLC Sầm Sơn', 'uploads/blog/tong-quan-FLC-Sam-Son-1.jpg', 'Du lịch Sầm Sơn ngày càng được phát triển, diện mạo của Sầm Sơn ngày càng trở nên khởi sắc hơn, nhất là khi FLC Sầm Sơn xuất hiện', '<p>Du lịch Sầm Sơn ng&agrave;y c&agrave;ng được ph&aacute;t triển, diện mạo của Sầm Sơn ng&agrave;y c&agrave;ng trở n&ecirc;n khởi sắc hơn, nhất l&agrave; khi&nbsp;<strong><em>FLC Sầm Sơn</em>&nbsp;</strong>xuất hiện. Nếu như trước đ&acirc;y, biển Sầm Sơn chỉ thu h&uacute;t kh&aacute;ch du lịch v&agrave;o những dịp h&egrave; n&oacute;ng nực, th&igrave; giờ đ&acirc;y quanh năm tại đ&acirc;y vẫn thu h&uacute;t h&agrave;ng triệu lượt du kh&aacute;ch bởi hệ thống 152 bể bơi trong nh&agrave; v&agrave; ngo&agrave;i trời, bể bơi nước n&oacute;ng tại quần thể khu du lịch sinh th&aacute;i&nbsp;<a href=\"http://flcresortsamson.com/\">FLC Resort Sầm Sơn</a>.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-1\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-1.jpg\" style=\"height:558px; width:950px\" /></p>\r\n\r\n<p>Nguồn: Samson.org.vn</p>\r\n\r\n<p><strong><em>FLC Sầm Sơn</em></strong>&nbsp;tọa lạc tại đường Hồ Xu&acirc;n Hương, x&atilde; Quảng Cư, thị x&atilde; Sầm Sơn, tỉnh Thanh H&oacute;a; l&agrave; nơi giao thoa giữa biển v&agrave; d&ograve;ng s&ocirc;ng M&atilde;, gi&aacute;p khu du lịch biển Sầm Sơn,&nbsp;<em>FLC Sầm Sơn</em>&nbsp;được x&acirc;y dựng trở th&agrave;nh một nơi nghỉ ngơi v&agrave; giải tr&iacute; bậc nhất cả nước. Đ&acirc;y l&agrave; một tổ hợp dịch vụ biệt thự- liền kề- shophouse- shoptel- condetel với quy m&ocirc; hơn 2 triệu m2 được ph&aacute;t triển th&agrave;nh quần thể khu du lịch nghỉ dưỡng sinh th&aacute;i cao cấp với đầy đủ dịch vụ được ph&aacute;t triển đồng bộ gồm: S&acirc;n golf, khu biệt thự nghĩ dưỡng 5 sao, kh&aacute;ch sạn 5 sao, khu Bungalow &Agrave; La Carte, bể bơi nước mặt, trung t&acirc;m hội nghị quốc tế, c&aacute;c khu vui chơi giải tr&iacute; trong nh&agrave; v&agrave; ngo&agrave;i trời c&ugrave;ng hơn 1000 căn biệt thự.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-2\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-2.jpg\" style=\"height:527px; width:950px\" /></p>\r\n\r\n<p>Bể bơi trong nh&agrave; cao cấp</p>\r\n\r\n<p>Điểm nhấn của quần thể nghỉ dưỡng n&agrave;y ch&iacute;nh l&agrave;&nbsp;<em>FLC Sầm Sơn</em>&nbsp;Golf Links, được quản l&yacute; v&agrave; triển khai thi c&ocirc;ng bởi Flagstick, đơn vị quản l&yacute; s&acirc;n golf h&agrave;ng đầu của Mỹ. Với sự kết hợp n&agrave;y, FLC mong muốn mang đến một s&acirc;n golf đẳng cấp thế giới cả về thiết kế lẫn chất lượng.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-4\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-4.jpg\" style=\"height:535px; width:950px\" /></p>\r\n\r\n<p>S&acirc;n golf tại FLC Sầm Sơn</p>\r\n\r\n<p>Bất k&igrave; du kh&aacute;ch n&agrave;o đến đ&acirc;y cũng sẽ cảm thấy cho&aacute;ng ngợp kh&ocirc;ng chỉ v&igrave; hệ thống c&aacute;c bể bơi, m&agrave; nơi đ&acirc;y c&ograve;n c&oacute; bể bơi nước mặn ngo&agrave;i trời lớn nhất Việt Nam với diện t&iacute;ch 5.100m2.</p>\r\n\r\n<p>Li&ecirc;n hệ&nbsp;<a href=\"https://www.vnbooking.com/\"><strong>đặt ph&ograve;ng trực tuyến gi&aacute; rẻ</strong></a></p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-3\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-3.jpg\" style=\"height:527px; width:950px\" /></p>\r\n\r\n<p>B&ecirc;n cạnh bể bơi ngo&agrave;i trời</p>\r\n\r\n<p>Đến với&nbsp;<em>FLC Sầm Sơn</em>&nbsp;bạn sẽ được lạc v&agrave;o thi&ecirc;n đường ẩm thực với những m&oacute;n ăn đa dạng của nhiều khu vực tr&ecirc;n thế giới. Nh&agrave; h&agrave;ng&nbsp; Fresh C&aacute; được thiết kế với kh&ocirc;ng gian thư th&aacute;i, nhẹ nh&agrave;ng ngay cạnh bể bơi nước mặn &amp; hướng ra biển mang đến cho bạn những m&oacute;n ăn &Acirc;u &ndash; &Aacute; đa dạng, tiệc buffet ho&agrave;n hảo.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-5\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-5.jpg\" style=\"height:634px; width:950px\" /></p>\r\n\r\n<p><em>FLC Sầm Sơn</em>&nbsp;c&ograve;n cho x&acirc;y dựng hệ thống Bar như Zen bar, Tabaha Bar, Aqua Bar với thiết kế độc đ&aacute;o, tuyệt đẹp, phục vụ cả tiệc BBQ ngo&agrave;i trời. Ngo&agrave;i ra, tại đ&acirc;y c&ograve;n c&oacute; s&acirc;n Tennis, khu vui chơi trẻ em trong nh&agrave; &amp; ngo&agrave;i trời, khu vực tập gymn, yoga, taichi đầy đủ tiện &iacute;ch hiện đại bậc nhất tr&ecirc;n thế giới.</p>\r\n\r\n<p><img alt=\"tong-quan-FLC-Sam-Son-6\" src=\"https://img.blogdulich.vn/2017/07/tong-quan-FLC-Sam-Son-6.jpg\" style=\"height:527px; width:950px\" /></p>\r\n\r\n<p>H&atilde;y tới&nbsp;<a href=\"https://www.vnbooking.com/hotel/flc-luxury-hotel-sam-son.html\"><em>FLC Sầm Sơn</em></a>&nbsp;để tận hưởng sự kết hợp giữa n&eacute;t mới mẽ v&agrave; cổ điển, phương ph&aacute;p trị liệu truyền thống, với c&aacute;c kĩ thuật d&agrave;i hay ngắn, trị liệu với dầu hoặc kh&ocirc;ng dầu, đơn giản hoặc mang n&eacute;t ri&ecirc;ng trong kh&ocirc;ng gian hiện đại, đầy sức sống tại Spa cao cấp.</p>', 'tong-quan-quan-the-nghi-duong-flc-sam-son', '382HH', 1, '2020-09-06 13:22:12', '2020-09-06 13:22:12', NULL),
+(9, 'Kinh nghiệm du lịch Sầm Sơn không bị “chặt chém”', 'uploads/blog/bai-bien-sam-son.jpg', 'Sầm Sơn là vùng đất được thiên nhiên ưu đãi với bãi biển đẹp nổi tiếng bên núi Trường Lệ, nằm ở phía đông tỉnh Thanh Hóa,', '<p>Sầm Sơn l&agrave; v&ugrave;ng đất được thi&ecirc;n nhi&ecirc;n ưu đ&atilde;i với b&atilde;i biển đẹp nổi tiếng b&ecirc;n n&uacute;i Trường Lệ, nằm ở ph&iacute;a đ&ocirc;ng tỉnh Thanh H&oacute;a, c&aacute;ch th&agrave;nh phố khoảng 16km. Lần đầu ti&ecirc;n đến đ&acirc;y, bạn sẽ ấn tượng ngay với những con s&oacute;ng kh&ocirc;ng ngừng đổ v&agrave;o n&ecirc;n c&aacute;t mịn, những h&agrave;ng c&acirc;y xanh tr&ecirc;n bờ biển, thấp tho&aacute;ng d&atilde;y n&uacute;i nhấp nh&ocirc; b&ecirc;n bờ biển tạo n&ecirc;n một khung cảnh đẹp n&ecirc;n thơ. Nơi đ&acirc;y c&ograve;n l&agrave; v&ugrave;ng đất gi&agrave;u bản sắc văn h&oacute;a độc đ&aacute;o với nhiều lễ hội truyền thống. Tuy nhi&ecirc;n, những năm gần đ&acirc;y Sầm Sơn bị du kh&aacute;ch phản &aacute;nh kh&ocirc;ng tốt về chất lượng dịch vụ k&eacute;m v&agrave; nạn &ldquo;ch&eacute;m chặt&rdquo; qu&aacute; nhiều. Tham khảo những kinh nghiệm dưới đ&acirc;y để c&oacute; được một chuyến du lịch vui vẻ v&agrave; tiết kiệm!</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/bai-bien-sam-son.jpg\"><img alt=\"Bãi biển Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/bai-bien-sam-son.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p><em>B&atilde;i biển Sầm Sơn</em></p>\r\n\r\n<p><strong>Thời điểm n&agrave;o th&igrave; th&iacute;ch hợp?</strong></p>\r\n\r\n<p>Từ th&aacute;ng 6 đến th&aacute;ng 8 (giữa m&ugrave;a du lịch) l&agrave; thời điểm tốt nhất để đến Sầm Sơn. Tuy nhi&ecirc;n l&uacute;c n&agrave;y gi&aacute; cả c&aacute;c dịch vụ cũng l&agrave; đắt nhất. Du lịch biển Sầm Sơn th&igrave; khoảng 3 ng&agrave;y 2 đ&ecirc;m l&agrave; hợp l&yacute; nhất với chi ph&iacute; vừa sức v&agrave; tham quan được nhiều nơi.</p>\r\n\r\n<p><strong>Đi Sầm Sơn n&ecirc;n mang g&igrave;?</strong></p>\r\n\r\n<p>Ngo&agrave;i những thứ kh&ocirc;ng thể thiếu như quần &aacute;o, tiền nong,&hellip; th&igrave; để chuyến đi chơi tr&ecirc;n biển được ho&agrave;n hảo, bạn cần lưu &yacute;:</p>\r\n\r\n<p>&ndash; Đi chơi biển, bạn n&ecirc;n chọn quần &aacute;o, gi&agrave;y d&eacute;p, t&uacute;i x&aacute;ch, mũ&hellip; c&agrave;ng m&agrave;u sắc c&agrave;ng tốt. Bạn nhớ mang theo kem chống nắng, mũ rộng v&agrave;nh v&agrave; đ&ocirc;i d&eacute;p xỏ ng&oacute;n.</p>\r\n\r\n<p>&ndash; Nếu mang đồng hồ th&igrave; chọn loại water proof (kh&ocirc;ng thấm nước). D&ugrave; đi &ocirc; t&ocirc;, bạn cũng đừng qu&ecirc;n chiếc &ocirc; v&agrave; &aacute;o mưa.</p>\r\n\r\n<p>&ndash; N&ecirc;n mang chiếc khăn tắm của m&igrave;nh theo, bởi đ&oacute; l&agrave; vũ kh&iacute; đa năng: d&ugrave;ng để che nắng, l&oacute;t chỗ nằm, quấn ngang người&hellip; Hơn nữa, nếu chiếc khăn c&oacute; m&agrave;u sắc rực rỡ cũng gi&uacute;p người kh&aacute;c t&igrave;m bạn dễ hơn đấy.</p>\r\n\r\n<p>&ndash; Nhớ mang theo con dao nhỏ (loại chuy&ecirc;n dụng cho picnic), thức ăn gi&agrave;u chất bột (như b&aacute;nh). Khi bơi v&agrave; vận động tr&ecirc;n biển, bạn ti&ecirc;u hao nhiều năng lượng n&ecirc;n nhanh bị đ&oacute;i. L&uacute;c ấy, bất kỳ thực phẩm n&agrave;o cũng khiến bạn cảm thấy ngon miệng; v&agrave; con dao nhỏ rất cần thiết để bạn cắt tr&aacute;i c&acirc;y, b&aacute;nh, mở đồ hộp&hellip;</p>\r\n\r\n<p><strong>Phương tiện đi lại?</strong></p>\r\n\r\n<p><em>C&aacute;ch đến Sầm Sơn:</em></p>\r\n\r\n<p>Sầm Sơn c&aacute;ch H&agrave; Nội khoảng 170km, c&aacute;c bạn c&oacute; thể đi &ocirc; t&ocirc; từ c&aacute;c bến xe Mỹ Đ&igrave;nh, Gi&aacute;p B&aacute;t, Lương Y&ecirc;n với gi&aacute; v&eacute; khoảng 70 &ndash; 120 ngh&igrave;n đồng (t&ugrave;y v&agrave;o chất lượng xe) v&agrave; mất khoảng 5h để đến Sầm Sơn.</p>\r\n\r\n<p>Với qu&atilde;ng đường 170km kh&aacute; ph&ugrave; hợp cho 1 chuyến phượt vui vẻ bằng xe m&aacute;y, nhưng c&aacute;c bạn phải ch&uacute; &yacute; an to&agrave;n.</p>\r\n\r\n<p>Hoặc c&aacute;c bạn c&oacute; thể ra Ga H&agrave; Nội hoặc Ga Long Bi&ecirc;n để đi T&agrave;u Hỏa về Ga Thanh H&oacute;a, gi&aacute; v&eacute; dao đồng từ 70 &ndash; 150 ngh&igrave;n đồng (t&ugrave;y v&agrave;o chất lượng toa). Đến Ga Thanh H&oacute;a bạn c&oacute; thể đi xe bus đến Sầm Sơn (gi&aacute; v&eacute; khoảng 10 ngh&igrave;n đồng/ lượt).</p>\r\n\r\n<p><em>Di chuyển ở Sầm Sơn:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em><strong>&nbsp;&nbsp;<em>&nbsp;&nbsp;</em></strong></p>\r\n\r\n<p>Nếu đi gần th&igrave; n&ecirc;n đi bộ, vừa đi dạo thư th&aacute;i ngắm cảnh Sầm Sơn, vừa tiết kiệm cho chuyến đi của bạn.</p>\r\n\r\n<p>Nếu đi xa hơn bạn c&oacute; thể đi taxi, x&iacute;ch l&ocirc; hoặc xe điện nhưng ch&uacute; &yacute; nếu kh&ocirc;ng biết khoảng c&aacute;ch địa điểm bạn đi th&igrave; phải hỏi trước người ở nh&agrave; nghỉ trước để biết ước t&iacute;nh đường.</p>\r\n\r\n<p>Đi x&iacute;ch l&ocirc; bạn ch&uacute; &yacute; phải l&agrave;m gi&aacute; trước v&agrave; cần ch&uacute; &yacute; nhiều xe thi thoảng đi cứ lắc lắc, đ&aacute;nh v&otilde;ng để qu&yacute; kh&aacute;ch rơi v&iacute;, đồng hồ, điện thoại để lấy cắp.</p>\r\n\r\n<p>Hoặc bạn cũng c&oacute; thể thu&ecirc; xe đạp đ&ocirc;i, xe đạp 3 m&agrave; tự do ngắm cảnh, vui chơi thỏa th&iacute;ch.</p>\r\n\r\n<p><strong>Nghỉ đ&acirc;u rẻ?</strong></p>\r\n\r\n<p>Việc đặt ph&ograve;ng ở Sầm Sơn kh&aacute; kh&oacute; khăn bởi ở đ&acirc;y rất đ&ocirc;ng kh&aacute;ch,ặc biệt l&agrave; v&agrave;o ng&agrave;y lễ, ng&agrave;y nghỉ. V&igrave; thề nếu bạn muốn c&oacute; ph&ograve;ng th&igrave; n&ecirc;n đặt trước (đặt trước c&agrave;ng l&acirc;u gi&aacute; c&agrave;ng rẻ).</p>\r\n\r\n<p>Nếu bạn l&agrave; Học sinh, sinh vi&ecirc;n, n&ecirc;n chọn nh&agrave; nghỉ (kh&aacute;ch sạn) xa xa b&atilde;i biển sẽ rẻ hơn. C&ograve;n nếu c&oacute; điều kiện th&igrave; bạn c&oacute; thể dừng ch&acirc;n tại c&aacute;c nh&agrave; nghỉ (kh&aacute;ch sạn) tại đường Hồ Xu&acirc;n Hương, đ&acirc;y l&agrave; con đường song song với bờ biển, từ nh&agrave; nghỉ (kh&aacute;ch sạn) bạn c&oacute; thể nh&igrave;n ra ph&iacute;a bờ biền để ngắm cảnh, h&oacute;ng gi&oacute;. Mức gi&aacute; dao động từ 400.000 &ndash; 800.000 vnđ/đ&ecirc;m với ph&ograve;ng đầy đủ điều h&ograve;a, ti vi, tủ lạnh,&hellip;</p>\r\n\r\n<blockquote>\r\n<p>Tham khảo:&nbsp;<a href=\"http://www.vnbooking.com/city/sam-son-hotels.html?sid=105\">Kh&aacute;ch sạn gi&aacute; tốt ở Sầm Sơn</a></p>\r\n</blockquote>\r\n\r\n<p><strong>Ăn g&igrave;?</strong></p>\r\n\r\n<p>Th&ocirc;ng thường nh&agrave; nghỉ n&agrave;o cũng c&oacute; nh&agrave; h&agrave;ng lu&ocirc;n n&ecirc;n bạn c&oacute; thể ăn ngay tại nh&agrave; nghỉ, mỗi suất ăn khoảng từ 30k &ndash; 50k/ suất, m&oacute;n ăn được thay đổi, chất lượng cũng tốt.</p>\r\n\r\n<p>Nếu muốn rẻ hơn một ch&uacute;t th&igrave; bạn đi l&ecirc;n ra đường ch&iacute;nh v&agrave; ăn ở c&aacute;c h&agrave;ng cơm b&igrave;nh d&acirc;n như ở H&agrave; Nội. Nếu bạn c&oacute; ng&acirc;n s&aacute;ch kha kh&aacute; c&oacute; thể ăn đặc sản ở c&aacute;c nh&agrave; h&agrave;ng ngay mặt biển (nh&agrave; h&agrave;ng tốt nhất l&agrave; Phuong Linh &ndash; giao giữa b&atilde;i B &amp; C, địa điểm đẹp , đồ ăn ngon , đầu bếp rất giỏi mỗi tội hơi đắt, hoặc nh&agrave; h&agrave;ng Anh Nu&ocirc;i &ndash; B&atilde;i C,&hellip; N&oacute;i chung đi ăn c&aacute;c bạn n&ecirc;n l&agrave;m gi&aacute; trước, ăn cua, ghẹ th&igrave; phải l&agrave;m gi&aacute; xong, v&agrave;o c&acirc;n trực tiếp xem bao nhi&ecirc;u con&hellip; )</p>\r\n\r\n<p>Một số m&oacute;n bạn n&ecirc;n thử khi đến Sầm Sơn:</p>\r\n\r\n<p>&ndash;&nbsp;<em>Nem chua:</em>&nbsp;Nhắc đến Thanh H&oacute;a th&igrave; kh&ocirc;ng thể kh&ocirc;ng nhắc đến m&oacute;n nem chua quen thuộc của v&ugrave;ng đất n&agrave;y, ch&iacute;nh v&igrave; vậy nếu c&oacute; dịp đến Sầm Sơn th&igrave; đừng n&ecirc;n bỏ qua đặc sản đặc trưng n&agrave;y. Nem được l&agrave;m từ thịt sống, b&igrave; lợn c&ugrave;ng c&aacute;c gia vị như ti&ecirc;u, tỏi, ớt cho l&ecirc;n men đến ch&iacute;n, khi ăn c&oacute; vị dịu đậm đ&agrave;.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/nem-chua.jpg\"><img alt=\"nem chua\" src=\"https://img.blogdulich.vn/2015/04/nem-chua.jpg\" style=\"height:586px; width:950px\" /></a></p>\r\n\r\n<p>&ndash;&nbsp;<em>B&aacute;nh cuốn:</em>&nbsp;B&aacute;nh cuốn một hương vị rất ri&ecirc;ng ở biển Sầm Sơn c&oacute; vị dai, mềm khi cắn một miếng, nước chấm pha ngon, vị rất đặc trưng. B&aacute;nh cuốn thường ăn sau khi đ&atilde; thưởng thức b&aacute;nh x&egrave;o, với c&aacute;i gi&ograve;n đ&ocirc;m đốp trong miệng, b&eacute;o ngậy khi cắn, rồi đến vị của nh&acirc;n, n&agrave;o mộc nhĩ, thịt lợn bằm, miến mằn mặn, cay của hạt ti&ecirc;u, thơm của h&agrave;nh&hellip;</p>\r\n\r\n<p><em>&ndash; Ch&aacute;o lươn</em>: Chắc hẳn du kh&aacute;ch n&agrave;o đ&atilde; từng du lịch biển Sầm Sơn chắc kh&ocirc;ng thể qu&ecirc;n được m&oacute;n ch&aacute;o lươn quen thuộc. Gọi l&agrave; ch&aacute;o nhưng n&oacute; lại giống như canh vậy, nước ch&aacute;o kh&ocirc;ng s&aacute;nh m&agrave; rất lo&atilde;ng, hạt gạo c&ograve;n nguy&ecirc;n nhưng khi ăn c&oacute; cảm gi&aacute;c mềm mại của hạt gạo kh&ocirc;ng cứng như cơm nhưng lại kh&ocirc;ng mềm như những hạt gạo c&ograve;n s&oacute;t lại trong nồi ch&aacute;o b&igrave;nh thường.</p>\r\n\r\n<p><em>&ndash; Mực nhồi thịt</em>: M&oacute;n mực nhồi thịt l&agrave; một đặc trưng rất ri&ecirc;ng của v&ugrave;ng biển Sầm Sơn, nhất l&agrave; thưởng thức khi c&ograve;n n&oacute;ng sốt, vỏ mực tươi d&agrave;y khi nướng săn chắc, dai dai lẫn m&ugrave;i thơm của vị thịt nhồi tỏa ra khiến ta c&oacute; một cảm gi&aacute;c ngon tuyệt rất đặc biệt.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/muc-nhoi-thit-sam-son.jpg\"><img alt=\"Mực nhồi thịt - đặc trưng riêng của Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/muc-nhoi-thit-sam-son.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>Mực nhồi thịt &ndash; đặc trưng ri&ecirc;ng của Sầm Sơn</p>\r\n\r\n<p><em>Lưu &yacute;</em>: d&ugrave; ăn g&igrave;, ăn ở đ&acirc;u th&igrave; trước khi đặt m&oacute;n c&aacute;c bạn n&ecirc;n l&agrave;m gi&aacute; trước, để đỡ bị chặt ch&eacute;m, nếu cẩn thận th&igrave; khi thống nhất gi&aacute; cả bạn n&ecirc;n ghi &acirc;m lại để đề ph&ograve;ng t&igrave;nh huống xấu nhất xảy ra. V&iacute; dụ như c&acirc;u chuyện của một du kh&aacute;ch: &ldquo;mặc cả trứng vịt lộn 5k, b&aacute;n h&agrave;ng đồng &yacute;. Ăn xong 10 quả t&iacute;nh hết 95k, thắc mắc th&igrave; chủ qu&aacute;n trả lời: quả đầu ti&ecirc;n chị mặc cả 5k, c&aacute;c quả sau chị c&oacute; mặc cả đ&acirc;u? Vẫn 10k/quả&rdquo;</p>\r\n\r\n<p><strong>Điểm vui chơi giải tr&iacute; ở Sầm Sơn?</strong></p>\r\n\r\n<p>Đến Sầm Sơn th&igrave; điều trước ti&ecirc;n l&agrave; phải ngắm v&agrave; tắm biển thỏa th&iacute;ch. C&aacute;c bạn c&oacute; thể ngắm b&igrave;nh minh tr&ecirc;n biển hoặc tham gia k&eacute;o lưới c&ugrave;ng với d&acirc;n ch&agrave;i v&agrave;o buổi sớm.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/binh-minh-tren-bien-sam-son.jpg\"><img alt=\"Bình minh trên biển Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/binh-minh-tren-bien-sam-son.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>B&igrave;nh minh tr&ecirc;n biển Sầm Sơn</p>\r\n\r\n<p>Ngo&agrave;i ra đến Sầm Sơn c&ograve;n nhiều điểm tham quan như:</p>\r\n\r\n<p>&ndash; N&uacute;i Trường Lệ:&nbsp;n&uacute;i cao 76 m&eacute;t nằm s&aacute;t biển với c&aacute;c v&aacute;ch đ&aacute; dựng đứng h&ugrave;ng vĩ v&agrave; l&atilde;ng mạn. Đến với n&uacute;i Trường Lệ, bạn sẽ được tham quan đền Độc Cước, đền C&ocirc; Ti&ecirc;n, đền T&ocirc; Hiến Th&agrave;nh&hellip; hoặc nền m&oacute;ng những biệt thự Ph&aacute;p x&acirc;y dựng đầu thế kỷ 20. V&agrave; đặc biệt, một địa danh bạn cũng kh&ocirc;ng n&ecirc;n bỏ qua khi đến đ&acirc;y l&agrave; h&ograve;n Trống M&aacute;i. H&ograve;n Trống M&aacute;i đ&atilde; được xem l&agrave; một trong những biểu tượng của Sầm Sơn.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/hon-trong-mai.jpg\"><img alt=\"Hòn Trống Mái - một trong những biểu tượng của Sầm Sơn\" src=\"https://img.blogdulich.vn/2015/04/hon-trong-mai.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>H&ograve;n Trống M&aacute;i &ndash; một trong những biểu tượng của Sầm Sơn</p>\r\n\r\n<p>&ndash; Thủy Ti&ecirc;n Cung: nằm ở ch&acirc;n n&uacute;i Trường Lệ.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/den-tho-ba-trieu.jpg\"><img alt=\"Đền thờ Bà Triệu\" src=\"https://img.blogdulich.vn/2015/04/den-tho-ba-trieu.jpg\" style=\"height:535px; width:950px\" /></a></p>\r\n\r\n<p>Đền thờ B&agrave; Triệu</p>\r\n\r\n<p>&ndash; Bạn c&oacute; thể đi thăm th&agrave;nh nh&agrave; Hồ thuộc huyện Vĩnh Lộc; suối c&aacute; thần ở l&agrave;ng Ngọc, X&atilde; Cẩm Lương; đền thờ B&agrave; Triệu tại n&uacute;i Gai, thuộc l&agrave;ng Ph&uacute; Điền, động Từ Thức c&ograve;n gọi l&agrave; B&iacute;ch Đ&agrave;o thuộc huyện Nga Sơn&hellip;</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/04/thanh-nha-ho.jpg\"><img alt=\"Thành nhà Hồ\" src=\"https://img.blogdulich.vn/2015/04/thanh-nha-ho.jpg\" style=\"height:513px; width:950px\" /></a></p>\r\n\r\n<p>Th&agrave;nh nh&agrave; Hồ</p>\r\n\r\n<p>&ndash; Chợ Sầm Sơn: đ&acirc;y l&agrave; điểm đến bạn kh&ocirc;ng thể bỏ qua trong chuyến du lịch Sầm Sơn. Sầm Sơn c&oacute; 2 chợ ch&iacute;nh (chợ trong v&agrave; chợ ngo&agrave;i). Du kh&aacute;ch n&ecirc;n đi chợ trong, c&oacute; rất nhiều đồ hải sản tươi ngon m&agrave; gi&aacute; cũng rẻ hơn đại l&yacute; hải sản.</p>\r\n\r\n<p>&ndash; Hoặc đi chơi ở khu du lịch sinh th&aacute;i (gần Vạn Ch&agrave;i Resort), đi c&acirc;u t&ocirc;m, c&acirc;u c&aacute;,&hellip;</p>\r\n\r\n<p>&ndash; Nếu muốn tổ chức tiệc t&ugrave;ng th&igrave; tối c&oacute; thể đến c&aacute;c qu&aacute;n nhạc sống (qu&aacute;n Nhịp Sống Trẻ ở b&atilde;i B hoặc một số qu&aacute;n kh&aacute;c ở b&atilde;i C) rất đ&ocirc;ng vui, c&oacute; thể l&ecirc;n đăng k&yacute; h&aacute;t tặng nhau thoải m&aacute;i, đến tiết mục dancing th&igrave; nhảy nh&oacute;t tưng bừng cả qu&aacute;n. Nhưng cafe, sinh tố, nước hoa quả ở đ&acirc;y rất ch&aacute;n, bạn n&ecirc;n gọi bia hoặc đồ uống đ&oacute;ng lon cho an to&agrave;n</p>\r\n\r\n<p>Sầm Sơn l&agrave; một điểm đến l&yacute; tưởng, tuy nhi&ecirc;n hiện tượng &ldquo;chặt ch&eacute;m&rdquo; ở đ&acirc;y kh&aacute; phố biển, v&igrave; thế h&atilde;y l&agrave; một du kh&aacute;ch th&ocirc;ng minh để tự bảo vệ m&igrave;nh.</p>', 'kinh-nghiem-du-lich-sam-son-khong-bi-chat-chem', '382HH', 1, '2020-09-06 13:25:08', '2020-09-06 13:25:08', NULL);
 INSERT INTO `blogs` (`id`, `title`, `photo`, `description`, `post`, `alias`, `maqh`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(9, 'Làng chài Hàm Ninh – Nơi hoài niệm về cuộc sống cổ xưa', 'uploads/blog/ham-ninh-phu-quoc.jpg', 'Phú Quốc được thiên nhiên ưu ái với những khu rừng nguyên sinh xanh mướt, bãi biển trong vắt, bờ cát trắng trải dài lung linh dưới ánh nắng hè', '<p>Ph&uacute; Quốc được thi&ecirc;n nhi&ecirc;n ưu &aacute;i với những khu rừng nguy&ecirc;n sinh xanh mướt, b&atilde;i biển trong vắt, bờ c&aacute;t trắng trải d&agrave;i lung linh dưới &aacute;nh nắng h&egrave;. Đến Ph&uacute; Quốc c&oacute; rất nhiều điểm tham quan, vui chơi, thưởng thức hải sản nhưng c&oacute; lẽ L&agrave;ng Ch&agrave;i H&agrave;m Ninh l&agrave; nơi l&yacute; tưởng nhất để ngắm b&igrave;nh minh v&agrave; ăn những m&oacute;n hải sản tươi ngon nhất. H&agrave;m Ninh l&agrave; một l&agrave;ng ch&agrave;i mộc mạc cổ xưa, hoang sơ với những m&aacute;i nh&agrave; tranh, v&aacute;ch tre giản dị, đến đ&acirc;y như được h&ograve;a m&igrave;nh v&agrave;o kh&ocirc;ng gian xa xưa n&agrave;o đ&oacute; của một l&agrave;ng ch&agrave;i miền biển, phong cảnh tuyệt đẹp nhất l&agrave; v&agrave;o buổi s&aacute;ng b&igrave;nh minh thu h&uacute;t rất nhiều du kh&aacute;ch đến đ&acirc;y h&agrave;ng ng&agrave;y.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh-phu-quoc.jpg\"><img alt=\"ham-ninh-phu-quoc\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh-phu-quoc.jpg\" style=\"height:630px; width:950px\" /></a></p>\r\n\r\n<p>Nằm dưới ch&acirc;n n&uacute;i H&agrave;m Ninh c&aacute;ch trung t&acirc;m thị trấn Dương Đ&ocirc;ng khoảng 20km về hướng Đ&ocirc;ng Bắc. Đến với L&agrave;ng ch&agrave;i H&agrave;m Ninh như người ho&agrave;i cổ trở lại l&agrave;ng xưa. Cuộc sống nơi đ&acirc;y gần như c&ograve;n giữ nguy&ecirc;n vẻ hoang sơ với d&aacute;ng vẻ mộc mạc của những ng&ocirc;i nh&agrave; tranh v&aacute;ch tre tạm bợ. Người d&acirc;n chủ yếu sống bằng nghề lặn ngọc trai, bắt hải s&acirc;m v&agrave; giăng lưới ghẹ.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh3.jpg\"><img alt=\"ham ninh3\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh3.jpg\" style=\"height:595px; width:950px\" /></a></p>\r\n\r\n<p>Kh&ocirc;ng ai biết ng&ocirc;i l&agrave;ng n&agrave;y c&oacute; tự bao giờ, chỉ biết rằng, khi đảo&nbsp;Ph&uacute; Quốc c&ograve;n hoang vắng, một số cư d&acirc;n từ xa đến đ&acirc;y khai khẩn hải sản, rồi lập l&agrave;ng sinh sống. Khi cửa bể Dương Đ&ocirc;ng vang tiếng s&oacute;ng th&igrave; H&agrave;m Ninh l&agrave; bến đậu ghe y&ecirc;n tĩnh v&agrave; kh&ocirc;ng c&oacute; c&aacute;c mối nguy hiểm hoặc rủi ro. C&aacute;c ghe buồm, ghe bầu từ&nbsp;đất liền&nbsp;đến cập bến ở đ&acirc;y để l&ecirc;n h&agrave;ng h&oacute;a rồi chở hải sản đi.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh.jpg\"><img alt=\"ham-ninh\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh.jpg\" style=\"height:421px; width:950px\" /></a></p>\r\n\r\n<p>Với c&aacute;i sống thanh b&igrave;nh trải qua h&agrave;ng trăm năm của l&agrave;ng ch&agrave;i H&agrave;m Ninh, Ng&ocirc;i l&agrave;ng b&aacute;m biển quanh năm sống bằng những hải vật đ&aacute;nh bắt được. Cuộc sống ngh&egrave;o l&agrave; vậy nhưng họ vẫn b&aacute;m với nơi n&agrave;y. V&igrave; đ&acirc;y l&agrave; qu&ecirc; hương m&agrave; họ đ&atilde; sinh ra v&agrave; lớn l&ecirc;n từ bao đời.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh11.jpg\"><img alt=\"ham-ninh1\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh11.jpg\" style=\"height:595px; width:950px\" /></a></p>\r\n\r\n<p>L&agrave;ng ch&agrave;i nằm tr&ecirc;n bờ biển ph&iacute;a Đ&ocirc;ng Đảo, trước l&agrave; đại dương m&ecirc;nh m&ocirc;ng, sau lưng l&agrave; rừng n&uacute;i. Biển H&agrave;m Ninh ra xa v&agrave;i trăm thước m&agrave; vẫn c&ograve;n cạn. Khi nước r&ograve;ng, b&atilde;i c&aacute;t m&ecirc;nh m&ocirc;ng chạy t&iacute;t ra xa, l&uacute;c nước l&ecirc;n, tr&agrave;n trề b&atilde;i, v&agrave;o tận m&eacute; rừng.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-inh-8.jpg\"><img alt=\"ham inh 8\" src=\"https://img.blogdulich.vn/2015/05/ham-inh-8.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>Đứng tr&ecirc;n b&atilde;i H&agrave;m Ninh, nh&igrave;n ra xa c&oacute; thể thấy quần đảo Hải Tặc, chếch về Đ&ocirc;ng Nam, h&ograve;n Nghệ mờ mờ tr&ecirc;n l&agrave;n nước biếc, ph&iacute;a Nam l&agrave; mũi &Ocirc;ng Đội &ndash; mũi sau ch&oacute;t của đảo. L&agrave;ng ch&agrave;i H&agrave;m Ninh c&oacute; non nước hữu t&igrave;nh&nbsp;với ngọn n&uacute;i H&agrave;m Ninh cao&nbsp;vời vợi&nbsp;xanh thẫm bởi rừng c&acirc;y m&aacute;t mẻ, c&ugrave;ng biển xanh rộng suốt đường ch&acirc;n trời.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh7.jpg\"><img alt=\"ham ninh7\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh7.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>Thăm H&agrave;m Ninh v&agrave;o s&aacute;ng sớm hay những đ&ecirc;m trăng th&igrave; mới hưởng hết vẻ đẹp của biển n&agrave;y. Tại đ&acirc;y du kh&aacute;ch sẽ được thưởng thức cảnh nhật nguyệt tr&ocirc;i bồng bềnh tr&ecirc;n mặt biển.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh2.jpg\"><img alt=\"ham ninh\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh2.jpg\" style=\"height:633px; width:950px\" /></a></p>\r\n\r\n<p>Đến H&agrave;m Ninh m&agrave; chưa thưởng thức ghẹ luộc th&igrave; coi như chuyến đi của bạn chưa trọn vẹn. Ghẹ l&agrave; đặc sản v&ugrave;ng n&agrave;y, gần như l&uacute;c n&agrave;o cũng c&oacute;. Những con ghẹ vừa bắt l&ecirc;n đem luộc, m&agrave;u đỏ tươi, thịt chắc nịt, chấm muối ti&ecirc;u chanh th&igrave; ngọt biết chừng n&agrave;o!</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh-2.jpg\"><img alt=\"ham ninh 2\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh-2.jpg\" style=\"height:713px; width:950px\" /></a></p>', 'lang-chai-ham-ninh-noi-hoai-niem-ve-cuoc-song-co-xua', '769HH', 1, NULL, NULL, NULL);
+(10, 'Làng chài Hàm Ninh – Nơi hoài niệm về cuộc sống cổ xưa', 'uploads/blog/ham-ninh-phu-quoc.jpg', 'Phú Quốc được thiên nhiên ưu ái với những khu rừng nguyên sinh xanh mướt, bãi biển trong vắt, bờ cát trắng trải dài lung linh dưới ánh nắng hè', '<p>Ph&uacute; Quốc được thi&ecirc;n nhi&ecirc;n ưu &aacute;i với những khu rừng nguy&ecirc;n sinh xanh mướt, b&atilde;i biển trong vắt, bờ c&aacute;t trắng trải d&agrave;i lung linh dưới &aacute;nh nắng h&egrave;. Đến Ph&uacute; Quốc c&oacute; rất nhiều điểm tham quan, vui chơi, thưởng thức hải sản nhưng c&oacute; lẽ L&agrave;ng Ch&agrave;i H&agrave;m Ninh l&agrave; nơi l&yacute; tưởng nhất để ngắm b&igrave;nh minh v&agrave; ăn những m&oacute;n hải sản tươi ngon nhất. H&agrave;m Ninh l&agrave; một l&agrave;ng ch&agrave;i mộc mạc cổ xưa, hoang sơ với những m&aacute;i nh&agrave; tranh, v&aacute;ch tre giản dị, đến đ&acirc;y như được h&ograve;a m&igrave;nh v&agrave;o kh&ocirc;ng gian xa xưa n&agrave;o đ&oacute; của một l&agrave;ng ch&agrave;i miền biển, phong cảnh tuyệt đẹp nhất l&agrave; v&agrave;o buổi s&aacute;ng b&igrave;nh minh thu h&uacute;t rất nhiều du kh&aacute;ch đến đ&acirc;y h&agrave;ng ng&agrave;y.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh-phu-quoc.jpg\"><img alt=\"ham-ninh-phu-quoc\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh-phu-quoc.jpg\" style=\"height:630px; width:950px\" /></a></p>\r\n\r\n<p>Nằm dưới ch&acirc;n n&uacute;i H&agrave;m Ninh c&aacute;ch trung t&acirc;m thị trấn Dương Đ&ocirc;ng khoảng 20km về hướng Đ&ocirc;ng Bắc. Đến với L&agrave;ng ch&agrave;i H&agrave;m Ninh như người ho&agrave;i cổ trở lại l&agrave;ng xưa. Cuộc sống nơi đ&acirc;y gần như c&ograve;n giữ nguy&ecirc;n vẻ hoang sơ với d&aacute;ng vẻ mộc mạc của những ng&ocirc;i nh&agrave; tranh v&aacute;ch tre tạm bợ. Người d&acirc;n chủ yếu sống bằng nghề lặn ngọc trai, bắt hải s&acirc;m v&agrave; giăng lưới ghẹ.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh3.jpg\"><img alt=\"ham ninh3\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh3.jpg\" style=\"height:595px; width:950px\" /></a></p>\r\n\r\n<p>Kh&ocirc;ng ai biết ng&ocirc;i l&agrave;ng n&agrave;y c&oacute; tự bao giờ, chỉ biết rằng, khi đảo&nbsp;Ph&uacute; Quốc c&ograve;n hoang vắng, một số cư d&acirc;n từ xa đến đ&acirc;y khai khẩn hải sản, rồi lập l&agrave;ng sinh sống. Khi cửa bể Dương Đ&ocirc;ng vang tiếng s&oacute;ng th&igrave; H&agrave;m Ninh l&agrave; bến đậu ghe y&ecirc;n tĩnh v&agrave; kh&ocirc;ng c&oacute; c&aacute;c mối nguy hiểm hoặc rủi ro. C&aacute;c ghe buồm, ghe bầu từ&nbsp;đất liền&nbsp;đến cập bến ở đ&acirc;y để l&ecirc;n h&agrave;ng h&oacute;a rồi chở hải sản đi.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh.jpg\"><img alt=\"ham-ninh\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh.jpg\" style=\"height:421px; width:950px\" /></a></p>\r\n\r\n<p>Với c&aacute;i sống thanh b&igrave;nh trải qua h&agrave;ng trăm năm của l&agrave;ng ch&agrave;i H&agrave;m Ninh, Ng&ocirc;i l&agrave;ng b&aacute;m biển quanh năm sống bằng những hải vật đ&aacute;nh bắt được. Cuộc sống ngh&egrave;o l&agrave; vậy nhưng họ vẫn b&aacute;m với nơi n&agrave;y. V&igrave; đ&acirc;y l&agrave; qu&ecirc; hương m&agrave; họ đ&atilde; sinh ra v&agrave; lớn l&ecirc;n từ bao đời.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh11.jpg\"><img alt=\"ham-ninh1\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh11.jpg\" style=\"height:595px; width:950px\" /></a></p>\r\n\r\n<p>L&agrave;ng ch&agrave;i nằm tr&ecirc;n bờ biển ph&iacute;a Đ&ocirc;ng Đảo, trước l&agrave; đại dương m&ecirc;nh m&ocirc;ng, sau lưng l&agrave; rừng n&uacute;i. Biển H&agrave;m Ninh ra xa v&agrave;i trăm thước m&agrave; vẫn c&ograve;n cạn. Khi nước r&ograve;ng, b&atilde;i c&aacute;t m&ecirc;nh m&ocirc;ng chạy t&iacute;t ra xa, l&uacute;c nước l&ecirc;n, tr&agrave;n trề b&atilde;i, v&agrave;o tận m&eacute; rừng.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-inh-8.jpg\"><img alt=\"ham inh 8\" src=\"https://img.blogdulich.vn/2015/05/ham-inh-8.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>Đứng tr&ecirc;n b&atilde;i H&agrave;m Ninh, nh&igrave;n ra xa c&oacute; thể thấy quần đảo Hải Tặc, chếch về Đ&ocirc;ng Nam, h&ograve;n Nghệ mờ mờ tr&ecirc;n l&agrave;n nước biếc, ph&iacute;a Nam l&agrave; mũi &Ocirc;ng Đội &ndash; mũi sau ch&oacute;t của đảo. L&agrave;ng ch&agrave;i H&agrave;m Ninh c&oacute; non nước hữu t&igrave;nh&nbsp;với ngọn n&uacute;i H&agrave;m Ninh cao&nbsp;vời vợi&nbsp;xanh thẫm bởi rừng c&acirc;y m&aacute;t mẻ, c&ugrave;ng biển xanh rộng suốt đường ch&acirc;n trời.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh7.jpg\"><img alt=\"ham ninh7\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh7.jpg\" style=\"height:713px; width:950px\" /></a></p>\r\n\r\n<p>Thăm H&agrave;m Ninh v&agrave;o s&aacute;ng sớm hay những đ&ecirc;m trăng th&igrave; mới hưởng hết vẻ đẹp của biển n&agrave;y. Tại đ&acirc;y du kh&aacute;ch sẽ được thưởng thức cảnh nhật nguyệt tr&ocirc;i bồng bềnh tr&ecirc;n mặt biển.</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh2.jpg\"><img alt=\"ham ninh\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh2.jpg\" style=\"height:633px; width:950px\" /></a></p>\r\n\r\n<p>Đến H&agrave;m Ninh m&agrave; chưa thưởng thức ghẹ luộc th&igrave; coi như chuyến đi của bạn chưa trọn vẹn. Ghẹ l&agrave; đặc sản v&ugrave;ng n&agrave;y, gần như l&uacute;c n&agrave;o cũng c&oacute;. Những con ghẹ vừa bắt l&ecirc;n đem luộc, m&agrave;u đỏ tươi, thịt chắc nịt, chấm muối ti&ecirc;u chanh th&igrave; ngọt biết chừng n&agrave;o!</p>\r\n\r\n<p><a href=\"https://img.blogdulich.vn/2015/05/ham-ninh-2.jpg\"><img alt=\"ham ninh 2\" src=\"https://img.blogdulich.vn/2015/05/ham-ninh-2.jpg\" style=\"height:713px; width:950px\" /></a></p>', 'lang-chai-ham-ninh-noi-hoai-niem-ve-cuoc-song-co-xua', '769HH', 1, '2020-09-06 13:31:22', '2020-09-06 13:31:22', NULL),
+(11, 'Khu du lịch Sun World Danang Wonders', 'uploads/blog/U0fsg_45926.jpg', 'Khu du lịch Sun World Danang Wonders sẽ trở thành “Xứ sở băng giá” với tuyết trắng ngập tràn, ngôi làng Bắc Âu như cổ tích từ 20 đến 30/12.', '<p>Khu du lịch Sun World Danang Wonders sẽ trở th&agrave;nh &ldquo;Xứ sở băng gi&aacute;&rdquo; với tuyết trắng ngập tr&agrave;n, ng&ocirc;i l&agrave;ng Bắc &Acirc;u như cổ t&iacute;ch từ 20 đến 30/12.<img alt=\"\" src=\"http://localhost/laravelBooking/public/uploads/blog/images/60642.jpg\" style=\"height:639px; width:959px\" /></p>', 'khu-du-lich-sun-world-danang-wonders', '002HH', 0, '2020-09-11 19:14:30', '2020-09-11 19:14:30', NULL),
+(12, 'Mango Bay Phu Quoc Resort nằm trải dài trên 700 m bãi biển đầy cát riêng', 'uploads/blog/LXTTE_tong-quan-FLC-Sam-Son-1.jpg', 'bbbbbbbbbbbbbbb bbbbbbb bbbbbbbbbbb vvvvvvvvvvvvvvvv', '<p>Du lịch tự t&uacute;c</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost/laravelBooking/public/uploads/blog/images/hinh-nen-chinh-phuc-thien-nhien_105621369.jpeg\" style=\"height:641px; width:960px\" />&nbsp;&nbsp;</p>\r\n\r\n<p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>', 'mango-bay-phu-quoc-resort-nam-trai-dai-tren-700-m-bai-bien-day-cat-rieng', '002HH', 0, '2020-09-25 17:29:28', '2020-09-25 17:29:28', NULL);
 
 -- --------------------------------------------------------
 
@@ -88,6 +139,13 @@ CREATE TABLE `cancel_bill` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `cancel_bill`
+--
+
+INSERT INTO `cancel_bill` (`bill_id`, `token`, `created_at`) VALUES
+('64', 'X5NubpmGHijHC4WB403pUabLqEVGFK2OUOfW08Xtg3XvlswkL3pwCPnRUo7e', '2021-06-23 05:49:16');
 
 -- --------------------------------------------------------
 
@@ -853,12 +911,35 @@ CREATE TABLE `homestays` (
   `xaid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `point` double(5,2) DEFAULT NULL,
+  `point` double(5,1) DEFAULT NULL,
   `status_pay` tinyint(4) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `homestays`
+--
+
+INSERT INTO `homestays` (`id`, `name`, `alias`, `avatar`, `keyword(SE0)`, `status`, `user_id`, `matp`, `maqh`, `xaid`, `title`, `description`, `point`, `status_pay`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(2, 'VinOasis Phu Quoc', 'vinoasis-phu-quoc', 'uploads/homestay/avatar49101.jpg', NULL, 1, 2, '91TTT', '911HH', '31081', 'VinOasis Phu Quoc cung cấp chỗ ở sang trọng tại Đảo Phú Quốc và có khu vực bãi biển riêng tại mũi Gành Dầu.', 'VinOasis Phu Quoc cung cấp chỗ ở sang trọng tại Đảo Phú Quốc và có khu vực bãi biển riêng tại mũi Gành Dầu. Quý khách có thể dùng bữa tại nhà hàng trong khuôn viên và sau đó thưởng thức đồ uống tại quầy bar.\r\n\r\nTất cả các phòng nghỉ tại đây có ban công riêng mở ra toàn cảnh biển, máy lạnh và khu vực tiếp khách. Phòng tắm riêng được trang bị bồn tắm, máy sấy tóc và đồ vệ sinh cá nhân miễn phí.\r\n\r\nChỗ nghỉ có khu vườn và Wi-Fi miễn phí ở các khu vực chung.', 5.0, 0, '2020-09-05 02:55:33', '2020-09-11 18:26:48', NULL),
+(3, 'Novotel Phu Quoc Resort', 'novotel-phu-quoc-resort', 'uploads/homestay/avatar14892.jpg', NULL, 1, 2, '91TTT', '911HH', '31078', 'Cung cấp hồ bơi ngoài trời và tầm nhìn ra cảnh biển, Novotel Phu Quoc Resort tọa lạc tại xã Dương Tơ, cách thị trấn Dương Đông 11 km.', 'Cung cấp hồ bơi ngoài trời và tầm nhìn ra cảnh biển, Novotel Phu Quoc Resort tọa lạc tại xã Dương Tơ, cách thị trấn Dương Đông 11 km. Khách sạn có sân hiên và tầm nhìn ra hồ đồng thời du khách có thể dùng bữa tại nhà hàng.\r\n\r\nMột số phòng có khu vực ghế ngồi để khách thư giãn sau một ngày bận rộn trong khi một số phòng còn được bố trí sân hiên hoặc ban công. Novotel Phu Quoc Resort cung cấp Wi-Fi miễn phí. TV truyền hình vệ tinh màn hình phẳng cũng được trang bị trong phòng.\r\n\r\nKhách sạn bố trí dịch vụ đưa đón miễn phí trên nguyên tắc khách đến trước được phục vụ trước.\r\n\r\nKhách có thể chơi tennis và bóng bàn tại đây. Sân bay gần nhất là sân bay quốc tế Phú Quốc, cách khách sạn 7 km.', 4.5, 0, '2020-09-05 02:57:16', '2020-09-11 17:50:30', NULL),
+(4, 'Sunset Beach Resort', 'sunset-beach-resort', 'uploads/homestay/avatar38765.jpg', NULL, 1, 2, '91TTT', '911HH', '31078', 'Tọa lạc tại đảo Phú Quốc, cách Chùa Sùng Hưng 1,9 km, Sunset Beach Resort and Spa có nhà hàng, chỗ đỗ xe riêng miễn phí.', 'Tọa lạc tại đảo Phú Quốc, cách Chùa Sùng Hưng 1,9 km, Sunset Beach Resort and Spa có nhà hàng, chỗ đỗ xe riêng miễn phí, hồ bơi ngoài trời và trung tâm thể dục. Các tiện nghi của chỗ nghỉ bao gồm dịch vụ lễ tân 24 giờ, dịch vụ phòng và WiFi miễn phí trong toàn bộ khuôn viên. Khách sạn cũng có hồ bơi trong nhà và phòng giữ hành lý.\r\n\r\nTất cả phòng nghỉ tại khách sạn đều được trang bị ấm đun nước, máy điều hòa và TV màn hình phẳng.\r\n\r\nChỗ nghỉ phục vụ bữa sáng tự chọn và kiểu Á hàng ngày.\r\n\r\nSunset Beach Resort and Spa cũng có sân hiên.\r\n\r\nKhách sạn cách sòng bạc Corona Casino 23 km và công viên giải trí Vinpearl Land Phú Quốc 24 km.', 3.5, 0, '2020-09-05 03:01:13', '2020-09-11 12:04:45', NULL),
+(5, 'Robin Hotel Danang', 'robin-hotel-danang', 'uploads/homestay/avatar88445.jpg', NULL, 1, 2, '48TTT', '493HH', '20263', 'Tọa lạc tại vị trí tuyệt đẹp ở khu Bãi biển Mỹ Khê thuộc thành phố Đà Nẵng, Robin Hotel Danang nằm cách Bãi biển Mỹ Khê 400 m', 'Tọa lạc tại vị trí tuyệt đẹp ở khu Bãi biển Mỹ Khê thuộc thành phố Đà Nẵng, Robin Hotel Danang nằm cách Bãi biển Mỹ Khê 400 m, Cầu Sông Hàn 2,2 km và Trung tâm thương mại Indochina Riverside 2,7 km. Khách sạn 2 sao này có sảnh khách chung và phòng nghỉ gắn máy điều hòa với WiFi miễn phí cùng phòng tắm riêng. Chỗ nghỉ cung cấp dịch vụ lễ tân 24 giờ, dịch vụ phòng và tổ chức các tour du lịch cho khách.\r\n\r\nPhòng nghỉ tại Robin Hotel Danang được trang bị tủ để quần áo, bàn làm việc và TV màn hình phẳng.', 3.7, 0, '2020-09-05 10:38:55', '2020-09-05 10:41:35', NULL),
+(6, 'Diamond Sea Hotel', 'diamond-sea-hotel', 'uploads/homestay/avatar57473.jpg', NULL, 1, 2, '48TTT', '490HH', '20194', 'Nằm cạnh Bãi biển Mỹ Khê ở thành phố Đà Nẵng, Diamond Sea Hotel cung cấp các chỗ ở hiện đại và thoải mái với Wi-Fi miễn phí toàn khuôn viên.', 'Khách sạn nằm dọc bãi biển, cách Cầu Sông Hàn 2 km và cách Bảo tàng Chăm 2,4 km trong khi Sân bay Đà Nẵng cách đó trong vòng 15 phút lái xe.\r\n\r\nVới tầm nhìn ra biển, các phòng máy lạnh tại đây được trang bị tủ quần áo, giá treo quần áo, truyền hình cáp màn hình phẳng và khu vực tiếp khách. Ngoài ra còn có minibar và ấm đun nước điện. Phòng tắm riêng đi kèm tiện nghi vòi sen, dép và máy sấy tóc.', 5.0, 0, '2020-09-05 10:57:31', '2020-09-22 15:13:35', NULL),
+(7, 'Mai Chau Sunrise Village', 'mai-chau-sunrise-village', 'uploads/homestay/avatar34980.jpg', NULL, 1, 2, '17TTT', '156HH', '05200', 'Mai Chau Sunrise Village còn có sân hiên tắm nắng. Đi xe đạp là hoạt động được ưa chuộng trong khu vực. Du khách có thể thuê xe hơi tại chỗ nghỉ.', 'Nằm tại huyện Mai Châu, Mai Chau Sunrise Village có nhà hàng, xe đạp cho khách sử dụng miễn phí, quán bar và phòng khách chung. Chỗ nghỉ này còn có phòng gia đình và sân chơi cho trẻ em. Khách sạn này cũng cung cấp chỗ đỗ xe riêng miễn phí và dịch vụ cho thuê xe máy cho những khách muốn khám phá khu vực xung quanh.\r\n\r\nKhách sạn phục vụ bữa sáng kiểu lục địa và tự chọn hàng ngày.', 4.3, 0, '2020-09-05 11:11:30', '2020-09-17 18:00:18', NULL),
+(8, 'Cò\'s House', 'cos-house', 'uploads/homestay/avatar33674.jpg', NULL, 1, 2, '17TTT', '156HH', '05200', 'Tọa lạc tại huyện Mai Châu, Cò\'s House cung cấp tầm nhìn ra vườn, nhà hàng, lễ tân 24 giờ, quầy bar, khu vườn, sân hiên', 'Tọa lạc tại huyện Mai Châu, Cò\'s House cung cấp tầm nhìn ra vườn, nhà hàng, lễ tân 24 giờ, quầy bar, khu vườn, sân hiên, WiFi miễn phí ở tất cả các khu vực và chỗ đỗ xe riêng ngay trong khuôn viên.\r\n\r\nTất cả chỗ nghỉ tại đây đều có máy điều hòa cùng khu vực ghế ngồi và/hoặc ăn uống.', 4.5, 0, '2020-09-05 11:19:06', '2020-09-17 17:51:11', NULL),
+(10, 'Mai Chau Ecolodge', 'mai-chau-ecolodge', 'uploads/homestay/avatar29319.jpg', NULL, 1, 2, '17TTT', '156HH', '05200', 'Được bao quanh bởi những ngọn núi và cánh đồng lúa, Mai Chau Ecolodge cung cấp các phòng và suite hiện đại với tầm nhìn và Wi-Fi miễn phí.', 'Được bao quanh bởi những ngọn núi và cánh đồng lúa, Mai Chau Ecolodge cung cấp các phòng và suite hiện đại với tầm nhìn và Wi-Fi miễn phí. Nơi nghỉ này có nhà hàng, quán bar, hồ bơi ngoài trời và spa trong nhà để khách thư giãn.\r\n\r\nMai Chau Ecolodge cách Làng Pom Coọng 500 m và cách Làng Lạc 1 km. Trung tâm thị trấn Mai Châu và Làng Vạn cách đó lần lượt 1,5 km và 3 km.\r\n\r\nMỗi phòng và suite đều có ban công, khu vực tiếp khách và minibar. Phòng tắm riêng đi kèm vòi sen, máy sấy tóc và đồ vệ sinh cá nhân miễn phí.', 4.0, 0, '2020-09-06 11:25:48', '2020-09-06 11:25:48', NULL),
+(11, 'Mai Chau Sky Resort', 'mai-chau-sky-resort', 'uploads/homestay/avatar83208.jpg', NULL, 1, 2, '17TTT', '156HH', '05200', 'Mai Chau Sky Resort cung cấp nhà hàng, xe đạp cho khách sử dụng miễn phí, hồ bơi ngoài trời mở cửa theo mùa và quán bar ở thị trấn Mai Châu.', 'Mai Chau Sky Resort cung cấp nhà hàng, xe đạp cho khách sử dụng miễn phí, hồ bơi ngoài trời mở cửa theo mùa và quán bar ở thị trấn Mai Châu. Resort 3 sao này còn có khu vườn. Chỗ nghỉ này còn có lễ tân 24 giờ, dịch vụ đưa đón sân bay, dịch vụ phòng và WiFi miễn phí.\r\n\r\nMỗi phòng tại resort đều có ban công và phòng tắm riêng.', 5.0, 0, '2020-09-06 11:27:52', '2020-09-06 11:35:35', NULL),
+(12, 'Mai Chau La Vida', 'mai-chau-la-vida', 'uploads/homestay/avatar49164.jpg', NULL, 1, 2, '17TTT', '156HH', '05200', 'Nằm ở huyện Mai Châu, Mai Chau La Vida có chỗ nghỉ, xe máy cho khách sử dụng miễn phí', 'Nằm ở huyện Mai Châu, Mai Chau La Vida có chỗ nghỉ, xe máy cho khách sử dụng miễn phí, quán bar, sảnh khách chung, vườn và tầm nhìn ra vườn. Lodge cung cấp cả WiFi lẫn chỗ đỗ xe riêng miễn phí.\r\n\r\nChỗ nghỉ này có phòng tắm riêng đầy đủ tiện nghi với chậu rửa vệ sinh (bidet) và máy sấy tóc.\r\n\r\nMai Chau La Vida phục vụ bữa sáng tự chọn.', 3.4, 0, '2020-09-06 11:30:23', '2020-09-06 11:30:23', NULL),
+(13, 'Raon Apartment and Hotel', 'raon-apartment-and-hotel', 'uploads/homestay/avatar45810.jpg', NULL, 1, 2, '48TTT', '492HH', '20227', 'Tọa lạc ở thành phố Đà Nẵng, cách Bãi biển Mỹ Khê trong vòng 600 m, Raon Apartment and Hotel có dịch vụ nhận phòng/trả phòng cấp tốc.', 'Tọa lạc ở thành phố Đà Nẵng, cách Bãi biển Mỹ Khê trong vòng 600 m, Raon Apartment and Hotel có dịch vụ nhận phòng/trả phòng cấp tốc, phòng nghỉ không gây dị ứng, nhà hàng, WiFi miễn phí trong toàn bộ khuôn viên và quầy bar. Khách sạn này có các phòng gia đình và sân hiên. Chỗ nghỉ cũng cung cấp dịch vụ lễ tân 24 giờ, dịch vụ phòng và dịch vụ thu đổi ngoại tệ cho khách.\r\n\r\nTất cả phòng đều được trang bị máy điều hòa, TV truyền hình vệ tinh màn hình phẳng, tủ lạnh, ấm đun nước, chậu rửa vệ sinh (bidet), máy sấy tóc và bàn làm việc. Các phòng còn có tủ để quần áo và phòng tắm riêng.', 4.1, 0, '2020-09-06 11:59:27', '2020-09-06 11:59:27', NULL),
+(14, 'Halina Hotel', 'halina-hotel', 'uploads/homestay/avatar87320.jpg', NULL, 1, 2, '48TTT', '494HH', '20284', 'Tọa lạc tại thành phố Đà Nẵng, cách Cầu tàu Tình yêu 3 km, Halina Hotel and Apartment cung cấp chỗ nghỉ bên bờ biển', 'Tọa lạc tại thành phố Đà Nẵng, cách Cầu tàu Tình yêu 3 km, Halina Hotel and Apartment cung cấp chỗ nghỉ bên bờ biển với nhiều tiện nghi như hồ bơi ngoài trời, phòng xông hơi khô, trung tâm thể dục và quầy bar. Trong số các tiện nghi tại khách sạn này còn có nhà hàng, lễ tân 24 giờ, dịch vụ phòng và WiFi miễn phí. Chỗ nghỉ cũng có sảnh khách chung, trung tâm dịch vụ doanh nhân và dịch vụ thu đổi ngoại tệ cho khách.', 3.9, 0, '2020-09-06 12:02:34', '2020-09-06 12:02:34', NULL),
+(15, 'Happy Sky Hotel', 'happy-sky-hotel', 'uploads/homestay/avatar35733.jpg', NULL, 1, 2, '48TTT', '493HH', '20272', 'Khách sạn nằm cách Cầu Sông Hàn 2,3 km và Trung tâm thương mại Indochina Riverside 2,9 km.', 'Nằm ở thành phố Đà Nẵng, cách Bãi biển Mỹ Khê 450 m, Happy Sky Hotel cung cấp chỗ nghỉ với quầy bar, chỗ đỗ xe riêng miễn phí, sảnh khách chung và vườn. Khách sạn này có các phòng gia đình và sân hiên. Chỗ nghỉ cung cấp dịch vụ lễ tân 24 giờ, dịch vụ phòng và dịch vụ thu đổi ngoại tệ cho khách.\r\n\r\nPhòng nghỉ tại khách sạn được trang bị máy điều hòa, truyền hình vệ tinh màn hình phẳng, tủ lạnh, ấm đun nước, chậu rửa vệ sinh (bidet), máy sấy tóc và bàn làm việc. Các phòng còn có tầm nhìn ra quang cảnh thành phố và phòng tắm riêng với vòi sen cùng đồ vệ sinh cá nhân miễn phí. Tủ để quần áo và máy pha cà phê cũng được bố trí trong phòng.', 4.5, 0, '2020-09-06 12:04:28', '2020-09-06 12:04:28', NULL),
+(16, 'FLC Sam Son 2', 'flc-sam-son-2', 'uploads/homestay/avatar78026.jpg', NULL, 1, 7, '38TTT', '382HH', '14830', 'Nằm tại thành phố Sầm Sơn, FLC Sam Son SB 31/14 có WiFi miễn phí, máy điều hòa và vườn với tiện nghi BBQ.', 'Nằm tại thành phố Sầm Sơn, FLC Sam Son SB 31/14 có WiFi miễn phí, máy điều hòa và vườn với tiện nghi BBQ.\r\n\r\nMỗi phòng và biệt thự tại đây đều được trang bị bếp đầy đủ tiện nghi với lò vi sóng, khu vực ghế ngồi đi kèm ghế sofa, TV màn hình phẳng, máy giặt cùng phòng tắm riêng với chậu rửa vệ sinh (bidet) và đồ vệ sinh cá nhân miễn phí. Để thêm phần thuận tiện cho du khách, chỗ nghỉ có thể cung cấp khăn tắm và ga trải giường với một khoản phụ phí.\r\n\r\nDu khách có thể thư giãn tại phòng khách chung của chỗ nghỉ và đi bộ đường dài ở khu vực gần đó.\r\n\r\nChúng tôi sử dụng ngôn ngữ của bạn!', NULL, 0, '2020-09-11 18:40:40', '2020-09-25 17:31:14', NULL),
+(19, 'AAAAAAAAAAAAA', 'aaaaaaaaaaaaa', 'uploads/homestay/avatar62452.jpg', NULL, 1, 2, '01TTT', '001HH', '00001', 'CCCCCCCCCCCCCCCCCCC', 'BBBBBBBBBBBBBBBBBBBBBB', NULL, 0, '2020-09-25 17:05:09', '2020-09-25 17:07:17', '2020-09-25 17:07:17'),
+(20, 'Huyền Trang Hotel', 'huyen-trang-hotel', 'uploads/homestay/avatar52862.jpg', NULL, 1, 2, '79TTT', '568HH', '22369', 'Huyền Trang Hotel', 'Khách sạn đẹp gần biển', NULL, 0, '2021-06-11 04:54:06', '2021-06-11 04:54:06', NULL),
+(21, 'Aurora Western Village', 'aurora-western-village', 'uploads/homestay/avatar96622.jpeg', NULL, 1, 11, '79TTT', '769HH', '27088', 'Aurora Western Village', '65 Quốc Hương, Thảo Điền, Quận 2, Thành phố Hồ Chí Minh, Việt Nam, 713327', NULL, 0, '2021-06-28 14:13:44', '2021-06-28 14:13:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -876,6 +957,122 @@ CREATE TABLE `images_homestay` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `images_homestay`
+--
+
+INSERT INTO `images_homestay` (`id`, `url`, `homestay_id`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'uploads/homestay/66301.jpg', 4, 1, '2020-09-05 03:03:47', '2020-09-05 03:03:47', NULL),
+(2, 'uploads/homestay/38508.jpg', 4, 1, '2020-09-05 03:03:47', '2020-09-05 03:03:47', NULL),
+(3, 'uploads/homestay/94905.jpg', 4, 1, '2020-09-05 03:03:47', '2020-09-05 03:03:47', NULL),
+(4, 'uploads/homestay/61419.jpg', 4, 1, '2020-09-05 03:03:47', '2020-09-05 03:03:47', NULL),
+(5, 'uploads/homestay/38023.jpg', 4, 1, '2020-09-05 03:03:47', '2020-09-05 03:03:47', NULL),
+(6, 'uploads/homestay/2938.jpg', 4, 1, '2020-09-05 03:03:47', '2020-09-05 03:03:47', NULL),
+(7, 'uploads/homestay/48150.jpg', 4, 1, '2020-09-05 03:03:47', '2020-09-05 03:03:47', NULL),
+(16, 'uploads/homestay/92402.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(17, 'uploads/homestay/69163.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(18, 'uploads/homestay/11274.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(19, 'uploads/homestay/83856.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(20, 'uploads/homestay/75623.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(21, 'uploads/homestay/72105.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(22, 'uploads/homestay/78449.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(23, 'uploads/homestay/36469.jpg', 3, 1, '2020-09-05 03:10:51', '2020-09-05 03:10:51', NULL),
+(24, 'uploads/homestay/26219.jpg', 2, 1, '2020-09-05 03:13:31', '2020-09-05 03:13:31', NULL),
+(25, 'uploads/homestay/68049.jpg', 2, 1, '2020-09-05 03:13:31', '2020-09-05 03:13:31', NULL),
+(26, 'uploads/homestay/72114.jpg', 2, 1, '2020-09-05 03:13:31', '2020-09-05 03:13:31', NULL),
+(27, 'uploads/homestay/13746.jpg', 2, 1, '2020-09-05 03:13:31', '2020-09-05 03:13:31', NULL),
+(28, 'uploads/homestay/13416.jpg', 2, 1, '2020-09-05 03:13:31', '2020-09-05 03:13:31', NULL),
+(29, 'uploads/homestay/86972.jpg', 2, 1, '2020-09-05 03:13:31', '2020-09-05 03:13:31', NULL),
+(30, 'uploads/homestay/65131.jpg', 2, 1, '2020-09-05 03:13:31', '2020-09-05 03:13:31', NULL),
+(31, 'uploads/homestay/60334.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(32, 'uploads/homestay/91043.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(33, 'uploads/homestay/52301.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(34, 'uploads/homestay/64441.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(35, 'uploads/homestay/64386.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(36, 'uploads/homestay/44332.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(37, 'uploads/homestay/37017.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(38, 'uploads/homestay/6277.jpg', 5, 1, '2020-09-05 10:48:57', '2020-09-05 10:48:57', NULL),
+(39, 'uploads/homestay/89371.jpg', 6, 1, '2020-09-05 11:03:31', '2020-09-05 11:03:31', NULL),
+(40, 'uploads/homestay/76194.jpg', 6, 1, '2020-09-05 11:03:31', '2020-09-05 11:03:31', NULL),
+(41, 'uploads/homestay/28946.jpg', 6, 1, '2020-09-05 11:03:31', '2020-09-05 11:03:31', NULL),
+(42, 'uploads/homestay/87542.jpg', 6, 1, '2020-09-05 11:03:31', '2020-09-05 11:03:31', NULL),
+(43, 'uploads/homestay/63717.jpg', 6, 1, '2020-09-05 11:03:31', '2020-09-05 11:03:31', NULL),
+(44, 'uploads/homestay/3172.jpg', 6, 1, '2020-09-05 11:03:31', '2020-09-05 11:03:31', NULL),
+(45, 'uploads/homestay/27672.jpg', 7, 1, '2020-09-05 11:13:00', '2020-09-05 11:13:00', NULL),
+(46, 'uploads/homestay/60491.jpg', 7, 1, '2020-09-05 11:13:00', '2020-09-05 11:13:00', NULL),
+(47, 'uploads/homestay/61156.jpg', 7, 1, '2020-09-05 11:13:00', '2020-09-05 11:13:00', NULL),
+(48, 'uploads/homestay/7057.jpg', 7, 1, '2020-09-05 11:13:00', '2020-09-05 11:13:00', NULL),
+(49, 'uploads/homestay/85218.jpg', 7, 1, '2020-09-05 11:13:00', '2020-09-05 11:13:00', NULL),
+(50, 'uploads/homestay/88313.jpg', 7, 1, '2020-09-05 11:13:00', '2020-09-05 11:13:00', NULL),
+(51, 'uploads/homestay/17006.jpg', 8, 1, '2020-09-05 11:20:51', '2020-09-05 11:20:51', NULL),
+(52, 'uploads/homestay/70508.jpg', 8, 1, '2020-09-05 11:20:51', '2020-09-05 11:20:51', NULL),
+(53, 'uploads/homestay/17601.jpg', 8, 1, '2020-09-05 11:20:51', '2020-09-05 11:20:51', NULL),
+(54, 'uploads/homestay/27791.jpg', 8, 1, '2020-09-05 11:20:51', '2020-09-05 11:20:51', NULL),
+(55, 'uploads/homestay/84209.jpg', 8, 1, '2020-09-05 11:20:51', '2020-09-05 11:20:51', NULL),
+(56, 'uploads/homestay/13713.jpg', 8, 1, '2020-09-05 11:20:51', '2020-09-05 11:20:51', NULL),
+(57, 'uploads/homestay/28195.jpg', 8, 1, '2020-09-05 11:20:51', '2020-09-05 11:20:51', NULL),
+(58, 'uploads/homestay/21585.jpg', 10, 1, '2020-09-06 11:33:44', '2020-09-06 11:33:44', NULL),
+(59, 'uploads/homestay/33909.jpg', 10, 1, '2020-09-06 11:33:44', '2020-09-06 11:33:44', NULL),
+(60, 'uploads/homestay/56662.jpg', 10, 1, '2020-09-06 11:33:44', '2020-09-06 11:33:44', NULL),
+(61, 'uploads/homestay/42790.jpg', 10, 1, '2020-09-06 11:33:44', '2020-09-06 11:33:44', NULL),
+(62, 'uploads/homestay/95477.jpg', 10, 1, '2020-09-06 11:33:44', '2020-09-06 11:33:44', NULL),
+(63, 'uploads/homestay/61039.jpg', 10, 1, '2020-09-06 11:33:44', '2020-09-06 11:33:44', NULL),
+(64, 'uploads/homestay/71753.jpg', 10, 1, '2020-09-06 11:33:44', '2020-09-06 11:33:44', NULL),
+(65, 'uploads/homestay/64455.jpg', 11, 1, '2020-09-06 11:37:11', '2020-09-06 11:37:11', NULL),
+(66, 'uploads/homestay/4705.jpg', 11, 1, '2020-09-06 11:37:11', '2020-09-06 11:37:11', NULL),
+(67, 'uploads/homestay/22225.jpg', 11, 1, '2020-09-06 11:37:11', '2020-09-06 11:37:11', NULL),
+(68, 'uploads/homestay/82786.jpg', 11, 1, '2020-09-06 11:37:11', '2020-09-06 11:37:11', NULL),
+(69, 'uploads/homestay/34338.jpg', 11, 1, '2020-09-06 11:37:11', '2020-09-06 11:37:11', NULL),
+(70, 'uploads/homestay/11004.jpg', 11, 1, '2020-09-06 11:37:11', '2020-09-06 11:37:11', NULL),
+(71, 'uploads/homestay/41976.jpg', 11, 1, '2020-09-06 11:37:11', '2020-09-06 11:37:11', NULL),
+(72, 'uploads/homestay/83342.jpg', 12, 1, '2020-09-06 11:38:58', '2020-09-06 11:38:58', NULL),
+(73, 'uploads/homestay/48935.jpg', 12, 1, '2020-09-06 11:38:58', '2020-09-06 11:38:58', NULL),
+(74, 'uploads/homestay/89870.jpg', 12, 1, '2020-09-06 11:38:58', '2020-09-06 11:38:58', NULL),
+(75, 'uploads/homestay/93384.jpg', 12, 1, '2020-09-06 11:38:58', '2020-09-06 11:38:58', NULL),
+(76, 'uploads/homestay/67895.jpg', 12, 1, '2020-09-06 11:38:58', '2020-09-06 11:38:58', NULL),
+(77, 'uploads/homestay/43960.jpg', 12, 1, '2020-09-06 11:38:58', '2020-09-06 11:38:58', NULL),
+(78, 'uploads/homestay/12244.jpg', 12, 1, '2020-09-06 11:38:58', '2020-09-06 11:38:58', NULL),
+(79, 'uploads/homestay/79567.jpg', 13, 1, '2020-09-06 12:06:53', '2020-09-06 12:06:53', NULL),
+(80, 'uploads/homestay/65563.jpg', 13, 1, '2020-09-06 12:06:53', '2020-09-06 12:06:53', NULL),
+(81, 'uploads/homestay/35812.jpg', 13, 1, '2020-09-06 12:06:53', '2020-09-06 12:06:53', NULL),
+(82, 'uploads/homestay/13356.jpg', 13, 1, '2020-09-06 12:06:53', '2020-09-06 12:06:53', NULL),
+(83, 'uploads/homestay/6237.jpg', 13, 1, '2020-09-06 12:06:53', '2020-09-06 12:06:53', NULL),
+(84, 'uploads/homestay/23169.jpg', 13, 1, '2020-09-06 12:06:53', '2020-09-06 12:06:53', NULL),
+(85, 'uploads/homestay/75319.jpg', 13, 1, '2020-09-06 12:06:53', '2020-09-06 12:06:53', NULL),
+(86, 'uploads/homestay/5962.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(87, 'uploads/homestay/86915.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(88, 'uploads/homestay/12660.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(89, 'uploads/homestay/2506.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(90, 'uploads/homestay/68820.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(91, 'uploads/homestay/24586.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(92, 'uploads/homestay/80786.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(93, 'uploads/homestay/27886.jpg', 14, 1, '2020-09-06 12:08:44', '2020-09-06 12:08:44', NULL),
+(94, 'uploads/homestay/14837.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(95, 'uploads/homestay/79599.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(96, 'uploads/homestay/90975.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(97, 'uploads/homestay/33115.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(98, 'uploads/homestay/3852.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(99, 'uploads/homestay/55156.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(100, 'uploads/homestay/56387.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(101, 'uploads/homestay/3980.jpg', 15, 1, '2020-09-06 12:10:55', '2020-09-06 12:10:55', NULL),
+(102, 'uploads/homestay/64519.jpg', 16, 1, '2020-09-11 18:42:35', '2020-09-11 18:42:35', NULL),
+(104, 'uploads/homestay/29863.jpg', 16, 1, '2020-09-11 18:42:35', '2020-09-11 18:42:35', NULL),
+(105, 'uploads/homestay/11142.jpg', 16, 1, '2020-09-11 18:42:35', '2020-09-11 18:42:35', NULL),
+(106, 'uploads/homestay/12997.jpg', 16, 1, '2020-09-11 18:42:35', '2020-09-11 18:42:35', NULL),
+(107, 'uploads/homestay/73617.jpg', 16, 1, '2020-09-11 18:42:35', '2020-09-11 18:42:35', NULL),
+(108, 'uploads/homestay/36792.jpg', 19, 1, '2020-09-25 17:05:21', '2020-09-25 17:05:21', NULL),
+(109, 'uploads/homestay/80567.jpg', 19, 1, '2020-09-25 17:05:21', '2020-09-25 17:05:21', NULL),
+(110, 'uploads/homestay/91125.jpg', 19, 1, '2020-09-25 17:05:21', '2020-09-25 17:05:21', NULL),
+(111, 'uploads/homestay/90133.jpg', 19, 1, '2020-09-25 17:05:21', '2020-09-25 17:05:21', NULL),
+(112, 'uploads/homestay/22746.jpg', 19, 1, '2020-09-25 17:05:21', '2020-09-25 17:05:21', NULL),
+(113, 'uploads/homestay/66780.jpg', 19, 1, '2020-09-25 17:05:21', '2020-09-25 17:05:21', NULL),
+(114, 'uploads/homestay/7616.jpeg', 21, 1, '2021-06-28 14:14:03', '2021-06-28 14:14:03', NULL),
+(115, 'uploads/homestay/21910.jpeg', 21, 1, '2021-06-28 14:14:03', '2021-06-28 14:14:03', NULL),
+(116, 'uploads/homestay/57615.jpeg', 21, 1, '2021-06-28 14:14:03', '2021-06-28 14:14:03', NULL),
+(117, 'uploads/homestay/56059.jpeg', 21, 1, '2021-06-28 14:14:03', '2021-06-28 14:14:03', NULL),
+(118, 'uploads/homestay/6176.jpeg', 21, 1, '2021-06-28 14:14:03', '2021-06-28 14:14:03', NULL),
+(119, 'uploads/homestay/69612.jpeg', 21, 1, '2021-06-28 14:14:03', '2021-06-28 14:14:03', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -891,6 +1088,26 @@ CREATE TABLE `images_product` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `images_product`
+--
+
+INSERT INTO `images_product` (`id`, `url`, `product_id`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(2, 'uploads/room/36452.jpg', 38, 1, '2020-09-25 16:41:57', '2020-09-25 16:41:57', NULL),
+(3, 'uploads/room/78887.jpg', 38, 1, '2020-09-25 16:41:57', '2020-09-25 16:41:57', NULL),
+(7, 'uploads/room/94453.jpg', 21, 1, '2020-09-25 16:47:43', '2020-09-25 16:47:43', NULL),
+(8, 'uploads/room/79693.jpg', 21, 1, '2020-09-25 16:47:43', '2020-09-25 16:47:43', NULL),
+(9, 'uploads/room/70028.jpg', 21, 1, '2020-09-25 16:47:43', '2020-09-25 16:47:43', NULL),
+(10, 'uploads/room/28442.jpg', 21, 1, '2020-09-25 16:47:43', '2020-09-25 16:47:43', NULL),
+(11, 'uploads/room/98026.jpg', 21, 1, '2020-09-25 16:47:43', '2020-09-25 16:47:43', NULL),
+(12, 'uploads/room/79900.jpg', 38, 1, '2020-09-25 16:52:23', '2020-09-25 16:52:23', NULL),
+(13, 'uploads/room/93997.jpg', 38, 1, '2020-09-25 16:52:23', '2020-09-25 16:52:23', NULL),
+(14, 'uploads/room/58684.jpg', 38, 1, '2020-09-25 16:52:23', '2020-09-25 16:52:23', NULL),
+(15, 'uploads/room/63170.jpg', 50, 1, '2020-09-25 17:06:14', '2020-09-25 17:06:14', NULL),
+(16, 'uploads/room/96331.jpg', 50, 1, '2020-09-25 17:06:14', '2020-09-25 17:06:14', NULL),
+(17, 'uploads/room/43446.jpg', 50, 1, '2020-09-25 17:06:14', '2020-09-25 17:06:14', NULL),
+(18, 'uploads/room/38301.jpg', 50, 1, '2020-09-25 17:06:14', '2020-09-25 17:06:14', NULL);
 
 -- --------------------------------------------------------
 
@@ -909,26 +1126,26 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_100000_create_password_resets_table', 1),
-(2, '2019_08_19_000000_create_failed_jobs_table', 1),
-(3, '2020_01_01_000001_create_provinces_table', 1),
-(4, '2020_01_01_000002_create_districts_table', 1),
-(5, '2020_01_01_000003_create_wards_table', 1),
-(6, '2020_07_10_235607_create_users_table', 1),
-(7, '2020_07_10_235608_create_utilities_table', 1),
-(8, '2020_07_10_235610_create_room_types_table', 1),
-(9, '2020_07_10_235611_create_homestays_table', 1),
-(10, '2020_07_10_235612_create_products_table', 1),
-(11, '2020_07_11_000252_create_uti_pro_table', 1),
-(12, '2020_07_11_000300_create_blogs_table', 1),
-(13, '2020_07_11_000345_create_images_homestay_table', 1),
-(14, '2020_07_11_000411_create_bills_table', 1),
-(15, '2020_07_11_000423_create_orders_table', 1),
-(16, '2020_07_11_005108_create_ratings_table', 1),
-(17, '2020_07_12_171845_create_slides_table', 1),
-(18, '2020_09_13_234138_create_images_product', 1),
-(19, '2020_09_14_224536_add_sort_delete_columns', 1),
-(20, '2020_09_17_221325_create_cancel_bill', 1);
+(18, '2014_10_12_100000_create_password_resets_table', 1),
+(19, '2019_08_19_000000_create_failed_jobs_table', 1),
+(20, '2020_01_01_000001_create_provinces_table', 1),
+(21, '2020_01_01_000002_create_districts_table', 1),
+(22, '2020_01_01_000003_create_wards_table', 1),
+(23, '2020_07_10_235607_create_users_table', 1),
+(24, '2020_07_10_235608_create_utilities_table', 1),
+(25, '2020_07_10_235610_create_room_types_table', 1),
+(26, '2020_07_10_235611_create_homestays_table', 1),
+(27, '2020_07_10_235612_create_products_table', 1),
+(28, '2020_07_11_000252_create_uti_pro_table', 1),
+(29, '2020_07_11_000300_create_blogs_table', 1),
+(30, '2020_07_11_000345_create_images_homestay_table', 1),
+(31, '2020_07_11_000411_create_bills_table', 1),
+(32, '2020_07_11_000423_create_orders_table', 1),
+(33, '2020_07_11_005108_create_ratings_table', 1),
+(34, '2020_07_12_171845_create_slides_table', 1),
+(39, '2020_09_13_234138_create_images_product', 2),
+(40, '2020_09_14_224536_add_sort_delete_columns', 2),
+(41, '2020_09_17_221325_create_cancel_bill', 2);
 
 -- --------------------------------------------------------
 
@@ -949,6 +1166,62 @@ CREATE TABLE `orders` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `orders`
+--
+
+INSERT INTO `orders` (`id`, `bill_id`, `product_id`, `date_start`, `date_end`, `price`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(36, 23, 21, '2020-09-11', '2020-09-12', 28500000, 0, '2020-09-11 11:42:30', '2020-09-11 17:48:23', NULL),
+(37, 23, 22, '2020-09-11', '2020-09-12', 28500000, 0, '2020-09-11 11:42:30', '2020-09-11 17:48:23', NULL),
+(38, 24, 24, '2020-09-11', '2020-09-12', 30000000, 0, '2020-09-11 11:43:14', '2020-09-11 17:48:23', NULL),
+(39, 25, 8, '2020-09-11', '2020-09-12', 30000000, 0, '2020-09-11 11:43:51', '2020-09-11 11:46:05', NULL),
+(40, 26, 4, '2020-09-11', '2020-09-12', 47500000, 0, '2020-09-11 11:44:29', '2020-09-11 17:48:23', NULL),
+(41, 26, 6, '2020-09-11', '2020-09-12', 54000000, 0, '2020-09-11 11:44:29', '2020-09-11 17:48:23', NULL),
+(42, 27, 26, '2020-09-11', '2020-09-13', 180000000, 0, '2020-09-11 11:45:01', '2020-09-14 16:50:56', NULL),
+(43, 28, 18, '2020-09-12', '2020-09-13', 38000000, 0, '2020-09-11 18:01:19', '2020-09-11 19:02:08', NULL),
+(44, 28, 17, '2020-09-12', '2020-09-13', 57000000, 0, '2020-09-11 18:01:19', '2020-09-11 19:02:08', NULL),
+(45, 29, 33, '2020-09-12', '2020-09-13', 30000000, 0, '2020-09-11 18:05:32', '2020-09-14 16:50:56', NULL),
+(46, 30, 28, '2020-09-12', '2020-09-13', 28500000, 0, '2020-09-11 18:11:50', '2020-09-14 16:50:56', NULL),
+(47, 31, 28, '2020-09-15', '2020-09-16', 28500000, 0, '2020-09-11 18:21:56', '2020-09-15 18:03:01', NULL),
+(48, 32, 4, '2020-09-17', '2020-09-19', 47500000, 0, '2020-09-15 19:57:17', '2020-09-21 16:36:56', NULL),
+(49, 32, 6, '2020-09-17', '2020-09-19', 54000000, 0, '2020-09-15 19:57:17', '2020-09-21 16:36:56', NULL),
+(50, 33, 24, '2020-09-14', '2020-09-17', 30000000, 0, '2020-09-15 19:57:56', '2020-09-17 15:27:25', NULL),
+(51, 34, 24, '2020-09-18', '2020-09-19', 30000000, 0, '2020-09-15 19:59:12', '2020-09-21 16:36:56', NULL),
+(52, 35, 24, '2020-09-17', '2020-09-18', 30000000, 0, '2020-09-15 22:48:34', '2020-09-17 17:01:54', NULL),
+(53, 36, 7, '2020-09-17', '2020-09-18', 40000000, 0, '2020-09-17 15:53:42', '2020-09-17 17:01:54', NULL),
+(54, 37, 7, '2020-09-17', '2020-09-18', 40000000, 0, '2020-09-17 15:54:34', '2020-09-17 17:01:54', NULL),
+(55, 38, 25, '2020-09-17', '2020-09-18', 28500000, 0, '2020-09-17 15:58:17', '2020-09-17 17:01:54', NULL),
+(56, 39, 4, '2020-09-22', '2020-09-23', 47500000, 0, '2020-09-17 17:04:17', '2020-09-17 17:06:02', NULL),
+(57, 40, 28, '2020-09-18', '2020-09-19', 28500000, 0, '2020-09-17 17:46:39', '2020-09-17 17:47:27', NULL),
+(58, 41, 25, '2020-09-18', '2020-09-18', 28500000, 0, '2020-09-17 17:52:21', '2020-09-17 17:52:30', NULL),
+(59, 42, 21, '2020-09-18', '2020-09-19', 28500000, 0, '2020-09-17 17:54:24', '2020-09-21 16:36:56', NULL),
+(62, 44, 7, '2020-09-18', '2020-09-19', 40000000, 0, '2020-09-17 18:00:45', '2020-09-21 16:36:56', NULL),
+(63, 45, 46, '2020-09-21', '2020-09-23', 38000000, 0, '2020-09-17 18:04:00', '2020-09-24 17:04:08', NULL),
+(64, 46, 47, '2020-09-18', '2020-09-19', 47500000, 0, '2020-09-17 18:05:20', '2020-09-21 16:36:56', NULL),
+(65, 47, 38, '2020-09-20', '2020-09-21', 38000000, 0, '2020-09-17 18:07:36', '2020-09-17 18:07:57', NULL),
+(66, 48, 38, '2020-09-20', '2020-09-21', 38000000, 0, '2020-09-17 18:10:06', '2020-09-17 18:12:47', NULL),
+(67, 49, 4, '2020-09-19', '2020-09-20', 47500000, 0, '2020-09-17 18:24:23', '2020-09-21 16:36:56', NULL),
+(68, 50, 4, '2020-09-20', '2020-09-22', 47500000, 0, '2020-09-17 18:25:55', '2020-09-17 18:26:26', NULL),
+(69, 51, 4, '2020-09-21', '2020-09-22', 47500000, 0, '2020-09-21 16:44:04', '2020-09-21 17:48:36', NULL),
+(70, 52, 4, '2020-09-24', '2020-09-26', 47500000, 0, '2020-09-21 18:00:05', '2020-09-25 17:00:27', NULL),
+(71, 52, 6, '2020-09-24', '2020-09-26', 54000000, 0, '2020-09-21 18:00:05', '2020-09-25 17:00:27', NULL),
+(72, 53, 22, '2020-09-25', '2020-09-26', 28500000, 0, '2020-09-25 16:54:35', '2020-09-25 17:00:27', NULL),
+(73, 54, 7, '2020-09-25', '2020-09-26', 40000000, 0, '2020-09-25 16:59:04', '2020-09-25 17:00:27', NULL),
+(74, 55, 4, '2020-09-26', '2020-09-27', 47500000, 0, '2020-09-25 17:21:16', '2021-06-02 15:04:05', NULL),
+(75, 56, 4, '2020-09-29', '2020-10-01', 47500000, 0, '2020-09-25 17:23:29', '2021-06-02 15:04:05', NULL),
+(76, 57, 24, '2021-06-14', '2021-06-16', 30000000, 0, '2021-06-11 03:27:29', '2021-06-23 05:19:47', NULL),
+(77, 57, 25, '2021-06-14', '2021-06-16', 28500000, 0, '2021-06-11 03:27:29', '2021-06-23 05:19:47', NULL),
+(78, 58, 14, '2021-06-15', '2021-06-17', 38000000, 0, '2021-06-11 03:33:23', '2021-06-23 05:19:47', NULL),
+(79, 59, 33, '2021-06-16', '2021-06-18', 30000000, 0, '2021-06-11 04:06:31', '2021-06-23 05:19:47', NULL),
+(80, 60, 24, '2021-06-17', '2021-06-19', 30000000, 0, '2021-06-11 04:17:09', '2021-06-23 05:19:47', NULL),
+(81, 61, 15, '2021-06-16', '2021-06-18', 38000000, 0, '2021-06-11 05:09:46', '2021-06-11 05:27:10', NULL),
+(82, 62, 16, '2021-06-16', '2021-06-18', 38000000, 0, '2021-06-11 05:20:52', '2021-06-11 05:27:18', NULL),
+(83, 63, 15, '2021-06-16', '2021-06-18', 38000000, 0, '2021-06-11 05:27:51', '2021-06-23 05:19:47', NULL),
+(84, 64, 21, '2021-06-25', '2021-06-30', 28500000, 0, '2021-06-23 05:49:16', '2021-06-30 13:10:28', NULL),
+(85, 64, 22, '2021-06-25', '2021-06-30', 28500000, 0, '2021-06-23 05:49:16', '2021-06-30 13:10:28', NULL),
+(86, 65, 46, '2021-06-29', '2021-06-30', 38000000, 0, '2021-06-28 14:27:21', '2021-06-30 13:10:28', NULL),
+(87, 66, 18, '2021-06-29', '2021-06-30', 38000000, 0, '2021-06-28 19:39:12', '2021-06-30 13:10:28', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -966,7 +1239,15 @@ CREATE TABLE `password_resets` (
 --
 
 INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
-('lhbaothien99@gmail.com', '73ydosiOxT8KkpqouQ4YQOY2btdvxem10CHX3CwgQOdTUDD8DNp7uiBbjbUQ', '2021-06-02 15:45:20');
+('linhlee.dom@gmail.com', 'in7tDoZAqrbWJEi56u80yDntdFdfzlHx64VhF4onn8gZVHTOlqZDeXetUWAY', '2020-09-11 11:33:55'),
+('linhlee.dom@gmail.com', 'k8LhloGLnGUANPKzlLCGyN5UPzzBMEO9xr6Vi57OImhnrod7SDsUTVlIEgmX', '2020-09-11 11:34:55'),
+('hihinewbie99@gmail.com', '8w3Xkste8W9pUtYaGRpvJKkMH0kUsBn6ZD4hgTWVYQOWPrVrTQWkghCyXUL0', '2021-06-11 04:09:28'),
+('hihinewbie99@gmail.com', 'DG1X6Avo06VP1WCFIvPikCiR61FEhtE98hHO803tOUbvaUeFg1lLOAgDr2qF', '2021-06-11 04:09:46'),
+('hihinewbie99@gmail.com', 'inINHuZ5XjaquE2iY4mBLRiFTl3OGjl13i99bNZylUPEfLNJnsqm2vBNv07j', '2021-06-11 04:11:15'),
+('hihinewbie99@gmail.com', 'c1VPKbve5XFc5B3jQTaAI98b30BOyuQEEAbbjpLqknzGrNeNCVSXJK7G4bpm', '2021-06-11 04:11:29'),
+('hihinewbie99@gmail.com', 'GxnnqCGnGbIVKtXiUwF9NB5IvmdTNDmoWIrxV6wdNTS9JYiFAFQGcg1Wxzz3', '2021-06-11 04:11:58'),
+('hihinewbie99@gmail.com', 'IO4OpbhN9QcZKtraKiU15RIcXkeadAdhhzJQcFyauymEAxOJcpQxCZ9iRa3L', '2021-06-11 04:14:50'),
+('anhdv001@gmail.com', 'TXpABpWCsIO4Q3HBKCAskDZqKDjLAXs62kZkADb7Ls7fnhtLrmA2FfpxaVec', '2021-06-11 05:31:03');
 
 -- --------------------------------------------------------
 
@@ -989,6 +1270,58 @@ CREATE TABLE `products` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `products`
+--
+
+INSERT INTO `products` (`id`, `homestay_id`, `room_type_id`, `name`, `prices`, `discount`, `avatar`, `description`, `area`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(4, 2, 5, 'Phòng Tiêu Chuẩn', 500000, 5, 'uploads/room/avatar8012.jpg', 'Giá phòng chỉ áp dụng cho 2 người lớn. Phòng có thể chứa đến 3 người lớn và 1 trẻ em dưới 12 tuổi. Xin lưu ý: - Một trẻ em từ 4 - 11 tuổi phải trả phí 300.000 VND/người/đêm khi sử dụng giường có sẵn', 25, 1, '2020-09-05 10:11:49', '2020-09-05 10:11:49', NULL),
+(6, 2, 5, 'Suite Junior', 600000, 10, 'uploads/room/avatar37290.jpg', 'Phòng giường đôi này có ban công, máy điều hòa và khu vực ghế ngồi.', 30, 1, '2020-09-05 10:14:45', '2020-09-25 16:42:41', '2020-09-25 16:42:41'),
+(7, 2, 2, 'Phòng Tiêu chuẩn', 400000, 0, 'uploads/room/avatar65562.jpg', 'Giá phòng chỉ áp dụng cho 2 người lớn. Phòng có thể chứa đến 3 người lớn và 1 trẻ em dưới 12 tuổi. Xin lưu ý: - Một trẻ em từ 4 - 11 tuổi phải trả phí 300.000 VND/người/đêm khi sử dụng giường có sẵn', 25, 1, '2020-09-05 10:18:32', '2020-09-05 10:18:32', NULL),
+(8, 3, 5, 'Phòng Superior', 300000, 0, 'uploads/room/avatar70741.jpg', 'Nép mình trong khu vườn, phòng máy lạnh này có ban công riêng với tầm nhìn. Phòng được trang bị TV màn hình LCD 42 inch và bàn làm việc.', 25, 1, '2020-09-05 10:22:37', '2020-09-05 10:22:37', NULL),
+(9, 3, 5, 'Phòng Superior ', 400000, 10, 'uploads/room/avatar25718.jpg', 'Phòng máy lạnh này có ban công riêng với tầm nhìn. Phòng được trang bị TV màn hình LCD 42 inch và bàn làm việc.', 30, 1, '2020-09-05 10:26:39', '2020-09-05 10:26:39', NULL),
+(10, 3, 6, 'Phòng Superior Luxury', 700000, 10, 'uploads/room/avatar25718.jpg', 'Phòng máy lạnh này có ban công riêng với tầm nhìn. Phòng được trang bị TV màn hình LCD 42 inch và bàn làm việc.', 30, 1, '2020-09-05 10:26:39', '2020-09-05 10:26:39', NULL),
+(11, 3, 6, 'Phòng Superior Luxury', 700000, 10, 'uploads/room/avatar25718.jpg', 'Phòng máy lạnh này có ban công riêng với tầm nhìn. Phòng được trang bị TV màn hình LCD 42 inch và bàn làm việc.', 30, 1, '2020-09-05 10:26:39', '2020-09-05 10:26:39', NULL),
+(12, 3, 6, 'Phòng Superior Luxury', 700000, 10, 'uploads/room/avatar25718.jpg', 'Phòng máy lạnh này có ban công riêng với tầm nhìn. Phòng được trang bị TV màn hình LCD 42 inch và bàn làm việc.', 30, 1, '2020-09-05 10:26:39', '2020-09-25 17:03:32', '2020-09-25 17:03:32'),
+(13, 4, 6, 'Phòng Deluxe Gia đình', 700000, 15, 'uploads/room/avatar37849.jpg', 'Phòng 4 người này có ban công, tủ lạnh mini.', 40, 1, '2020-09-05 10:32:26', '2020-09-05 10:32:26', NULL),
+(14, 4, 2, 'Phòng Deluxe', 400000, 5, 'uploads/room/avatar11812.jpg', 'Phòng 2 giường đơn này có sân trong, lối vào riêng và minibar.', 25, 1, '2020-09-05 10:35:14', '2020-09-05 10:35:14', NULL),
+(15, 4, 2, 'Phòng Deluxe', 400000, 5, 'uploads/room/avatar11812.jpg', 'Phòng 2 giường đơn này có sân trong, lối vào riêng và minibar.', 25, 1, '2020-09-05 10:35:14', '2020-09-05 10:35:14', NULL),
+(16, 4, 2, 'Phòng Deluxe', 400000, 5, 'uploads/room/avatar11812.jpg', 'Phòng 2 giường đơn này có sân trong, lối vào riêng và minibar.', 25, 1, '2020-09-05 10:35:14', '2020-09-05 10:35:14', NULL),
+(17, 5, 6, 'Phòng Deluxe', 600000, 5, 'uploads/room/133628429.jpg', 'Phòng 2 giường đôi này có sân trong, lối vào riêng và minibar.', 25, 1, '2020-09-05 10:35:14', '2020-09-05 10:50:00', NULL),
+(18, 5, 2, 'Phòng Deluxe', 400000, 5, 'uploads/room/133628429.jpg', 'Phòng 2 giường đơn này có sân trong, lối vào riêng và minibar.', 25, 1, '2020-09-05 10:35:14', '2020-09-05 10:54:15', NULL),
+(19, 5, 2, 'Phòng Deluxe', 400000, 5, 'uploads/room/133628429.jpg', 'Phòng 2 giường đơn này có sân trong, lối vào riêng và minibar.', 25, 1, '2020-09-05 10:35:14', '2020-09-05 10:54:48', NULL),
+(20, 5, 2, 'Phòng Deluxe', 400000, 5, 'uploads/room/133628429.jpg', 'Phòng 2 giường đơn này có sân trong, lối vào riêng và minibar.', 25, 1, '2020-09-05 10:35:14', '2020-09-05 10:55:36', NULL),
+(21, 6, 5, 'Phòng Đôi Superior', 300000, 5, 'uploads/room/avatar75394.jpg', 'Hướng ra biển, bungalow rộng rãi này có thể chứa tối đa 4 khách. Phòng có hệ thống làm mát không gian giường ngủ thân thiện với môi trường và tiết kiệm năng lượng Evening Breeze®, đồng thời có quạt và két an toàn cá nhân.', 20, 1, '2020-09-05 10:59:26', '2020-09-05 10:59:26', NULL),
+(22, 6, 5, 'Phòng Đôi Superior', 300000, 5, 'uploads/room/avatar75394.jpg', 'Hướng ra biển, bungalow rộng rãi này có thể chứa tối đa 4 khách. Phòng có hệ thống làm mát không gian giường ngủ thân thiện với môi trường và tiết kiệm năng lượng Evening Breeze®, đồng thời có quạt và két an toàn cá nhân.', 20, 1, '2020-09-05 10:59:26', '2020-09-05 10:59:26', NULL),
+(23, 6, 5, 'Phòng Đôi Superior', 400000, 15, 'uploads/room/avatar75394.jpg', 'Hướng ra biển, bungalow rộng rãi này có thể chứa tối đa 4 khách. Phòng có hệ thống làm mát không gian giường ngủ thân thiện với môi trường và tiết kiệm năng lượng Evening Breeze®, đồng thời có quạt và két an toàn cá nhân.', 20, 1, '2020-09-05 10:59:26', '2020-09-05 10:59:26', NULL),
+(24, 7, 5, 'Phòng Đôi Superior', 300000, 0, 'uploads/room/avatar27412.jpg', 'Phòng giường đôi/2 giường đơn này có ban công, ấm đun nước điện và tầm nhìn quang cảnh.', 25, 1, '2020-09-05 11:14:34', '2020-09-05 11:14:34', NULL),
+(25, 7, 5, 'Phòng Đôi Superior', 300000, 5, 'uploads/room/avatar60245.jpg', 'Phòng giường đôi/2 giường đơn này có ban công, ấm đun nước điện và tầm nhìn quang cảnh.', 25, 1, '2020-09-05 11:16:17', '2020-09-05 11:16:17', NULL),
+(26, 8, 11, 'Nhà sàn truyền thống', 2000000, 10, 'uploads/room/avatar22514.jpg', '10 giường nệm futon kiểu Nhật', 50, 1, '2020-09-05 11:22:52', '2020-09-05 11:22:52', NULL),
+(27, 8, 11, 'Nhà sàn truyền thống', 2200000, 15, 'uploads/room/avatar24209.jpg', '10 giường nệm futon kiểu Nhật', 50, 1, '2020-09-05 11:26:02', '2020-09-05 11:26:02', NULL),
+(28, 8, 5, 'Phòng Đôi', 300000, 5, 'uploads/room/avatar57656.jpg', 'Phòng có hệ thống làm mát không gian giường ngủ thân thiện với môi trường và tiết kiệm năng lượng', 20, 1, '2020-09-05 11:28:33', '2020-09-05 11:28:33', NULL),
+(29, 10, 3, 'Phòng Superior', 300000, 5, 'uploads/room/avatar66543.jpg', 'Phòng giường đôi này có ban công, khu vực ghế ngồi và sàn lát gạch/đá cẩm thạch.', 25, 1, '2020-09-06 11:40:53', '2020-09-06 11:40:53', NULL),
+(30, 10, 5, 'Phòng Superior', 300000, 15, 'uploads/room/avatar83588.jpg', 'Phòng giường đôi này có ban công, khu vực ghế ngồi và sàn lát gạch/đá cẩm thạch.', 25, 1, '2020-09-06 11:41:46', '2020-09-06 11:41:46', NULL),
+(31, 10, 2, 'Phòng Superior', 300000, 10, 'uploads/room/avatar24561.jpg', 'Phòng 2 giường đơn này có ban công, máy điều hòa và sàn lát gạch/đá cẩm thạch.', 20, 1, '2020-09-06 11:43:06', '2020-09-06 11:43:06', NULL),
+(32, 10, 6, 'Phòng Đôi Superior', 500000, 5, 'uploads/room/avatar42243.jpg', 'Phòng 2 giường đôi này có ban công, máy điều hòa và sàn lát gạch/đá cẩm thạch.', 30, 1, '2020-09-06 11:44:28', '2020-09-06 11:44:28', NULL),
+(33, 11, 2, 'Bungalow Deluxe', 300000, 0, 'uploads/room/avatar31276.jpg', 'Bungalow này có ban công, sàn lát gạch/đá cẩm thạch và tủ lạnh mini.', 25, 1, '2020-09-06 11:46:07', '2020-09-06 11:46:07', NULL),
+(34, 11, 5, 'Diamond Sea Hotel', 400000, 5, 'uploads/room/avatar31997.jpg', 'Phòng 2 Giường Đơn này có ban công, máy điều hòa và tầm nhìn.', 10, 1, '2020-09-06 11:50:26', '2020-09-06 11:50:26', NULL),
+(35, 11, 6, 'Phòng Đôi Superior', 700000, 15, 'uploads/room/avatar29142.jpg', 'Phòng 2 Giường đôi này có ban công, máy điều hòa và tầm nhìn.', 30, 1, '2020-09-06 11:51:34', '2020-09-06 11:51:34', NULL),
+(36, 12, 2, 'Phòng Tiêu chuẩn', 300000, 5, 'uploads/room/avatar54329.jpg', 'Phòng 2 Giường Đơn này có ban công, máy điều hòa và tầm nhìn.', 20, 1, '2020-09-06 11:52:52', '2020-09-06 11:52:52', NULL),
+(37, 12, 5, 'Phòng Tiêu chuẩn', 400000, 5, 'uploads/room/avatar30040.jpg', 'Phòng 1 Giường đôi này có ban công, máy điều hòa và tầm nhìn.', 25, 1, '2020-09-06 11:54:07', '2020-09-06 11:54:07', NULL),
+(38, 13, 2, 'Phòng Superior', 400000, 5, 'uploads/room/avatar71276.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 20, 1, '2020-09-06 12:13:53', '2020-09-06 12:13:53', NULL),
+(39, 13, 6, 'Phòng Đôi Superior', 700000, 5, 'uploads/room/avatar85068.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 30, 1, '2020-09-06 12:14:44', '2020-09-06 12:14:44', NULL),
+(40, 13, 5, 'Phòng Superior', 400000, 0, 'uploads/room/avatar83137.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 25, 1, '2020-09-06 12:15:42', '2020-09-06 12:15:42', NULL),
+(41, 13, 6, 'Phòng Đôi Superior', 700000, 5, 'uploads/room/avatar58128.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 30, 1, '2020-09-06 12:16:38', '2020-09-06 12:16:38', NULL),
+(42, 14, 5, 'Phòng Đôi Deluxe', 300000, 5, 'uploads/room/avatar26354.jpg', 'Phòng Đôi Deluxe Nhìn ra Thành phố', 20, 1, '2020-09-06 12:19:15', '2020-09-06 12:19:15', NULL),
+(43, 14, 7, 'Phòng Đôi Superior', 300000, 5, 'uploads/room/avatar49510.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 20, 1, '2020-09-06 12:20:39', '2020-09-06 12:20:39', NULL),
+(44, 14, 8, 'Phòng Đôi Superior', 500000, 5, 'uploads/room/avatar42180.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 25, 1, '2020-09-06 12:21:26', '2020-09-06 12:21:26', NULL),
+(45, 15, 6, 'Phòng Đôi Superior', 500000, 0, 'uploads/room/avatar16461.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 20, 1, '2020-09-06 12:24:00', '2020-09-06 12:24:00', NULL),
+(46, 15, 5, 'Phòng Đôi Superior', 400000, 5, 'uploads/room/avatar57959.jpg', 'This twin/double room has air conditioning, electric kettle and seating area.', 20, 1, '2020-09-06 12:25:47', '2020-09-06 12:25:47', NULL),
+(47, 16, 5, 'Villa Deluxe', 500000, 5, 'uploads/room/avatar81165.jpg', 'Biệt thự này có máy lạnh.', 25, 1, '2020-09-11 18:44:53', '2020-09-11 18:44:53', NULL),
+(50, 19, 1, 'a1', 500000, 15, 'uploads/room/avatar14211.jpg', 'ewtertrterter', 30, 1, '2020-09-25 17:06:01', '2020-09-25 17:06:01', NULL),
+(51, 20, 2, 'Phòng Tiêu Chuẩn', 250000, 0, 'uploads/room/avatar76446.jpg', 'Phòng đẹp', 25, 1, '2021-06-11 04:56:49', '2021-06-11 04:56:49', NULL),
+(52, 21, 6, 'Phòng Royal', 500000, 0, 'uploads/room/avatar41900.jpeg', 'Phòng Royal - 2 giường đôi', 30, 1, '2021-06-28 18:57:01', '2021-06-28 18:57:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -1092,6 +1425,20 @@ CREATE TABLE `ratings` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `ratings`
+--
+
+INSERT INTO `ratings` (`id`, `homestay_id`, `bill_id`, `name`, `email`, `phone`, `point`, `comment`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(5, 2, 26, NULL, NULL, NULL, 5, 'Tốt', 1, '2020-09-11 18:26:48', '2021-06-28 18:00:44', NULL),
+(6, 7, 24, NULL, NULL, NULL, 5, 'Khá tốt', 1, '2020-09-11 18:27:03', '2020-09-11 18:27:03', NULL),
+(7, 6, 23, NULL, NULL, NULL, 5, 'Tốt 5 sao', 1, '2020-09-11 18:27:21', '2020-09-11 18:27:21', NULL),
+(8, 8, 31, NULL, NULL, NULL, 4, 'Tốt', 1, '2020-09-17 17:50:26', '2020-09-17 17:50:26', NULL),
+(9, 8, 27, NULL, NULL, NULL, 5, 'Phục vụ nhiệt tình', 1, '2020-09-17 17:51:11', '2020-09-17 17:51:11', NULL),
+(10, 7, 41, NULL, NULL, NULL, 3, 'Cũng được', 1, '2020-09-17 17:53:29', '2020-09-17 17:53:29', NULL),
+(11, 7, 33, NULL, NULL, NULL, 5, 'Chất lượng ok', 1, '2020-09-17 18:00:18', '2021-06-26 01:30:39', NULL),
+(12, 6, 42, NULL, NULL, NULL, 5, 'Phòng rất đẹp. Chủ nhà vui tính', 1, '2020-09-22 15:13:35', '2020-09-22 15:13:35', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -1114,15 +1461,17 @@ CREATE TABLE `room_types` (
 --
 
 INSERT INTO `room_types` (`id`, `name`, `alias`, `keyword(SE0)`, `capacity`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Phòng 1 giường đơn', 'phong-1-giuong-don', NULL, 2, 1, NULL, NULL),
-(2, 'Phòng 2 giường đơn', 'phong-2-giuong-don', NULL, 2, 1, NULL, NULL),
-(3, 'Phòng 3 giường đơn', 'phong-3-giuong-don', NULL, 3, 1, NULL, NULL),
-(4, 'Phòng 1 giường đôi', 'phong-1-giuong-doi', NULL, 2, 1, NULL, NULL),
-(5, 'Phòng 2 giường đôi', 'phong-2-giuong-doi', NULL, 0, 1, NULL, NULL),
-(6, 'Phòng 1 giường tầng', 'phong-1-giuong-tang', NULL, 2, 1, NULL, NULL),
-(7, 'Phòng 2 giường tầng', 'phong-2-giuong-tang', NULL, 4, 1, NULL, NULL),
-(8, 'Phòng tập thể', 'phong-tap-the', NULL, 6, 1, NULL, NULL),
-(9, 'Cả căn hộ', 'ca-can-ho', NULL, 10, 1, NULL, NULL);
+(1, 'Phòng 1 giường đơn', 'phong-1-giuong-don', NULL, 2, 1, '2020-09-05 02:41:38', '2020-09-05 02:41:38'),
+(2, 'Phòng 2 giường đơn', 'phong-2-giuong-don', NULL, 2, 1, '2020-09-05 02:41:57', '2020-09-05 02:41:57'),
+(3, 'Phòng 3 giường đơn', 'phong-3-giuong-don', NULL, 3, 1, '2020-09-05 02:42:09', '2020-09-05 02:42:09'),
+(4, 'Phòng 4 giường đơn', 'phong-4-giuong-don', NULL, 4, 1, '2020-09-05 02:42:24', '2020-09-05 02:42:24'),
+(5, 'Phòng 1 giường đôi', 'phong-1-giuong-doi', NULL, 2, 1, '2020-09-05 02:42:34', '2020-09-05 02:42:34'),
+(6, 'Phòng 2 giường đôi', 'phong-2-giuong-doi', NULL, 4, 1, '2020-09-05 02:42:45', '2020-09-05 02:42:45'),
+(7, 'Phòng 1 giường tầng', 'phong-1-giuong-tang', NULL, 2, 1, '2020-09-05 02:43:14', '2020-09-05 02:43:14'),
+(8, 'Phòng 2 giường tầng', 'phong-2-giuong-tang', NULL, 4, 1, '2020-09-05 02:43:26', '2020-09-05 02:43:26'),
+(9, 'Phòng 3 giường tầng', 'phong-3-giuong-tang', NULL, 6, 1, '2020-09-05 02:43:39', '2020-09-05 02:43:39'),
+(10, 'Phòng 4 giường tầng', 'phong-4-giuong-tang', NULL, 8, 1, '2020-09-05 02:43:51', '2020-09-05 02:43:51'),
+(11, 'Cả căn hộ', 'ca-can-ho', NULL, 10, 1, '2020-09-05 02:44:17', '2020-09-05 02:44:17');
 
 -- --------------------------------------------------------
 
@@ -1147,11 +1496,11 @@ CREATE TABLE `slides` (
 --
 
 INSERT INTO `slides` (`id`, `url`, `slogan`, `status`, `created_at`, `updated_at`, `order`, `slogan2`, `deleted_at`) VALUES
-(1, 'uploads/slider/DJI_0004.jpg', 'Cầu vàng Đà Nẵng', 1, NULL, NULL, '1', NULL, NULL),
-(2, 'uploads/slider/hinh-nen-dep-cho-may-tinh_105621572.jpeg', 'Ruộng bậc thang', 1, NULL, NULL, '2', NULL, NULL),
-(3, 'uploads/slider/hinh-nen-vinh-ha-long-quang-ninh-dep-21.jpg', 'Hạ Long', 1, NULL, NULL, '3', NULL, NULL),
-(4, 'uploads/slider/hinh-nen-phong-canh-thien-nhien-thac-nuoc-tuyet-dep_112141977.jpg', 'Thác bản dốc - Cao Bằng', 1, NULL, NULL, '4', NULL, NULL),
-(5, 'uploads/slider/FXsLdTuyển-tập-hình-nền-4K-dành-cho-máy-tính-đẹp-18.jpg', 'Phú Quốc', 1, NULL, NULL, '5', NULL, NULL);
+(1, 'uploads/slider/DJI_0004.jpg', 'Cầu vàng Đà Nẵng', 1, '2020-09-04 20:08:14', '2020-09-25 17:28:38', '1', 'Ưu đãi lớn', NULL),
+(2, 'uploads/slider/hinh-nen-dep-cho-may-tinh_105621572.jpeg', 'Ruộng bậc thang', 1, '2020-09-04 20:09:22', '2020-09-04 20:17:35', '2', NULL, NULL),
+(3, 'uploads/slider/hinh-nen-vinh-ha-long-quang-ninh-dep-21.jpg', 'Hạ Long', 1, '2020-09-04 20:11:32', '2020-09-04 20:16:39', '3', NULL, NULL),
+(4, 'uploads/slider/hinh-nen-phong-canh-thien-nhien-thac-nuoc-tuyet-dep_112141977.jpg', 'Thác bản dốc - Cao Bằng', 1, '2020-09-04 20:24:22', '2020-09-04 20:24:22', '4', NULL, NULL),
+(5, 'uploads/slider/FXsLdTuyển-tập-hình-nền-4K-dành-cho-máy-tính-đẹp-18.jpg', 'Phú Quốc', 0, '2020-09-04 20:29:57', '2021-06-28 20:32:32', '5', 'Vùng đất xinh đẹp', '2021-06-28 20:32:32');
 
 -- --------------------------------------------------------
 
@@ -1182,10 +1531,16 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `avatar`, `phone`, `xaid`, `address_detail`, `permision`, `bank_number`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'admin', 'himinnbooking@gmail.com', NULL, '$2y$10$QeEwmpkrZX6YmGZLP8U/7.hCUIJZwks.8fzDp9b3tzZEVqguqpxqK', 'uploads/avatar/avatar.jpg', '', '', NULL, 0, NULL, NULL, NULL, NULL, NULL),
-(2, 'Bảo Thiên', 'lhbaothien99@gmail.com', NULL, '$2y$10$QeEwmpkrZX6YmGZLP8U/7.hCUIJZwks.8fzDp9b3tzZEVqguqpxqK', 'uploads/avatar/avatar.jpg', '', '', NULL, 1, NULL, NULL, NULL, NULL, NULL),
-(3, 'Lê Duy Linh', 'leduylinh1998.nc@gmail.com', NULL, '$2y$10$QeEwmpkrZX6YmGZLP8U/7.hCUIJZwks.8fzDp9b3tzZEVqguqpxqK', 'uploads/avatar/avatar.jpg', '', '', NULL, 2, NULL, NULL, NULL, NULL, NULL),
-(4, 'Mi Hee', 'hihinewbie99@gmail.com', NULL, '$2y$10$TLYZEQSz9oBaA0vZJpwPIOuklM6o1XAM4d.5I7A/H5zEL6MaLdqT2', 'uploads/avatar/avatar.jpg', '0971097399', '00043', NULL, 1, NULL, NULL, '2021-05-27 14:37:21', '2021-06-02 16:08:58', NULL);
+(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$TLYZEQSz9oBaA0vZJpwPIOuklM6o1XAM4d.5I7A/H5zEL6MaLdqT2', 'uploads/avatar/j4DrK_1.png', '0388271679', '', NULL, 0, NULL, NULL, NULL, '2021-06-28 20:19:22', NULL),
+(2, 'Vũ Thành Long', 'khainguyentihoanh1104@gmail.com', NULL, '$2y$10$NNnNrAUipphp5Rs/wERy8.tI.rUBsAZqfwTMtzcVuKY0rwxYV2QHe', 'uploads/avatar/20018625-68c6420dbc510789a431c70dab78c293.jpeg', '0989525687', '22351', 'Phương Sài', 1, NULL, NULL, '2020-09-05 18:31:30', '2021-06-28 16:43:48', NULL),
+(3, 'Lê Duy Linh', 'lhbaothien99@gmail.com', NULL, '$2y$10$NNnNrAUipphp5Rs/wERy8.tI.rUBsAZqfwTMtzcVuKY0rwxYV2QHe', 'uploads/avatar/avatar-den-1_051422423.png', '0388271679', '00037', 'hghghgh', 2, NULL, NULL, '2020-09-05 18:31:30', '2021-06-11 05:35:32', NULL),
+(4, 'Linh Lee', 'linhduyle1998@gmail.com', NULL, '$2y$10$t1VRoS0W/iXTL363iyPqeO6U9YC8ibeEUFVpUhwY4CO4ytBDrdw7S', 'uploads/avatar/avatar.jpg', '0652521651', '', '', 2, NULL, NULL, '2020-09-05 18:31:30', '2020-09-17 17:59:50', NULL),
+(6, 'Linh Lee 2', 'hihinewbie99@gmail.com', NULL, '$2y$10$TLYZEQSz9oBaA0vZJpwPIOuklM6o1XAM4d.5I7A/H5zEL6MaLdqT2', 'uploads/avatar/avatar.jpg', '0388271556', '04561', 'A', 2, NULL, NULL, '2020-09-11 18:14:04', '2020-09-11 18:14:52', NULL),
+(7, 'Long', 'partner1@gmail.com', NULL, '$2y$10$NNnNrAUipphp5Rs/wERy8.tI.rUBsAZqfwTMtzcVuKY0rwxYV2QHe', 'uploads/avatar/avatar.jpg', '0969669669', '00094', NULL, 1, NULL, NULL, '2020-09-11 18:33:23', '2020-09-11 18:36:51', NULL),
+(8, 'test', 'testtest@gmail.com', NULL, '$2y$10$h0ackGgXNQYFVkfnzpShZ.kiH5uGQrF1VSu3pBl1b9iO9lfLRbZra', 'uploads/avatar/avatar.jpg', '0123456789', '04204', 'ádasd', 2, NULL, NULL, '2021-06-11 05:07:19', '2021-06-11 14:56:23', NULL),
+(9, 'Lê Hoàng Bảo Thiên', 'anhdv001@gmail.com', NULL, '$2y$10$TLYZEQSz9oBaA0vZJpwPIOuklM6o1XAM4d.5I7A/H5zEL6MaLdqT2', 'uploads/avatar/avatar.jpg', '0123456798', '22390', NULL, 1, NULL, NULL, '2021-06-11 05:41:45', '2021-06-11 05:41:45', NULL),
+(10, 'Thúy', 'phanhongocthuy.59ttql@gmail.com', NULL, '$2y$10$rp7W4jL8XGAPHrMSeOvicu09.nhyn6rerWDigrBKyFMsQivzxkXX2', 'uploads/avatar/avatar.jpg', '0931185811', '22351', NULL, 2, NULL, NULL, '2021-06-28 13:50:25', '2021-06-28 19:50:13', NULL),
+(11, 'Ngọc Thí', 'khainguyentihoanh1105@gmail.com', NULL, '$2y$10$4UJvyMnsJP11NUxu6L0N/uJ1RM9k56ZmtJ5HemK0UNfXZM3ogU7A2', 'uploads/avatar/avatar.jpg', '0931185812', '32152', NULL, 1, NULL, NULL, '2021-06-28 13:55:06', '2021-06-28 13:56:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -1207,32 +1562,33 @@ CREATE TABLE `utilities` (
 --
 
 INSERT INTO `utilities` (`id`, `name`, `alias`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Wifi miễn phí', 'wifi-mien-phi', 1, NULL, NULL),
-(2, 'Có chỗ đậu xe miễn phí', 'co-cho-dau-xe-mien-phi', 1, NULL, NULL),
-(3, 'Đồ vệ sinh cá nhân miễn phí', 'do-ve-sinh-ca-nhan-mien-phi', 1, NULL, NULL),
-(4, 'Vòi sen', 'voi-sen', 1, NULL, '2021-06-05 15:36:57'),
-(5, 'Két an toàn', 'ket-an-toan', 1, NULL, NULL),
-(6, 'Nhà vệ sinh', 'nha-ve-sinh', 1, NULL, NULL),
-(7, 'Khăn tắm', 'khan-tam', 1, NULL, NULL),
-(8, 'Sàn lát gạch / đá cẩm thạch', 'san-lat-gachda-cam-thach', 1, NULL, '2021-06-05 15:39:14'),
-(9, 'Bàn làm việc', 'ban-lam-viec', 1, NULL, NULL),
-(10, 'Khu vực tiếp khách', 'khu-vuc-tiep-khach', 1, NULL, NULL),
-(11, 'Dép', 'dep', 1, NULL, NULL),
-(12, 'Màn chống muỗi', 'man-chong-muoi', 1, NULL, NULL),
-(13, 'Quạt máy', 'quat-may', 1, NULL, NULL),
-(14, 'Điều hòa không khí', 'dieu-hoa-khong-khi', 1, NULL, NULL),
-(15, 'Tủ hoặc phòng để quần áo', 'tu-hoac-phong-de-quan-ao', 1, NULL, NULL),
-(16, 'Có thang máy', 'co-thang-may', 1, NULL, NULL),
-(17, 'Ấm đun nước điện', 'am-dun-nuoc-dien', 1, NULL, NULL),
-(18, 'Tivi', 'tivi', 1, NULL, NULL),
-(19, 'Điện thoại', 'dien-thoai', 1, NULL, NULL),
-(20, 'Truyền hình vệ tinh', 'truyen-hinh-ve-tinh', 1, NULL, NULL),
-(22, 'Ổ điện gần giường', 'o-dien-gan-giuong', 1, NULL, NULL),
-(23, 'Giá treo quần áo', 'gia-treo-quan-ao', 1, NULL, NULL),
-(24, 'Giá phơi quần áo', 'gia-phoi-quan-ao', 1, NULL, NULL),
-(25, 'Gần đồn Công an', 'gan-don-cong-an', 1, NULL, NULL),
-(26, 'Gần chợ', 'gan-cho', 1, NULL, NULL),
-(27, 'Gần trung tâm', 'gan-trung-tam', 1, NULL, NULL);
+(1, 'Wifi miễn phí', 'wifi-mien-phi', 1, '2020-09-05 03:21:22', '2020-09-05 03:21:22'),
+(2, 'Có chỗ đậu xe miễn phí', 'co-cho-dau-xe-mien-phi', 1, '2020-09-05 03:21:34', '2020-09-05 03:21:34'),
+(3, 'Đồ vệ sinh cá nhân miễn phí', 'do-ve-sinh-ca-nhan-mien-phi', 1, '2020-09-05 03:21:58', '2020-09-05 03:21:58'),
+(4, 'Vòi sen', 'voi-sen', 1, '2020-09-05 03:22:07', '2020-09-05 03:22:07'),
+(5, 'Két an toàn', 'ket-an-toan', 1, '2020-09-05 03:22:15', '2020-09-05 03:22:15'),
+(6, 'Nhà vệ sinh', 'nha-ve-sinh', 1, '2020-09-05 03:22:24', '2020-09-05 03:22:24'),
+(7, 'Khăn tắm', 'khan-tam', 1, '2020-09-05 03:22:33', '2020-09-05 03:22:33'),
+(8, 'Sàn lát gạch/đá cẩm thạch', 'san-lat-gachda-cam-thach', 1, '2020-09-05 03:22:44', '2020-09-05 03:22:44'),
+(9, 'Bàn làm việc', 'ban-lam-viec', 1, '2020-09-05 03:22:53', '2020-09-05 03:22:53'),
+(10, 'Khu vực tiếp khách', 'khu-vuc-tiep-khach', 1, '2020-09-05 03:23:01', '2020-09-05 03:23:01'),
+(11, 'Dép', 'dep', 1, '2020-09-05 03:23:09', '2020-09-05 03:23:09'),
+(12, 'Màn chống muỗi', 'man-chong-muoi', 1, '2020-09-05 03:23:19', '2020-09-05 03:23:19'),
+(13, 'Quạt máy', 'quat-may', 1, '2020-09-05 03:23:27', '2020-09-05 03:23:27'),
+(14, 'Điều hòa không khí', 'dieu-hoa-khong-khi', 1, '2020-09-05 03:24:21', '2020-09-05 03:24:21'),
+(15, 'Tủ hoặc phòng để quần áo', 'tu-hoac-phong-de-quan-ao', 1, '2020-09-05 03:24:30', '2020-09-05 03:24:30'),
+(16, 'Các tầng trên đi lên bằng thang máy', 'cac-tang-tren-di-len-bang-thang-may', 1, '2020-09-05 03:24:40', '2020-09-05 03:24:40'),
+(17, 'Ấm đun nước điện', 'am-dun-nuoc-dien', 1, '2020-09-05 03:24:49', '2020-09-05 03:24:49'),
+(18, 'Tivi', 'tivi', 1, '2020-09-05 03:25:07', '2020-09-05 03:25:07'),
+(19, 'Điện thoại', 'dien-thoai', 1, '2020-09-05 03:25:15', '2020-09-05 03:25:15'),
+(20, 'Truyền hình vệ tinh', 'truyen-hinh-ve-tinh', 1, '2020-09-05 03:25:23', '2020-09-05 03:25:23'),
+(21, 'TV màn hình phẳng', 'tv-man-hinh-phang', 1, '2020-09-05 03:25:32', '2020-09-05 03:25:32'),
+(22, 'Ổ điện gần giường', 'o-dien-gan-giuong', 1, '2020-09-05 03:25:41', '2020-09-05 03:25:41'),
+(23, 'Giá treo quần áo', 'gia-treo-quan-ao', 1, '2020-09-05 03:26:36', '2020-09-05 03:26:36'),
+(24, 'Giá phơi quần áo', 'gia-phoi-quan-ao', 1, '2020-09-05 03:26:45', '2020-09-05 03:26:45'),
+(25, 'Gần đồn Công an', 'gan-don-cong-an', 1, '2020-09-05 03:26:56', '2020-09-05 03:26:56'),
+(26, 'Gần chợ', 'gan-cho', 1, '2020-09-05 03:27:02', '2020-09-05 03:27:02'),
+(27, 'Gần trung tâm', 'gan-trung-tam', 1, '2020-09-05 03:27:13', '2020-09-05 03:27:13');
 
 -- --------------------------------------------------------
 
@@ -1247,6 +1603,516 @@ CREATE TABLE `uti_pro` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `uti_pro`
+--
+
+INSERT INTO `uti_pro` (`id`, `product_id`, `utilities_id`, `created_at`, `updated_at`) VALUES
+(84, 4, 1, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(85, 4, 2, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(86, 4, 3, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(87, 4, 4, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(88, 4, 5, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(89, 4, 6, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(90, 4, 7, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(91, 4, 11, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(92, 4, 13, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(93, 4, 14, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(94, 4, 21, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(95, 4, 23, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(96, 4, 24, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(97, 4, 26, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(98, 4, 27, '2020-09-05 10:11:49', '2020-09-05 10:11:49'),
+(99, 6, 1, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(100, 6, 2, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(101, 6, 3, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(102, 6, 4, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(103, 6, 6, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(104, 6, 7, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(105, 6, 9, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(106, 6, 11, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(107, 6, 13, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(108, 6, 14, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(109, 6, 17, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(110, 6, 20, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(111, 6, 21, '2020-09-05 10:14:45', '2020-09-05 10:14:45'),
+(112, 7, 1, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(113, 7, 2, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(114, 7, 3, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(115, 7, 4, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(116, 7, 5, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(117, 7, 6, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(118, 7, 7, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(119, 7, 9, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(120, 7, 11, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(121, 7, 13, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(122, 7, 14, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(123, 7, 18, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(124, 7, 22, '2020-09-05 10:18:32', '2020-09-05 10:18:32'),
+(125, 8, 1, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(126, 8, 2, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(127, 8, 3, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(128, 8, 4, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(129, 8, 6, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(130, 8, 7, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(131, 8, 11, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(132, 8, 13, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(133, 8, 14, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(134, 8, 20, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(135, 8, 21, '2020-09-05 10:22:37', '2020-09-05 10:22:37'),
+(136, 9, 1, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(137, 9, 2, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(138, 9, 3, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(139, 9, 4, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(140, 9, 5, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(141, 9, 6, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(142, 9, 7, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(143, 9, 11, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(144, 9, 13, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(145, 9, 14, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(146, 9, 20, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(147, 9, 21, '2020-09-05 10:26:39', '2020-09-05 10:26:39'),
+(148, 13, 1, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(149, 13, 2, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(150, 13, 3, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(151, 13, 4, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(152, 13, 5, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(153, 13, 6, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(154, 13, 7, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(155, 13, 11, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(156, 13, 12, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(157, 13, 13, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(158, 13, 14, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(159, 13, 15, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(160, 13, 18, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(161, 13, 21, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(162, 13, 22, '2020-09-05 10:32:26', '2020-09-05 10:32:26'),
+(163, 14, 1, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(164, 14, 2, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(165, 14, 3, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(166, 14, 4, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(167, 14, 6, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(168, 14, 7, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(169, 14, 11, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(170, 14, 14, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(171, 14, 20, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(172, 14, 21, '2020-09-05 10:35:14', '2020-09-05 10:35:14'),
+(173, 17, 1, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(174, 17, 2, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(175, 17, 3, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(176, 17, 4, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(177, 17, 6, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(178, 17, 7, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(179, 17, 10, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(180, 17, 13, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(181, 17, 14, '2020-09-05 10:50:00', '2020-09-05 10:50:00'),
+(191, 18, 1, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(192, 18, 2, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(193, 18, 4, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(194, 18, 5, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(195, 18, 6, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(196, 18, 7, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(197, 18, 13, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(198, 18, 14, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(199, 18, 18, '2020-09-05 10:54:15', '2020-09-05 10:54:15'),
+(200, 19, 1, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(201, 19, 2, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(202, 19, 3, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(203, 19, 4, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(204, 19, 6, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(205, 19, 13, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(206, 19, 14, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(207, 19, 21, '2020-09-05 10:54:48', '2020-09-05 10:54:48'),
+(208, 20, 1, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(209, 20, 2, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(210, 20, 3, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(211, 20, 4, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(212, 20, 5, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(213, 20, 6, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(214, 20, 11, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(215, 20, 14, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(216, 20, 20, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(217, 20, 21, '2020-09-05 10:55:36', '2020-09-05 10:55:36'),
+(218, 21, 1, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(219, 21, 2, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(220, 21, 3, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(221, 21, 4, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(222, 21, 6, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(223, 21, 7, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(224, 21, 13, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(225, 21, 14, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(226, 21, 18, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(227, 21, 20, '2020-09-05 10:59:26', '2020-09-05 10:59:26'),
+(228, 24, 1, '2020-09-05 11:14:34', '2020-09-05 11:14:34'),
+(229, 24, 2, '2020-09-05 11:14:34', '2020-09-05 11:14:34'),
+(230, 24, 3, '2020-09-05 11:14:34', '2020-09-05 11:14:34'),
+(231, 24, 4, '2020-09-05 11:14:34', '2020-09-05 11:14:34'),
+(232, 24, 8, '2020-09-05 11:14:35', '2020-09-05 11:14:35'),
+(233, 24, 9, '2020-09-05 11:14:35', '2020-09-05 11:14:35'),
+(234, 24, 17, '2020-09-05 11:14:35', '2020-09-05 11:14:35'),
+(235, 24, 25, '2020-09-05 11:14:35', '2020-09-05 11:14:35'),
+(236, 24, 26, '2020-09-05 11:14:35', '2020-09-05 11:14:35'),
+(237, 24, 27, '2020-09-05 11:14:35', '2020-09-05 11:14:35'),
+(238, 25, 1, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(239, 25, 2, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(240, 25, 3, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(241, 25, 4, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(242, 25, 6, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(243, 25, 11, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(244, 25, 14, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(245, 25, 20, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(246, 25, 21, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(247, 25, 23, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(248, 25, 24, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(249, 25, 25, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(250, 25, 26, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(251, 25, 27, '2020-09-05 11:16:17', '2020-09-05 11:16:17'),
+(252, 26, 1, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(253, 26, 2, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(254, 26, 3, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(255, 26, 4, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(256, 26, 6, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(257, 26, 7, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(258, 26, 13, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(259, 26, 14, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(260, 26, 25, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(261, 26, 26, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(262, 26, 27, '2020-09-05 11:22:52', '2020-09-05 11:22:52'),
+(263, 27, 1, '2020-09-05 11:26:02', '2020-09-05 11:26:02'),
+(264, 27, 2, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(265, 27, 3, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(266, 27, 4, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(267, 27, 6, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(268, 27, 11, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(269, 27, 12, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(270, 27, 13, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(271, 27, 14, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(272, 27, 18, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(273, 27, 23, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(274, 27, 24, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(275, 27, 25, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(276, 27, 26, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(277, 27, 27, '2020-09-05 11:26:03', '2020-09-05 11:26:03'),
+(278, 28, 1, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(279, 28, 2, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(280, 28, 3, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(281, 28, 4, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(282, 28, 6, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(283, 28, 7, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(284, 28, 18, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(285, 28, 20, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(286, 28, 22, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(287, 28, 23, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(288, 28, 24, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(289, 28, 25, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(290, 28, 26, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(291, 28, 27, '2020-09-05 11:28:33', '2020-09-05 11:28:33'),
+(352, 29, 1, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(353, 29, 2, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(354, 29, 3, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(355, 29, 4, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(356, 29, 5, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(357, 29, 6, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(358, 29, 7, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(359, 29, 8, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(360, 29, 11, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(361, 29, 12, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(362, 29, 14, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(363, 29, 18, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(364, 29, 20, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(365, 29, 24, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(366, 29, 26, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(367, 29, 27, '2020-09-06 11:40:53', '2020-09-06 11:40:53'),
+(368, 30, 1, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(369, 30, 2, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(370, 30, 3, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(371, 30, 4, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(372, 30, 5, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(373, 30, 6, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(374, 30, 7, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(375, 30, 8, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(376, 30, 11, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(377, 30, 12, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(378, 30, 13, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(379, 30, 14, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(380, 30, 17, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(381, 30, 19, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(382, 30, 21, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(383, 30, 22, '2020-09-06 11:41:46', '2020-09-06 11:41:46'),
+(384, 31, 1, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(385, 31, 2, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(386, 31, 3, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(387, 31, 4, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(388, 31, 5, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(389, 31, 6, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(390, 31, 7, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(391, 31, 8, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(392, 31, 13, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(393, 31, 14, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(394, 31, 15, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(395, 31, 18, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(396, 31, 20, '2020-09-06 11:43:06', '2020-09-06 11:43:06'),
+(397, 32, 1, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(398, 32, 2, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(399, 32, 3, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(400, 32, 4, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(401, 32, 5, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(402, 32, 6, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(403, 32, 7, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(404, 32, 9, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(405, 32, 10, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(406, 32, 11, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(407, 32, 12, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(408, 32, 13, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(409, 32, 14, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(410, 32, 18, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(411, 32, 19, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(412, 32, 24, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(413, 32, 25, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(414, 32, 26, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(415, 32, 27, '2020-09-06 11:44:28', '2020-09-06 11:44:28'),
+(416, 33, 1, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(417, 33, 2, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(418, 33, 3, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(419, 33, 4, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(420, 33, 5, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(421, 33, 6, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(422, 33, 7, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(423, 33, 8, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(424, 33, 9, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(425, 33, 11, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(426, 33, 12, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(427, 33, 13, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(428, 33, 14, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(429, 33, 18, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(430, 33, 19, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(431, 33, 20, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(432, 33, 25, '2020-09-06 11:46:07', '2020-09-06 11:46:07'),
+(433, 34, 1, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(434, 34, 2, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(435, 34, 3, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(436, 34, 4, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(437, 34, 5, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(438, 34, 6, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(439, 34, 7, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(440, 34, 9, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(441, 34, 10, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(442, 34, 11, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(443, 34, 12, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(444, 34, 13, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(445, 34, 14, '2020-09-06 11:50:26', '2020-09-06 11:50:26'),
+(446, 35, 1, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(447, 35, 2, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(448, 35, 3, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(449, 35, 4, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(450, 35, 5, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(451, 35, 6, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(452, 35, 7, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(453, 35, 10, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(454, 35, 11, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(455, 35, 12, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(456, 35, 13, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(457, 35, 14, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(458, 35, 15, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(459, 35, 16, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(460, 35, 17, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(461, 35, 18, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(462, 35, 19, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(463, 35, 22, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(464, 35, 25, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(465, 35, 26, '2020-09-06 11:51:34', '2020-09-06 11:51:34'),
+(466, 36, 1, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(467, 36, 2, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(468, 36, 3, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(469, 36, 4, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(470, 36, 5, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(471, 36, 6, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(472, 36, 7, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(473, 36, 10, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(474, 36, 17, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(475, 36, 18, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(476, 36, 19, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(477, 36, 23, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(478, 36, 24, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(479, 36, 26, '2020-09-06 11:52:52', '2020-09-06 11:52:52'),
+(480, 37, 1, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(481, 37, 2, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(482, 37, 3, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(483, 37, 4, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(484, 37, 5, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(485, 37, 6, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(486, 37, 7, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(487, 37, 15, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(488, 37, 18, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(489, 37, 19, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(490, 37, 22, '2020-09-06 11:54:07', '2020-09-06 11:54:07'),
+(491, 38, 1, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(492, 38, 2, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(493, 38, 3, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(494, 38, 4, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(495, 38, 6, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(496, 38, 7, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(497, 38, 11, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(498, 38, 13, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(499, 38, 14, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(500, 38, 15, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(501, 38, 16, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(502, 38, 18, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(503, 38, 19, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(504, 38, 20, '2020-09-06 12:13:53', '2020-09-06 12:13:53'),
+(505, 39, 1, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(506, 39, 2, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(507, 39, 3, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(508, 39, 4, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(509, 39, 5, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(510, 39, 6, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(511, 39, 7, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(512, 39, 8, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(513, 39, 9, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(514, 39, 12, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(515, 39, 13, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(516, 39, 14, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(517, 39, 15, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(518, 39, 16, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(519, 39, 17, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(520, 39, 18, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(521, 39, 20, '2020-09-06 12:14:44', '2020-09-06 12:14:44'),
+(522, 40, 1, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(523, 40, 2, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(524, 40, 3, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(525, 40, 4, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(526, 40, 5, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(527, 40, 6, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(528, 40, 7, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(529, 40, 8, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(530, 40, 9, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(531, 40, 13, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(532, 40, 14, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(533, 40, 17, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(534, 40, 18, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(535, 40, 19, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(536, 40, 20, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(537, 40, 22, '2020-09-06 12:15:42', '2020-09-06 12:15:42'),
+(538, 41, 1, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(539, 41, 2, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(540, 41, 3, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(541, 41, 4, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(542, 41, 5, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(543, 41, 6, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(544, 41, 7, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(545, 41, 8, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(546, 41, 10, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(547, 41, 12, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(548, 41, 13, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(549, 41, 14, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(550, 41, 19, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(551, 41, 20, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(552, 41, 21, '2020-09-06 12:16:38', '2020-09-06 12:16:38'),
+(553, 42, 1, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(554, 42, 2, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(555, 42, 3, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(556, 42, 4, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(557, 42, 5, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(558, 42, 6, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(559, 42, 7, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(560, 42, 10, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(561, 42, 11, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(562, 42, 13, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(563, 42, 14, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(564, 42, 18, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(565, 42, 20, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(566, 42, 21, '2020-09-06 12:19:15', '2020-09-06 12:19:15'),
+(567, 43, 1, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(568, 43, 2, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(569, 43, 3, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(570, 43, 5, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(571, 43, 6, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(572, 43, 7, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(573, 43, 11, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(574, 43, 12, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(575, 43, 13, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(576, 43, 14, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(577, 43, 17, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(578, 43, 18, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(579, 43, 19, '2020-09-06 12:20:39', '2020-09-06 12:20:39'),
+(580, 44, 1, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(581, 44, 2, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(582, 44, 5, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(583, 44, 6, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(584, 44, 10, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(585, 44, 12, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(586, 44, 13, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(587, 44, 14, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(588, 44, 18, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(589, 44, 19, '2020-09-06 12:21:26', '2020-09-06 12:21:26'),
+(590, 45, 1, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(591, 45, 2, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(592, 45, 3, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(593, 45, 4, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(594, 45, 5, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(595, 45, 6, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(596, 45, 7, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(597, 45, 9, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(598, 45, 13, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(599, 45, 14, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(600, 45, 18, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(601, 45, 19, '2020-09-06 12:24:00', '2020-09-06 12:24:00'),
+(602, 46, 1, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(603, 46, 2, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(604, 46, 3, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(605, 46, 4, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(606, 46, 5, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(607, 46, 6, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(608, 46, 7, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(609, 46, 11, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(610, 46, 12, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(611, 46, 13, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(612, 46, 14, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(613, 46, 18, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(614, 46, 19, '2020-09-06 12:25:47', '2020-09-06 12:25:47'),
+(615, 47, 1, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(616, 47, 2, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(617, 47, 3, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(618, 47, 4, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(619, 47, 5, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(620, 47, 8, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(621, 47, 9, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(622, 47, 11, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(623, 47, 12, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(624, 47, 13, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(625, 47, 17, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(626, 47, 18, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(627, 47, 19, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(628, 47, 20, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(629, 47, 25, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(630, 47, 26, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(631, 47, 27, '2020-09-11 18:44:53', '2020-09-11 18:44:53'),
+(689, 50, 3, '2020-09-25 17:06:01', '2020-09-25 17:06:01'),
+(690, 50, 5, '2020-09-25 17:06:01', '2020-09-25 17:06:01'),
+(691, 50, 7, '2020-09-25 17:06:01', '2020-09-25 17:06:01'),
+(692, 50, 8, '2020-09-25 17:06:01', '2020-09-25 17:06:01'),
+(693, 50, 9, '2020-09-25 17:06:01', '2020-09-25 17:06:01'),
+(694, 50, 12, '2020-09-25 17:06:01', '2020-09-25 17:06:01'),
+(695, 50, 15, '2020-09-25 17:06:01', '2020-09-25 17:06:01'),
+(696, 51, 1, '2021-06-11 04:56:49', '2021-06-11 04:56:49'),
+(697, 51, 2, '2021-06-11 04:56:49', '2021-06-11 04:56:49'),
+(698, 51, 3, '2021-06-11 04:56:49', '2021-06-11 04:56:49'),
+(699, 51, 4, '2021-06-11 04:56:49', '2021-06-11 04:56:49'),
+(700, 52, 1, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(701, 52, 2, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(702, 52, 3, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(703, 52, 4, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(704, 52, 5, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(705, 52, 6, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(706, 52, 7, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(707, 52, 8, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(708, 52, 9, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(709, 52, 10, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(710, 52, 13, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(711, 52, 14, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(712, 52, 15, '2021-06-28 18:57:01', '2021-06-28 18:57:01'),
+(713, 52, 16, '2021-06-28 18:57:01', '2021-06-28 18:57:01');
 
 -- --------------------------------------------------------
 
@@ -12589,13 +13455,13 @@ ALTER TABLE `wards`
 -- AUTO_INCREMENT cho bảng `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT cho bảng `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `districts`
@@ -12613,37 +13479,37 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT cho bảng `homestays`
 --
 ALTER TABLE `homestays`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `images_homestay`
 --
 ALTER TABLE `images_homestay`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT cho bảng `images_product`
 --
 ALTER TABLE `images_product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT cho bảng `provinces`
@@ -12655,13 +13521,13 @@ ALTER TABLE `provinces`
 -- AUTO_INCREMENT cho bảng `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `room_types`
 --
 ALTER TABLE `room_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `slides`
@@ -12673,7 +13539,7 @@ ALTER TABLE `slides`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `utilities`
@@ -12685,7 +13551,7 @@ ALTER TABLE `utilities`
 -- AUTO_INCREMENT cho bảng `uti_pro`
 --
 ALTER TABLE `uti_pro`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=714;
 
 --
 -- AUTO_INCREMENT cho bảng `wards`
@@ -12727,7 +13593,7 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_homestay_id_foreign` FOREIGN KEY (`homestay_id`) REFERENCES `homestays` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `products_room_type_id_foreign` FOREIGN KEY (`room_type_id`) REFERENCES `room_types` (`id`);
+  ADD CONSTRAINT `products_room_type_id_foreign` FOREIGN KEY (`room_type_id`) REFERENCES `room_types` (`id`) ON DELETE CASCADE;
 
 --
 -- Các ràng buộc cho bảng `ratings`
