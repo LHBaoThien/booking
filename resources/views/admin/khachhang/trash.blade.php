@@ -4,10 +4,16 @@
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="#">Home</a> 
-					<i class="icon-angle-right"></i>
+					<a href="{{url('/admin/dashboard')}}">Home</a>
 				</li>
-				<li><a href="#">Trash</a></li>
+                <li>
+                    <i class="icon-angle-right"></i>
+                    <a href="{{url('/admin/khachhang/danhsach')}}">Danh sách người dùng</a>
+                </li>
+				<li>
+                    <i class="icon-angle-right"></i>
+                    <a href="#">Thùng rác</a>
+                </li>
 			</ul>
 			@if(count($errors) > 0)
 						<div class="alert alert-danger">
@@ -22,10 +28,10 @@
 							{{session('thongbao')}}
 						</div>
 					@endif
-			<div class="row-fluid sortable">		
+			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon white user"></i><span class="break"></span>List</h2>
+						<h2><i class="halflings-icon white user"></i><span class="break"></span>Danh sách</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -44,12 +50,12 @@
 								  <th style="text-align: center">Level</th>
 								  <th style="text-align: center">Hoạt Động</th>
 							  </tr>
-						  </thead>   
+						  </thead>
 						  <tbody>
 						  	@foreach($user as $tl)
-						  	
+
 							<tr>
-								<td style="text-align: center"><img style="border-radius: 50%;width: 50px;height: 50px; padding-top: 3px;" src="{{$tl->avatar}}" alt=""></td>
+								<td style="text-align: center"><img style="border-radius: 50%;width: 50px;height: 50px; padding-top: 3px;" src="{{URL::to('/') }}/{{$tl->avatar}}" alt=""></td>
 								<td>{{$tl->name}}</td>
 								<td>{{$tl->updated_at}}</td>
 								<td>{{$tl->email}}</td>
@@ -61,19 +67,19 @@
 									 <p class="badge green">Partner</p>
 									@elseif($tl->permision==2)
 									<p class="badge orange">User</p>
-								
+
 									@endif
 								</td>
 								<td style="text-align: center">
 									<a class="btn btn-danger" href="{{url('admin/khachhang/untrash')}}/{{$tl->id}} " onclick="return confirm('Bạn Muốn Khôi Phục Đối Tượng?');">
-											Khôi Phục 
+											Khôi Phục
 									</a>
 								</td>
 							</tr>
-							
+
 							@endforeach
 						  </tbody>
-					  </table>            
+					  </table>
 					</div>
 				</div>
 			</div>

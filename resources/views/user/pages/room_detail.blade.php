@@ -6,7 +6,7 @@ Room Detail
 
 @section('script')
 	$(document).ready(function() {
-		
+
 	});
 @endsection
 @section('scriptEnd')
@@ -42,7 +42,7 @@ class="active"
 
 @section('content')
 	<!--main-->
-	<div class="main" role="main">		
+	<div class="main" role="main">
 		<div class="wrap clearfix">
 			<!--main content-->
 			<div class="content clearfix">
@@ -53,10 +53,10 @@ class="active"
 						<li><a href="{{route('userHomePage')}}" title="Home">Home</a></li>
 						<li><a href="{{route('userSearch').'?address='.$homestayVal->province->name.$url}}" title="Address">{{$homestayVal->province->name}}</a></li>
 						<li><a href="{{route('userSearch').'?address='.$homestayVal->district->name.' - '.$homestayVal->province->name.$url}}" title="Address">{{$homestayVal->district->name}}</a></li>
-						<li>{{$homestayVal->name}}</li>                                    
+						<li>{{$homestayVal->name}}</li>
 					</ul>
 					<!--//crumbs-->
-					
+
 					<!--top right navigation-->
 					<!-- <ul class="top-right-nav">
 						<li><a href="{{url('/')}}" title="Back to results">Trang chủ</a></li>
@@ -73,8 +73,9 @@ class="active"
 							<img src="{{$image->url}}" alt="" width="850" height="531" />
 						@endforeach
 					</section>
+                    <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize=false></div>
 					<!--//gallery-->
-				
+
 					<!--inner navigation-->
 					<nav class="inner-nav">
 						<ul>
@@ -86,7 +87,7 @@ class="active"
 						</ul>
 					</nav>
 					<!--//inner navigation-->
-					
+
 					<!--availability-->
 					<section id="availability" class="tab-content">
 						<article>
@@ -137,7 +138,7 @@ class="active"
 													<span class="first">&nbsp</span>
 													<span class="second price-new">{{ number_format( $productVal->prices*(100-$productVal->discount)/100,0,',','.' ) }}đ</span>
 												</div>
-											@endif	
+											@endif
 											@if( isset($datepicker1) && isset($datepicker2) )
 												<a onclick="AddCart({{$productVal->id}}, {{$homestayVal->id}}, '{{$datepicker1}}', '{{$datepicker2}}')" class="gradient-button no-href">Chọn</a>
 											@else
@@ -147,7 +148,7 @@ class="active"
 										<div class="more-information">
 											<p>{{$productVal->description}}</p>
 											<p><strong>Tiện ích và đồ dùng:</strong></p>
-											<div class="text-wrap utilities">	
+											<div class="text-wrap utilities">
 												<ul class="three-col">
 													@foreach($productVal->utilities as $utilitiesVal)
 														<li>{{$utilitiesVal->name}}</li>
@@ -163,43 +164,43 @@ class="active"
 						</article>
 					</section>
 					<!--//availability-->
-					
+
 					<!--description-->
 					<section id="description" class="tab-content">
 						<article>
 							<h1>Chung</h1>
-							<div class="text-wrap">	
+							<div class="text-wrap">
 								<p>{{$homestayVal->description}}</p>
 							</div>
-							
+
 							<h1>Giờ nhận phòng</h1>
-							<div class="text-wrap">	
+							<div class="text-wrap">
 								<p>Từ 15:00 giờ </p>
 							</div>
-							
+
 							<h1>Giờ trả phòng</h1>
-							<div class="text-wrap">	
+							<div class="text-wrap">
 								<p>Trước 12:00 giờ </p>
 							</div>
-							
+
 							<h1>Chính sách hủy phòng</h1>
-							<div class="text-wrap">	
+							<div class="text-wrap">
 								<p>Chính sách hủy khác nhau tùy theo loại phòng. Vui lòng kiểm tra các <a href="user_terms_of_service.html">điều kiện phòng </a>khi chọn phòng của bạn. </p>
 							</div>
-							
+
 							<h1>Chính sách giành cho trẻ em</h1>
-							<div class="text-wrap">	
+							<div class="text-wrap">
 								<p><strong style="color:red;">Miễn phí!</strong> Với tất cả trẻ em dưới <strong style="color:#0005a0;">140</strong>cm.<br /><br />Tất cả trẻ em trên <strong style="color:#0005a0;">140</strong>cm đều được áp dụng chính sách dành cho người lớn<br /></p>
 							</div>
-							
+
 							<h1>Thú cưng</h1>
-							<div class="text-wrap">	
+							<div class="text-wrap">
 								<p>Thú cưng được chấp nhận. Phí có thể được áp dụng, hãy liên hệ với chủ nhà</p>
 							</div>
 						</article>
 					</section>
 					<!--//description-->
-					
+
 					<!--reviews-->
 					<section id="reviews" class="tab-content">
 						<article>
@@ -234,7 +235,7 @@ class="active"
 					<!--//reviews-->
 				</section>
 				<!--//hotel content-->
-				
+
 				<!--sidebar-->
 				<aside class="right-sidebar">
 					<!--hotel details-->
@@ -256,7 +257,7 @@ class="active"
 									<img src="{{$image->url}}" alt="" width="50" height="50" />
 									<a href="{{$image->url}}" class="image-overlay" rel="prettyPhoto[gallery2]"></a>
 								</li>
-							@endforeach	
+							@endforeach
 							</ul>
 						</div>
 					</article>
@@ -305,19 +306,19 @@ class="active"
 							@include('user.ajax.cart')
 						</div>
 						@if( isset($datepicker1) && isset($datepicker2) )
-							<a href="{{route('userBookingStep1').'?id='.$homestayVal->id.'&address='.$homestayVal->province->name.$url}}" class="gradient-button" title="Book">Thanh toán</a>	
+							<a href="{{route('userBookingStep1').'?id='.$homestayVal->id.'&address='.$homestayVal->province->name.$url}}" class="gradient-button" title="Book">Thanh toán</a>
 						@endif
 					</article>
 					<!--// Booking?-->
 
 					<!--Popular hotels in the area-->
 					<!--//Popular hotels in the area-->
-					
+
 					<!--Deal of the day-->
-					<article class="default clearfix">	
+					<article class="default clearfix">
 						<h2>Hỗ trợ đặt phòng?</h2>
 						<p>Gọi cho nhóm dịch vụ khách hàng của chúng tôi theo số dưới đây để nói chuyện với một trong những cố vấn của chúng tôi, những người sẽ giúp bạn với tất cả các nhu cầu kỳ nghỉ của bạn.</p>
-						<p class="number">1800 1989</p>
+						<p class="number">0971097399</p>
 					</article>
 					<!--//Deal of the day-->
 				</aside>

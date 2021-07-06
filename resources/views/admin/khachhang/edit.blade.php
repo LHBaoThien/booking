@@ -3,14 +3,17 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
-			</li>
-			<li>
-				<i class="icon-edit"></i>
-				<a href="#">Edit User</a>
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/khachhang/danhsach')}}">Danh sách người dùng</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="">Chỉnh sửa người dùng</a>
+            </li>
 		</ul>
 		<div class="row-fluid sortable">
 			<div class="box span12">
@@ -44,35 +47,35 @@
 						<input type="hidden" name="_token" value="{{csrf_token()}}">
 					  <fieldset>
 						<div class="control-group">
-						  <label class="control-label" for="typeahead">Name:</label>
+						  <label class="control-label" for="typeahead">Tên:</label>
 						  <div class="controls">
 							<input type="text" id="typeahead" name="name" placeholder="Nhập Tên" value="{{$user->name}}">
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="avatar">Avatar:</label>
+						  <label class="control-label" for="avatar">Ảnh đại diện:</label>
 						  <div class="controls">
 							<input type="file" id="avatar" name="avatar" placeholder="Nhập Tên"><br>
-							<img width="190px" height="170px" src="{{$user->avatar}}" alt="">
+							<img width="190px" height="170px" src="{{ URL::to('/') }}/{{$user->avatar}}" alt="">
 						  </div>
 						</div>
 						<div>
 							<div class="control-group">
-								<label for="changepass" class="control-label" >Click To Change</label>
+								<label for="changepass" class="control-label" >Ấn để đổi mật khẩu</label>
 								<input type="checkbox" name="changepass" id="changepass">
 							</div>
 							<div class="control-group">
-							    <label class="control-label" for="date01">Change Pass:</label>
+							    <label class="control-label" for="date01">Mật khẩu mới:</label>
 							    <div class="controls">
-								<input type="password" name="password" placeholder="Nhập Password" disabled="" class="password">
+								<input type="password" name="password" placeholder="Nhập mật khẩu" disabled="" class="password">
 							 </div>
 							</div>
 							<div class="control-group">
-							  <label class="control-label" for="date02">Confirm Pass:</label>
+							  <label class="control-label" for="date02">Xác nhận mật khẩu:</label>
 							  <div class="controls">
-								<input type="password" name="passwordagain" placeholder="Nhập PasswordAgain" disabled="" class="password">
+								<input type="password" name="passwordagain" placeholder="Nhập lại mật khẩu" disabled="" class="password">
 							  </div>
-							</div>   
+							</div>
 						</div>
 						<div class="control-group">
 						  <label class="control-label" for="email">Email:</label>
@@ -81,11 +84,11 @@
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="xaid">PhoneNumber:</label>
+						  <label class="control-label" for="xaid">Số điện thoại:</label>
 						  <div class="controls">
 							<input type="text" id="xaid" name="phone" placeholder="Nhập Phone" value="{{$user->phone}}">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group ">
 							<label class="control-label" for="status">Level:</label>
 							<label class="controls radio-inline">
@@ -97,21 +100,21 @@
 							</label>
 						</div>
 						<div class="form-actions">
-						 	<button type="submit" class="btn btn-primary">ADD</button>
+						 	<button type="submit" class="btn btn-primary">Sửa</button>
 						  	<button type="reset" class="btn">Hủy</button>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- <script>
 		var editor = CKEDITOR.replace('editor');
-							
-	</script> --> 
-	
+
+	</script> -->
+
 @endsection
 
 @section('script')
@@ -127,7 +130,7 @@
 
 				}
 			});
-			
+
 		});
 	</script>
 @endsection

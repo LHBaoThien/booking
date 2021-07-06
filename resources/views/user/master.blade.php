@@ -26,8 +26,10 @@
     <script type="text/javascript">
         @yield('script')
     </script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 </head>
 <body>
+
 	<!--header-->
 	@include("user.includes.header")
 	<!--//header-->
@@ -38,5 +40,6 @@
 	@yield('scriptLogin')
 	@yield('scriptRegister')
 	@yield('scriptEnd')
+
 </body>
 </html>

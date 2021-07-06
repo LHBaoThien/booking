@@ -1,5 +1,4 @@
-Chạy lệnh để khởi tạo table
-php artisan migrate
-
-Chạy lệnh dưới để tải về dữ liệu bảng tỉnh, huyện,xã
-php artisan vietnamzone:download
+composer install & composer update
+thiết lập database trong file .env
+php artisan storage:link 
+php artisan serve

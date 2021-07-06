@@ -2,7 +2,7 @@
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<div class="brand" >
-					<img style="border-radius: 50%;width: 50px;height: 50px; padding-top: 3px;" src="{{Auth::user()->avatar}}" alt="">
+					<img style="border-radius: 50%;width: 50px;height: 50px; padding-top: 3px;" src="{{ URL::to('/') }}/{{Auth::user()->avatar}}" alt="">
 					<a href="#" style="text-decoration: none; color: white;"><span>{{Auth::user()->name}}</span></a>
 				</div>
 				<!-- start: Header Menu -->

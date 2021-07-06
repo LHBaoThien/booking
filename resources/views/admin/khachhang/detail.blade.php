@@ -3,13 +3,16 @@
 	<div id="content" class="span10">
 			<ul class="breadcrumb">
 				<li>
-					<i class="icon-home"></i>
-					<a href="#">Home</a>
-					<i class="icon-angle-right"></i>
-				</li>
+                    <i class="icon-home"></i>
+                    <a href="{{url('/admin/dashboard')}}">Home</a>
+                </li>
+                <li>
+                    <i class="icon-angle-right"></i>
+                    <a href="{{url('/admin/khachhang/danhsach')}}">Danh sách người dùng</a>
+                </li>
 				<li>
-					<i class="icon-edit"></i>
-					<a href="#">Detail user</a>
+					<i class="icon-angle-right"></i>
+					<a href="#">Chi tiết</a>
 				</li>
 			</ul>
 			<div class="row-fluid sortable">
@@ -28,7 +31,7 @@
 							<div class="control-group">
 							  <label class="control-label" for="fileInput">Ảnh Đại Diện:</label>
 							  <div class="controls">
-								<img style="border-radius: 50%;width: 70px;height: 70px; padding-top: 3px;" src="{{ URL::to('/') }}/{{$user->avatar}}" alt="">
+								<img style="border-radius: 50%;width: 70px;height: 70px; padding-top: 3px;" src="{{URL::to('/') }}/{{$user->avatar}}" alt="">
 							  </div>
 							</div>
 							<div class="control-group">

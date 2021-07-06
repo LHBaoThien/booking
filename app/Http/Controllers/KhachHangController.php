@@ -42,7 +42,7 @@ class KhachHangController extends Controller
             'passwordagain.required'=>'Bạn chưa nhập lại pass',
             'passwordagain.same'=>'Pass nhập lại không đúng'
         ]);
-        
+
         $user=new User;
         $user->name= $request->name;
         $user->password= bcrypt($request->password);
@@ -62,7 +62,7 @@ class KhachHangController extends Controller
         return redirect('admin/khachhang/them')->with('thongbao','Bạn đã thêm thành công');
 
 
-       
+
 
     }
 
@@ -72,13 +72,13 @@ class KhachHangController extends Controller
     }
     public function postEdit(Request $request,$id){
          $this->validate($request,[
-            'name'=>'required|min:3', 
-             
+            'name'=>'required|min:3',
+
         ],
         [
             'name.required'=>'Bạn chưa nhập tên',
             'name.min'=>'Tên quá ngắn',
-           
+
         ]);
         $user=User::find($id);
         $user->name= $request->name;
@@ -111,7 +111,7 @@ class KhachHangController extends Controller
              $user->password= bcrypt($request->password);
         }
         $user->save();
-         return redirect('admin/khachhang/edit/'.$id)->with('thongbao','Bạn dẫ sửa thành công');
+         return redirect('admin/khachhang/edit/'.$id)->with('thongbao','Bạn đã sửa thành công');
     }
 
     public function getDetail($id)
@@ -136,7 +136,7 @@ class KhachHangController extends Controller
         return redirect()->back()->with('thongbao','Khôi Phục Thành Công');
     }
 
-   
+
     public function getLogin(){
         return view('admin.login.login');
     }
@@ -158,7 +158,7 @@ class KhachHangController extends Controller
         }
     }
     public function getLogout()
-    {  
+    {
         Auth::logout();
         return redirect('admin/dangnhap');
     }

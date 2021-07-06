@@ -3,10 +3,13 @@
 	<div id="content" class="span10">
 		<ul class="breadcrumb">
 			<li>
-				<i class="icon-home"></i>
-				<a href="#">Home</a>
-				<i class="icon-angle-right"></i> 
-			</li>
+                <i class="icon-home"></i>
+                <a href="{{url('/admin/dashboard')}}">Home</a>
+            </li>
+            <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{url('/admin/khachhang/danhsach')}}">Danh sách người dùng</a>
+            </li>
 			<li>
 				<i class="icon-edit"></i>
 				<a href="#">User</a>
@@ -15,7 +18,7 @@
 		<div class="row-fluid sortable">
 			<div class="box span12">
 				<div class="box-header" data-original-title>
-					<h2><i class="halflings-icon white edit"></i><span class="break"></span>Thêm User</h2>
+					<h2><i class="halflings-icon white edit"></i><span class="break"></span>Thêm admin</h2>
 					<div class="box-icon">
 						<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 						<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -50,23 +53,23 @@
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="typeahead">Avatar:</label>
+						  <label class="control-label" for="typeahead">Ảnh đại diện:</label>
 						  <div class="controls">
 							<input type="file" id="typeahead" name="avatar">
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="date01">PassWord:</label>
+						  <label class="control-label" for="date01">Mật khẩu:</label>
 						  <div class="controls">
-							<input type="password" id="date01" name="password" placeholder="Nhập Password">
+							<input type="password" id="date01" name="password" placeholder="Nhập mật khẩu">
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="date02">PassWordAgain:</label>
+						  <label class="control-label" for="date02">Nhập lại mật khẩu:</label>
 						  <div class="controls">
-							<input type="password" id="date02" name="passwordagain" placeholder="Nhập PasswordAgain">
+							<input type="password" id="date02" name="passwordagain" placeholder="Nhập lại mật khẩu">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group">
 						  <label class="control-label" for="description">Email:</label>
 						  <div class="controls">
@@ -74,32 +77,32 @@
 						  </div>
 						</div>
 						<div class="control-group">
-						  <label class="control-label" for="xaid">PhoneNumber:</label>
+						  <label class="control-label" for="xaid">Số điện thoại:</label>
 						  <div class="controls">
 							<input type="text" id="xaid" name="phone" placeholder="Nhập Phone">
 						  </div>
-						</div>   
+						</div>
 						<div class="control-group ">
 							<label class="control-label" for="status">Level:</label>
 							<label class="controls radio-inline">
 								<input type="radio" name="permision" value="0" id="status" checked="checked">Admin
 							</label>
-							
+
 						</div>
 						<div class="form-actions">
-						 	<button type="submit" class="btn btn-primary">ADD</button>
+						 	<button type="submit" class="btn btn-primary">Thêm</button>
 						  	<button type="reset" class="btn">Hủy</button>
 						</div>
 					  </fieldset>
-					</form> 
-					 
+					</form>
+
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- <script>
 		var editor = CKEDITOR.replace('editor');
-							
-	</script> --> 
-	
+
+	</script> -->
+
 @endsection
