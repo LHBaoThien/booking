@@ -1,3 +1,17 @@
+# File .ENV
+
+<p>MAIL_DRIVER=smtp</p>
+MAIL_HOST=smtp.googlemail.com <br>
+MAIL_PORT=587 <br>
+MAIL_USERNAME=hihinewbie99@gmail.com <br>
+MAIL_PASSWORD=jvkxolraycwytttl <br>
+MAIL_ENCRYPTION=tls <br>
+MAIL_FROM_ADDRESS=hihinewbie99@gmail.com <br>
+MAIL_FROM_ADDRESS=hihinewbie99@gmail.com <br>
+MAIL_FROM_NAME="${APP_NAME}"
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
