@@ -25,14 +25,8 @@
 		<article class="one-fourth">
 			<h3>Theo dõi chúng tôi</h3>
 			<ul class="social">
-				<li class="facebook"><a href="javascript:" title="facebook">facebook</a></li>
-				<li class="youtube"><a href="javascript:" title="youtube">youtube</a></li>
-				<!-- <li class="rss"><a href="javascript:" title="rss">rss</a></li> -->
-				<!-- <li class="linkedin"><a href="javascript:" title="linkedin">linkedin</a></li> -->
-				<li class="googleplus"><a href="javascript:" title="googleplus">googleplus</a></li>
-				<li class="twitter"><a href="javascript:" title="twitter">twitter</a></li>
-				<!-- <li class="vimeo"><a href="javascript:" title="vimeo">vimeo</a></li> -->
-				<li class="pinterest"><a href="javascript:" title="pinterest">pinterest</a></li>
+				<li class="facebook"><a href="https://www.facebook.com/hii.peaceful" title="facebook">facebook</a></li>
+				<li class="googleplus"><a href="mailto:himinnbooking@gmail.com" title="googleplus">googleplus</a></li>
 			</ul>
 		</article>
 		<!--//column-->

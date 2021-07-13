@@ -73,7 +73,7 @@ class="active"
 							<img src="{{$image->url}}" alt="" width="850" height="531" />
 						@endforeach
 					</section>
-                    <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize=false></div>
+                    
 					<!--//gallery-->
 
 					<!--inner navigation-->
@@ -81,10 +81,10 @@ class="active"
 						<ul>
 							<li class="availability"><a href="#availability" title="Availability">Phòng phù hợp</a></li>
 							<li class="description"><a href="#description" title="Description">Mô tả</a></li>
-							<!-- <li class="facilities"><a href="#facilities" title="Facilities">Cơ sỏ vật chất</a></li> -->
-							<!-- <li class="location"><a href="#location" title="Location">Vị trí</a></li> -->
 							<li class="reviews"><a href="#reviews" title="Reviews">Đánh giá</a></li>
 						</ul>
+                        <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="1" data-color="blue" data-customize=false></div>
+                        <div class="fb-share-button" data-href="" data-layout="button" data-size="small" style="display:block"></div>                        
 					</nav>
 					<!--//inner navigation-->
 

@@ -36,7 +36,8 @@ class="active"
 								<h1>{{$blogDetailVal->title}}</h1>
 							</div>
 							<div class="post-infor">
-								<p class="post-date">{{date( "d-m-Y", strtotime( $blogDetailVal->created_at ))}}</p>
+                                <div class="fb-share-button" data-href="" data-layout="button" data-size="small"></div>                                
+								<p class="post-date" style="display:inline">{{date( "d-m-Y", strtotime( $blogDetailVal->created_at ))}}</p>                                                 
 							</div>
 						</div>
 						<div class="post-content">

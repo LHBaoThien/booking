@@ -16,6 +16,7 @@ class HomeController extends Controller
 {
     public function __construct(){
         $today = date('Y-m-d');
+        // $orderSucces = Order::where('date_end','<=',"'2021-6-6'")->get();
         $orderSucces = Order::where('date_end','<=',$today)->get();
         $bill_id_success = array();
 
@@ -25,7 +26,7 @@ class HomeController extends Controller
                 $order->status = 0;
                 $order->update();
             }
-            array_push($bill_id_success,$orderSuccessVal->bill_id); 
+            array_push($bill_id_success,$orderSuccessVal->bill_id);
         }
 
         $bill_seccess = Bill::whereIn('id',$bill_id_success)->get();
@@ -42,7 +43,7 @@ class HomeController extends Controller
     public function index(){
 
         $slide = Slide::where('status', '1')->orderBy('order','asc')->get();
-        
+
         $homestayTopRate = Homestay::where('status', '1')->orderBy('point', 'DESC')->take(8)->get();
         $homestay = Homestay::where('status', '1')->take(8)->get();
         $urlSearch ='&datepicker1=&datepicker2=&num_room=1&num_adult=2&num_chil=0';
