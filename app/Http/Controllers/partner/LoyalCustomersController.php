@@ -9,12 +9,13 @@ use App\Bill;
 
 class LoyalCustomersController extends Controller
 {
-    public function index(){
-        $payment = Bill::where('status',2)
-                        ->get();
+    public function index()
+    {
+        $payment = Bill::where('status', 2)
+            ->get();
         $payment2 = Bill::all();
         $listBill = Bill::GroupBy('email')
-                            ->get();
-        return view ('partner.loyalcustomers.listloyalcustomers',compact('listBill','payment','payment2')); 
+            ->get();
+        return view('partner.loyalcustomers.listloyalcustomers', compact('listBill', 'payment', 'payment2'));
     }
 }

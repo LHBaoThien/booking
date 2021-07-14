@@ -16,9 +16,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $dates=['deleted_at'];
+    protected $dates = ['deleted_at'];
     protected $table = 'users';
-    
+
     protected $fillable = [
         'email', 'password',
     ];
@@ -42,14 +42,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function bill(){
-        return $this->hasMany('App\Bill', 'user_id','id');
+    public function bill()
+    {
+        return $this->hasMany('App\Bill', 'user_id', 'id');
     }
-    public function rating(){
-        return $this->hasMany('App\Rating', 'user_id','id');
+    public function rating()
+    {
+        return $this->hasMany('App\Rating', 'user_id', 'id');
     }
-    public function ward(){
-        return $this->belongsTo('App\Ward', 'xaid','xaid');
+    public function ward()
+    {
+        return $this->belongsTo('App\Ward', 'xaid', 'xaid');
     }
-
 }

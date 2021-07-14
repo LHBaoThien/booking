@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Slide extends Model
 {
-	use SoftDeletes;
-	protected $date=['deleted_at'];
+    use SoftDeletes;
+    protected $date = ['deleted_at'];
     protected $table = 'slides';
 }

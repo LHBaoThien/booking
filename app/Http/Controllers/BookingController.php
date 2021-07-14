@@ -13,17 +13,16 @@ class BookingController extends Controller
 {
     public function getDanhSach()
     {
-        $bill = Bill::where('status',"=","0")->get(); 
+        $bill = Bill::where('status', "=", "0")->get();
         $user = User::all();
-    	return view('admin.booking.danhsach',['bill'=>$bill],['user'=>$user]);
+        return view('admin.booking.danhsach', ['bill' => $bill], ['user' => $user]);
     }
     public function getListOrder($id)
     {
-        $product=Product::all();
-        $homestay=Homestay::all();
-        $order=Order::find($id);
-        $order=Order::where('bill_id','=',$id)->get();
-        return view('admin.booking.listorder',['order'=>$order],['product'=>$product],['homestay'=>$homestay]);
+        $product = Product::all();
+        $homestay = Homestay::all();
+        $order = Order::find($id);
+        $order = Order::where('bill_id', '=', $id)->get();
+        return view('admin.booking.listorder', ['order' => $order], ['product' => $product], ['homestay' => $homestay]);
     }
-    
 }

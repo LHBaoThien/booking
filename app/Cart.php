@@ -4,7 +4,7 @@ class Cart{
     public $product = null;
     public $totalPrice = 0;
     public $totalQuanty = 0;
-    
+
     public function __construct($cart){
         if($cart){
             $this->product = $cart->product;
@@ -35,5 +35,3 @@ class Cart{
         unset($this->product[$id]);
     }
 }
-
-?>

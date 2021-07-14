@@ -10,5 +10,4 @@ class Uti_Pro extends Model
 {
     protected $table = 'uti_pro';
     protected $fillable = ['id', 'product_id', 'utilities_id'];
-    
 }

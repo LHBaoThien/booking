@@ -8,7 +8,8 @@ class RoomType extends Model
 {
     protected $table = 'room_types';
 
-    public function roomType(){
-        return $this->hasMany('App\Product', 'room_type_id','id');
+    public function roomType()
+    {
+        return $this->hasMany('App\Product', 'room_type_id', 'id');
     }
 }

@@ -14,13 +14,12 @@ class Controller extends BaseController
 
     function __construct()
     {
-    	$this->DangNhap();
+        $this->DangNhap();
     }
     function DangNhap()
     {
-    	if(Auth::check())
-    	{
-    		view()->share('user_login',Auth::user());
-    	}
+        if (Auth::check()) {
+            view()->share('user_login', Auth::user());
+        }
     }
 }

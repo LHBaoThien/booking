@@ -1,7 +1,7 @@
 @if ($paginator->hasPages())
     <!--back up button-->
-        <a href="#" class="scroll-to-top" title="Back up">Top</a> 
-	<!--//back up button-->
+    <a href="#" class="scroll-to-top" title="Back up">Top</a>
+    <!--//back up button-->
     <div class="pager">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
@@ -9,7 +9,7 @@
         @else
             <span><a href="{{ $paginator->toArray()['first_page_url'] }}">First</a></span>
             <span><a href="{{ $paginator->previousPageUrl() }}" rel="prev">&laquo;</a></span>
-         @endif
+        @endif
 
         {{-- Pagination Elements --}}
         @foreach ($elements as $element)
@@ -18,7 +18,8 @@
                 @foreach ($element as $page => $url)
                     @if ($page == $paginator->currentPage())
                         <span class="current"><a>{{ $page }}</a></span>
-                    @elseif (($page == $paginator->currentPage() + 1 || $page == $paginator->currentPage() + 2) || $page == $paginator->lastPage())
+                    @elseif (($page == $paginator->currentPage() + 1 || $page == $paginator->currentPage() + 2) ||
+                        $page == $paginator->lastPage())
                         <span><a href="{{ $url }}">{{ $page }}</a></span>
                     @elseif ($page == $paginator->lastPage() - 1)
                         <span>...</span>
